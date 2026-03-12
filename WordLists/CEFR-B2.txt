@@ -1,0 +1,4111 @@
+abandon verb LEAVE B2
+abandoned adjective EMPTY B2
+abandoned adjective LEFT SOMEWHERE B2
+abolish verb B2
+about adverb DIRECTION B2
+absence noun NOT PRESENT B2
+absence noun NOT EXISTING B2
+absolute adjective B2
+absorb verb TAKE IN B2
+be absorbed in sth B2
+abstract adjective IDEAS B2
+abstract adjective ART B2
+absurd adjective B2
+abuse noun BAD TREATMENT B2
+abuse noun WRONG USE B2
+academic adjective EDUCATION B2
+accent noun MARK B2
+accept verb ADMIT B2
+accept verb ALLOW TO JOIN B2
+accept responsibility/blame B2
+access verb B2
+accessible adjective REACH B2
+accidental adjective B2
+accidentally adverb B2
+according to preposition METHOD B2
+account noun REPORT B2
+take account of sth B2
+take into account sth B2
+on account of sth B2
+accuracy noun B2
+accuse verb B2
+ache verb B2
+acid noun B2
+acquire verb GET B2
+acquire verb LEARN B2
+act verb DO SOMETHING B2
+act as sth B2
+act noun THING DONE B2
+action noun DO B2
+active adjective INVOLVED B2
+actively adverb B2
+activity noun WORK B2
+activity noun MOVEMENT B2
+actual adjective REAL B2
+in actual fact B2
+actually adverb OPPOSITE B2
+adapt verb CHANGE BEHAVIOUR B2
+adapt verb CHANGE SOMETHING B2
+add to sth B2
+addict noun B2
+addicted adjective DRUGS B2
+addicted adjective LIKING B2
+addiction noun B2
+addition noun NEW THING B2
+addition noun NUMBERS/AMOUNTS B2
+additional adjective B2
+additionally adverb B2
+adequate adjective ENOUGH B2
+adequate adjective GOOD ENOUGH B2
+adequately adverb B2
+adjust verb CHANGE B2
+adjust verb CHANGE BEHAVIOUR B2
+adjustment noun B2
+admiration noun B2
+admire verb RESPECT B2
+admission noun PERMISSION B2
+admittedly adverb B2
+adopt verb TAKE CHILD B2
+adopt verb START B2
+adopted adjective B2
+adoption noun B2
+advance noun PROGRESS B2
+take advantage of sb/sth B2
+advantage noun SUCCESS B2
+adventurous adjective B2
+advertising noun B2
+affair noun RELATIONSHIP B2
+affair noun SITUATION B2
+affect verb CAUSE CHANGE B2
+affect verb CAUSE EMOTION B2
+affection noun B2
+after preposition BECAUSE OF B2
+all over again B2
+yet again B2
+against preposition NOT AGREE B2
+against the law B2
+agent noun BUSINESS B2
+agent noun SECRET INFORMATION B2
+aggressive adjective VIOLENT B2
+aggressively adverb B2
+agree verb SAY YES B2
+agree with sth B2
+agreement noun DECISION B2
+agreement noun SAME OPINION B2
+agriculture noun B2
+ahead adverb MORE POINTS B2
+be aimed at sb B2
+the air B2
+aircraft noun B2
+alike adverb SIMILAR B2
+alike adverb BOTH B2
+in all B2
+all of a sudden B2
+all along B2
+all in all B2
+all over the place B2
+leave sb alone B2
+along preposition PARTICULAR PLACE B2
+along with sb/sth B2
+alphabetical adjective B2
+alter verb B2
+alternative noun B2
+alternative adjective DIFFERENT PLAN B2
+alternative adjective NOT USUAL B2
+alternatively adverb B2
+altogether adverb COMPLETELY B2
+altogether adverb GENERALLY B2
+aluminium noun B2
+always adverb MANY TIMES B2
+amazement noun B2
+ambassador noun B2
+ambition noun STRONG FEELING B2
+ambitious adjective PERSON B2
+ambitious adjective PLAN B2
+among other things B2
+among the best/worst/biggest, etc. B2
+amongst preposition B2
+amuse verb MAKE LAUGH B2
+amuse verb KEEP INTERESTED B2
+amused adjective FUNNY B2
+keep sb amused B2
+amusement noun FEELING B2
+amusement noun ENTERTAINMENT B2
+analyse verb B2
+analysis noun B2
+analyst noun B2
+ancestor noun B2
+anger noun B2
+animal noun NOT A PLANT B2
+annually adverb B2
+anxiety noun B2
+anxious adjective EAGER B2
+anxiously adverb B2
+anyhow adverb DESPITE B2
+anyhow adverb EARLIER SUBJECT B2
+anyhow adverb MORE IMPORTANTLY B2
+or anything B2
+anything like B2
+not/never get anywhere B2
+apart adverb RELATIONSHIP B2
+apart adverb INTO PIECES B2
+apostrophe noun B2
+apparent adjective OBVIOUS B2
+apparently adverb AS HEARD/READ B2
+apparently adverb SEEMS TRUE B2
+appeal noun QUALITY B2
+appeal verb ATTRACT B2
+it appears (that) B2
+appear verb BECOME AVAILABLE B2
+appearance noun IN PUBLIC B2
+appearance noun BECOMING AVAILABLE B2
+application noun COMPUTER SOFTWARE B2
+apply verb AFFECT B2
+appreciate verb VALUE B2
+would appreciate B2
+I/We appreciate... B2
+appreciation noun B2
+approach verb DEAL WITH B2
+approach noun METHOD B2
+approach noun COMING CLOSER B2
+appropriate adjective B2
+appropriately adverb B2
+approval noun GOOD OPINION B2
+approval noun PERMISSION B2
+approve verb GOOD OPINION B2
+approximate adjective B2
+area noun SUBJECT B2
+argue verb GIVE REASONS B2
+argument noun REASON B2
+armed adjective WEAPONS B2
+be around B2
+arrange verb PUT IN POSITION B2
+arrangement noun AGREEMENT B2
+arrangement noun POSITION B2
+arrest noun B2
+arrogant adjective B2
+arrow noun SYMBOL B2
+arrow noun WEAPON B2
+arts B2
+artificial adjective NOT NATURAL B2
+artificially adverb B2
+artistic adjective CREATIVE ABILITY B2
+artistic adjective RELATING TO ART B2
+as for B2
+as a result of sth B2
+as a whole B2
+as a matter of fact B2
+as follows B2
+as if/as though B2
+as far as sb is concerned B2
+as far as sth is concerned B2
+as far as I know B2
+be ashamed of sb B2
+aside adverb MOVE TO SIDE B2
+aside adverb SAVE B2
+aside from sth B2
+Don't ask! B2
+Don't ask me B2
+aspect noun B2
+assess verb B2
+assessment noun B2
+assist verb B2
+assistance noun B2
+be associated with sth B2
+association noun B2
+assume verb B2
+assure verb SAY WITH CERTAINTY B2
+astonished adjective B2
+astonishing adjective B2
+astonishment noun B2
+at least B2
+at preposition AMOUNT B2
+at all costs B2
+at sb's disposal B2
+at fault B2
+at risk B2
+athletic adjective B2
+the atmosphere B2
+atmosphere noun AIR INSIDE B2
+atom noun B2
+atomic adjective B2
+attached adjective CONNECTED TO B2
+attachment noun EQUIPMENT B2
+attachment noun COMPUTING B2
+attempt noun B2
+attract/get (sb's) attention B2
+draw (sb's) attention to sth/sb B2
+be attracted to sb B2
+attractive adjective INTERESTING B2
+aubergine noun B2
+audience noun TYPE B2
+authority noun POWER B2
+automatic adjective MACHINE B2
+automatically adverb MACHINE B2
+automatically adverb PERSON B2
+availability noun B2
+average adjective USUAL B2
+on average B2
+avoid verb PREVENT B2
+avoid doing sth B2
+award verb B2
+award noun PRIZE B2
+aware adjective B2
+away adverb GRADUALLY B2
+an awful lot (of sth) B2
+awkward adjective DIFFICULT B2
+back adverb STATE B2
+back adverb EARLIER B2
+back adverb AWAY FROM B2
+back up sb or back sb up SUPPORT B2
+back up (sth) or back (sth) up B2
+background noun SOUND B2
+background noun PICTURE B2
+background noun SITUATION B2
+backup noun EXTRA HELP B2
+backup noun COPY B2
+bad adjective NOT FRESH B2
+badge noun B2
+badly adverb UNPLEASANT B2
+bad-tempered adjective B2
+bakery noun B2
+balance noun WEIGHT B2
+balance noun EQUAL IMPORTANCE B2
+balance noun MONEY B2
+on balance B2
+balance verb NOT FALLING B2
+balance verb EQUAL IMPORTANCE B2
+a balanced diet/meal B2
+balanced adjective FAIR B2
+ban verb B2
+ban noun B2
+bang verb B2
+bang noun B2
+bank noun RIVER B2
+banker noun B2
+banking noun B2
+bar noun LONG PIECE B2
+behind bars B2
+bare adjective NO CLOTHES B2
+bare adjective NOT COVERED B2
+barely adverb B2
+bargain noun CHEAP B2
+bark verb DOG B2
+barrier noun FENCE B2
+barrier noun PREVENTING B2
+base noun BOTTOM B2
+base noun MILITARY B2
+be based at/in/etc. B2
+basement noun B2
+basically adverb SIMPLY B2
+the basics B2
+on a daily/monthly/regular, etc. basis B2
+basis noun METHOD B2
+battle noun PROBLEMS/ILLNESS B2
+beam noun B2
+bear verb ACCEPT B2
+bear (sb/sth) in mind B2
+beat verb HIT B2
+beat up sb or beat sb up B2
+beat noun REGULAR SOUND B2
+beat noun MUSIC B2
+beg verb STRONG REQUEST B2
+beg verb VERY POOR B2
+to begin with B2
+on behalf of sb or on sb's behalf B2
+belief noun TRUE B2
+belief noun IDEA B2
+believe in sth/doing sth B2
+bell noun METAL OBJECT B2
+belong verb RIGHT PLACE B2
+belong verb HAPPY SOMEWHERE B2
+belongings noun B2
+bench noun B2
+bend verb BODY B2
+bend verb CURVE B2
+bend noun CURVED PART B2
+beneath preposition UNDER B2
+beneficial adjective B2
+benefit verb B2
+berry noun B2
+make the best of sth B2
+bestseller noun B2
+betray verb B2
+beyond preposition DISTANCE B2
+beyond preposition TIME B2
+beyond my/our, etc. control B2
+bikini noun B2
+billion noun B2
+biological adjective B2
+give birth B2
+American/Italian, etc. by birth B2
+a bit B2
+bite noun FOOD B2
+bite noun INJURY B2
+bitter adjective ANGRY B2
+bitter adjective HATE B2
+bitter adjective DISAPPOINTED B2
+bitter adjective COLD B2
+bizarre adjective B2
+blade noun B2
+blame noun B2
+go blank B2
+blink verb EYES B2
+block noun PIECE B2
+block verb PREVENT MOVEMENT B2
+bloody adjective COVERED IN BLOOD B2
+blow up sth or blow sth up B2
+blush verb B2
+board noun SURFACE B2
+board noun MEALS B2
+boast verb PRIDE B2
+boiling adjective B2
+bold adjective BRAVE B2
+boldly adverb B2
+bomber noun PERSON B2
+bombing noun B2
+bond noun B2
+bonus noun EXTRA THING B2
+bonus noun EXTRA MONEY B2
+booklet noun B2
+bookmark noun B2
+bookmark verb B2
+boost noun B2
+boost verb B2
+bossy adjective B2
+bother verb WORRY B2
+bother verb MAKE AN EFFORT B2
+can't be bothered B2
+bothered adjective B2
+bounce verb MOVE UP B2
+bounce along/around/into, etc. B2
+bound to do sth B2
+bow noun KNOT B2
+bow noun WEAPON B2
+bra noun B2
+bracket noun SYMBOL B2
+brake verb B2
+branch noun SUBJECT B2
+brand noun B2
+bravery noun B2
+break verb END B2
+break a record B2
+break an agreement/promise, etc. B2
+break the law B2
+break the ice B2
+break sb's heart B2
+break off (sth) or break (sth) off B2
+break out B2
+break through sth B2
+breakable adjective B2
+breakdown noun ILLNESS B2
+breakdown noun NOT WORKING B2
+breakthrough noun B2
+be out of breath B2
+hold your breath B2
+take your breath away B2
+take a deep breath B2
+breathtaking adjective B2
+breed verb KEEP ANIMALS B2
+breed noun B2
+brick noun B2
+in brief B2
+bright adjective INTELLIGENT B2
+bright adjective HAPPY B2
+brightly adverb B2
+brilliantly adverb B2
+bring out sth or bring sth out B2
+bring up sth or bring sth up B2
+broadband noun B2
+broadcast verb B2
+a broken heart B2
+brother-in-law noun B2
+browse verb LOOK B2
+browse verb COMPUTING B2
+browser noun B2
+bruise noun B2
+brush noun ACTION B2
+brush verb TOUCH B2
+budget noun AMOUNT B2
+budget adjective B2
+bug noun ILLNESS B2
+bug noun COMPUTER B2
+bulb noun B2
+bullet noun B2
+bump verb HURT B2
+bump against/into sth B2
+bumper noun B2
+bun noun B2
+burglar noun B2
+burglary noun B2
+burgle verb B2
+burn verb COPY B2
+burn verb ENERGY B2
+burn down (sth) or burn (sth) down B2
+burn out B2
+burn up sth or burn sth up B2
+burst verb BREAK APART B2
+burst into sth ENTER SUDDENLY B2
+burst into sth MAKE A NOISE B2
+burst out LAUGH/CRY B2
+bury verb HIDE B2
+bush noun B2
+be none of sb's business B2
+by preposition HOLDING B2
+by far B2
+by heart B2
+day by day/little by little/one by one, etc. B2
+by preposition AMOUNT B2
+cabinet noun B2
+cable noun WIRE B2
+be a piece of cake B2
+calculate verb MATHS B2
+calculation noun B2
+call verb DESCRIBE B2
+call in sick B2
+call back B2
+call in B2
+call off sth or call sth off NOT HAPPEN B2
+calm down (sb) or calm (sb) down B2
+calmly adverb B2
+an army/prison/refugee, etc. camp B2
+campus noun B2
+can modal verb TYPICAL B2
+can modal verb SOMETIMES HAPPENING B2
+candidate noun JOB/ELECTION B2
+canned adjective B2
+capable adjective GOOD AT DOING THINGS B2
+capable of sth/doing sth B2
+capacity noun AMOUNT B2
+capacity noun ABILITY B2
+captain noun SHIP/AIRCRAFT B2
+capture verb CATCH B2
+capture verb DESCRIBE B2
+capture sb/sth on camera/film, etc. B2
+carbon noun B2
+carbon dioxide noun B2
+carbon footprint noun B2
+carbon monoxide noun B2
+cardboard noun B2
+cardigan noun B2
+care noun PROTECTION B2
+Who cares? B2
+care for sb/sth B2
+carelessly adverb B2
+carelessness noun B2
+caring adjective B2
+carnival noun B2
+carry verb TRANSPORT B2
+be/get carried away B2
+be the case B2
+in any case B2
+in that case B2
+case noun CRIME B2
+case noun COURT OF LAW B2
+cast noun B2
+casual adjective NOT PLANNED B2
+casually adverb B2
+catalogue noun B2
+catch sb's attention, interest, etc. B2
+catch verb DISCOVER B2
+catch verb CRIMINAL B2
+catch up (sb) or catch (sb) up REACH SOMEONE B2
+catch up B2
+catch up on/with sth B2
+category noun B2
+catering noun B2
+cause noun REASON WHY B2
+cause verb B2
+cautious adjective B2
+cease verb B2
+cell noun ORGANISM B2
+cell noun ROOM B2
+cellar noun B2
+cello noun B2
+cemetery noun B2
+centigrade noun B2
+a certain B2
+certainty noun BEING SURE B2
+chain noun EVENTS B2
+challenge verb B2
+chance noun RISK B2
+change the subject B2
+chaos noun B2
+character noun INTERESTING QUALITIES B2
+characteristic noun B2
+charge verb ACCUSE B2
+charge verb ATTACK B2
+charge verb ELECTRICITY B2
+take charge B2
+charm noun QUALITY B2
+chart noun DRAWING B2
+the charts B2
+chase verb RUN AFTER B2
+chase sb/sth away/off/out, etc. B2
+chat sb up or chat up sb B2
+cheat verb B2
+cheat on sb B2
+check verb ASK B2
+cheeky adjective B2
+cheer verb B2
+cheer up (sb) or cheer (sb) up B2
+cheerful adjective MAKING YOU FEEL HAPPY B2
+cheerfully adverb B2
+Cheers! exclamation THANK YOU B2
+chemical noun B2
+chemical adjective B2
+cherry noun B2
+chest noun BODY B2
+chew verb EAT B2
+chew verb BITE B2
+chief adjective MOST IMPORTANT B2
+chief adjective HIGHEST IN RANK B2
+chief noun B2
+childish adjective SILLY B2
+childish adjective OF A CHILD B2
+chill out B2
+chimney noun B2
+chip noun COMPUTER PART B2
+choir noun B2
+chop verb B2
+circle noun GROUP B2
+circular adjective SHAPE B2
+circumstance noun B2
+citizen noun TOWN/CITY B2
+citizen noun LEGAL RIGHT B2
+civilization noun SOCIETY B2
+claim verb SAY B2
+claim verb DEMAND B2
+claim noun DEMAND B2
+class noun ECONOMIC GROUP B2
+classic adjective B2
+classic noun B2
+clause noun B2
+clear up (sth) or clear (sth) up MAKE TIDY B2
+clear up sth or clear sth up B2
+clear up B2
+client noun B2
+climate change noun B2
+climb into/out of/through, etc. B2
+climb verb MOVE HIGHER B2
+close verb STOP OPERATING B2
+close down (sth) or close (sth) down B2
+close adjective RELATIONSHIP B2
+closely adverb CONNECTED B2
+cloth noun MATERIAL B2
+cloth noun FOR CLEANING B2
+clothing noun B2
+cloud noun SMOKE/DUST B2
+clue noun SIGN B2
+not have a clue B2
+clumsy adjective B2
+coach verb B2
+coaching noun B2
+coastal adjective B2
+code noun SECRET MESSAGE B2
+coincidence noun B2
+collapse verb OBJECT B2
+collapse verb PERSON B2
+collapse noun B2
+collar noun ON AN ANIMAL B2
+collect verb MONEY B2
+collection noun TAKING AWAY B2
+collector noun B2
+collocation noun B2
+colon noun B2
+colourful adjective UNUSUAL B2
+column noun PRINTING B2
+column noun BUILDING B2
+combination noun B2
+combine verb B2
+come verb HAPPEN B2
+come across sb/sth B2
+come along ARRIVE B2
+come down FALL B2
+come down LOWER LEVEL B2
+come down with sth B2
+come out INFORMATION B2
+come to sth TOTAL B2
+come to sth DIFFERENT STATE B2
+come up MOVE TOWARDS B2
+come up BE MENTIONED B2
+come up SUN/MOON B2
+come up B2
+come up with sth B2
+comedian noun B2
+comfort noun NO PAIN B2
+comfortable adjective WITHOUT WORRIES B2
+comfortably adverb B2
+command noun ORDER B2
+command noun KNOWLEDGE B2
+comment verb B2
+commerce noun B2
+commercial noun B2
+commercial adjective BUYING AND SELLING B2
+commit verb DO B2
+commitment noun LOYALTY B2
+commitment noun ACTIVITY B2
+committee noun B2
+common knowledge B2
+communicate verb BE UNDERSTOOD B2
+communicative adjective B2
+community noun IN ONE AREA B2
+community noun GROUP OF PEOPLE B2
+companion noun B2
+company noun OTHER PEOPLE B2
+keep sb company B2
+compared to/with sb/sth B2
+comparison noun B2
+compete verb SUCCESS B2
+competition noun BUSINESS/JOBS B2
+competitive adjective SITUATION B2
+competitive adjective PERSON B2
+competitive adjective PRICES/SERVICES B2
+complex adjective B2
+compose verb BE MADE OF B2
+compose verb MUSIC B2
+composer noun B2
+composition noun MUSIC B2
+compromise noun B2
+compromise verb AGREE B2
+compulsory adjective B2
+concentration noun THOUGHT B2
+concept noun B2
+concern verb INVOLVE B2
+concern verb BE ABOUT B2
+concern noun WORRY B2
+concern noun IMPORTANT THING B2
+concerned adjective WORRIED B2
+concerning preposition B2
+In conclusion B2
+concrete noun B2
+condition noun ILLNESS B2
+on condition that B2
+conduct verb ORGANIZE B2
+conduct verb MUSIC B2
+conductor noun B2
+confess verb B2
+confession noun B2
+confidence noun CERTAIN B2
+confident adjective CERTAIN B2
+confidently adverb B2
+confirm verb PROVE TRUE B2
+confirmation noun B2
+conflict noun DISAGREEMENT B2
+conflict noun FIGHTING B2
+confuse verb NOT THINK CLEARLY B2
+confuse verb THINK ONE IS ANOTHER B2
+confused adjective NOT CLEAR B2
+confusion noun NOT UNDERSTAND B2
+confusion noun SITUATION B2
+confusion noun THOUGHT B2
+congratulate verb B2
+conjunction noun GRAMMAR B2
+connection noun INVOLVEMENT B2
+in connection with sth B2
+connection noun TRAVEL B2
+be conscious of/that B2
+consciousness noun AWAKE B2
+consequence noun RESULT B2
+consequently adverb B2
+conservation noun NATURE B2
+consider sb/sth (to be) sth B2
+considerable adjective B2
+considerably adverb B2
+consideration noun CAREFUL THOUGHT B2
+take sth into consideration B2
+consideration noun IMPORTANT FACT B2
+considering preposition, conjunction B2
+constant adjective A LOT B2
+constantly adverb B2
+construct verb B2
+construction noun BUILDING WORK B2
+construction noun LARGE BUILDING B2
+construction noun WORDS B2
+consultant noun B2
+consume verb EAT OR DRINK B2
+consumer noun B2
+contain verb PART B2
+container noun B2
+contemporary adjective B2
+content adjective B2
+content noun IDEAS B2
+contents noun BOOK B2
+context noun FACTS B2
+continuous adjective GRAMMAR B2
+continuous adjective WITHOUT STOPPING B2
+continuously adverb B2
+on the contrary B2
+contrast noun DIFFERENCE B2
+by/in contrast B2
+contribute verb GIVE B2
+contribution noun B2
+control verb LIMIT B2
+control verb RULE B2
+control noun POWER B2
+beyond your/out of control B2
+under control B2
+control noun EQUIPMENT B2
+take control B2
+control noun LAW B2
+control noun OFFICIAL PLACE B2
+controversial adjective B2
+convenience noun BEING EASY B2
+at your convenience B2
+conveniently adverb B2
+conventional adjective TRADITIONAL B2
+convert verb CHANGE B2
+convinced adjective B2
+cool verb B2
+cool down/off (sb/sth) or cool (sb/sth) down/off BECOME LESS HOT B2
+cool down/off (sb/sth) or cool (sb/sth) down/off BECOME CALMER B2
+cooperate verb WORK TOGETHER B2
+cooperate verb HELP B2
+cooperation noun B2
+cooperative adjective B2
+cope verb B2
+copper noun B2
+copy verb CHEAT B2
+copy verb BEHAVE B2
+copy noun SINGLE ONE B2
+corporation noun B2
+correct verb SHOW MISTAKE B2
+correct verb MAKE RIGHT B2
+correspond verb BE SIMILAR B2
+correspond verb WRITE B2
+corridor noun B2
+cost noun THING GIVEN B2
+cost verb LOSE B2
+costume noun PARTY/FILM/PLAY B2
+costume noun TYPICAL OF COUNTRY B2
+could have B2
+couldn't have B2
+council noun B2
+count verb BE IMPORTANT B2
+count on sb B2
+count on sth B2
+counter noun SURFACE B2
+county noun B2
+courage noun BRAVE B2
+in due course B2
+court noun LAW B2
+courtesy noun B2
+cover verb DISTANCE B2
+cover verb AREA B2
+coward noun B2
+cowardly adjective B2
+crab noun B2
+crack verb BREAK B2
+craft noun B2
+crash verb COMPUTER B2
+crash noun LOUD NOISE B2
+crawl verb HANDS AND KNEES B2
+crazy adjective ANGRY B2
+creation noun B2
+creatively adverb B2
+creativity noun B2
+credit noun PRAISE B2
+credit noun COURSE B2
+crew noun TEAM B2
+criminal adjective CRIME B2
+crisis noun B2
+critic noun ARTS B2
+critical adjective NOT PLEASED B2
+critical adjective IMPORTANT B2
+critical adjective SERIOUS B2
+critically adverb B2
+criticism noun B2
+criticize verb B2
+crocodile noun B2
+cross your mind B2
+crossroads noun B2
+crucial adjective B2
+cruelly adverb B2
+cruelty noun B2
+cruise verb B2
+culturally adverb B2
+cure verb HEALTHY B2
+cure noun B2
+curiosity noun B2
+curiously adverb STRANGELY B2
+current adjective B2
+currently adverb B2
+cursor noun B2
+curve noun B2
+cut verb REDUCE B2
+cut verb FILM/WRITING B2
+cut across sth DIRECTION B2
+cut down sth or cut sth down REMOVE B2
+cut down sth or cut sth down REDUCE B2
+cut down sth or cut sth down DIET B2
+cut off sb/sth or cut sb/sth off STOP PROVIDING B2
+cut off sb/sth or cut sb/sth off BE TRAPPED B2
+cut noun STOP IN SUPPLY B2
+cycle noun SERIES OF EVENTS B2
+cycle noun BICYCLE B2
+dairy adjective B2
+damp adjective B2
+dare (to) do sth B2
+darkness noun B2
+darling noun B2
+dash verb B2
+dash noun QUICK MOVEMENT B2
+dash noun PUNCTUATION B2
+data noun FACTS B2
+data noun COMPUTER B2
+database noun B2
+to date B2
+date back B2
+date from sth B2
+daughter-in-law noun B2
+dawn noun START OF DAY B2
+in those days B2
+daylight noun B2
+daytime noun B2
+dead adjective EQUIPMENT B2
+deadline noun B2
+deadly adjective B2
+deal noun AGREEMENT B2
+a good/great deal B2
+deal with sb B2
+dealer noun B2
+dear adjective LIKED B2
+bored/frightened/scared, etc. to death B2
+debate noun B2
+debit noun B2
+debit verb B2
+debit card noun B2
+debt noun AMOUNT OWING B2
+debt noun STATE OF OWING B2
+decade noun B2
+decay verb B2
+deceive verb B2
+decent adjective SATISFACTORY B2
+decent adjective HONEST B2
+decisive adjective MAKING DECISIONS B2
+deck noun B2
+declare verb EXPRESS B2
+decline verb GET LESS B2
+decline verb REFUSE B2
+decline noun B2
+decoration noun MAKE ATTRACTIVE B2
+decoration noun PAINT B2
+decorative adjective B2
+deep adjective STRONGLY FELT B2
+deep adjective SOUND B2
+one metre/6 ft, etc. deep B2
+a deep sleep B2
+deep down B2
+deeply adverb B2
+deer noun B2
+defeat verb CAUSE TO FAIL B2
+defeat noun FAILING B2
+defence noun PROTECTION B2
+defend verb SUPPORT B2
+defender noun B2
+define verb GIVE MEANING B2
+definite adjective B2
+definition noun MEANING B2
+degree noun AMOUNT B2
+deliberate adjective B2
+deliberately adverb B2
+delicate adjective SOFT B2
+delicate adjective EASY TO DAMAGE B2
+delight noun B2
+delightful adjective B2
+deliver a speech/talk, etc. B2
+demand verb NEED B2
+demand noun NEED B2
+demanding adjective B2
+democracy noun B2
+democratic adjective B2
+demolish verb DESTROY B2
+demonstrate verb PROVE B2
+demonstrate verb MARCH B2
+demonstration noun MARCH B2
+denim noun B2
+dense adjective B2
+densely adverb B2
+dental adjective B2
+deny verb NOT TRUE B2
+deny verb REFUSE B2
+depend on/upon sb/sth NEED B2
+depend on/upon sb/sth RELY B2
+dependent adjective NEEDING SUPPORT B2
+depressing adjective B2
+depression noun UNHAPPINESS B2
+deprive verb B2
+depth noun SERIOUSNESS B2
+in depth B2
+descend verb B2
+be designed for/to do sth B2
+designer adjective B2
+desirable adjective B2
+desire noun B2
+desktop noun COMPUTER SCREEN B2
+desktop noun COMPUTER B2
+despair noun B2
+desperate adjective WITHOUT HOPE B2
+desperate adjective NEEDING B2
+desperately adverb SERIOUSLY B2
+desperately adverb TRYING EVERYTHING B2
+despite the fact that B2
+destruction noun B2
+go into detail/s B2
+detailed adjective B2
+determination noun B2
+determined adjective B2
+determiner noun B2
+develop verb ILLNESS B2
+developed adjective B2
+developing adjective B2
+development noun EVENT B2
+device noun EQUIPMENT B2
+devil noun EVIL BEING B2
+devote sth to sb/sth USE TIME B2
+devote sth to sb/sth USE SPACE B2
+devoted adjective B2
+dialogue noun IN BOOK, ETC. B2
+diamond noun STONE B2
+diamond noun SHAPE B2
+die out B2
+differ verb B2
+make a (big) difference B2
+make no difference/not make any difference B2
+difficulty noun PROBLEM B2
+dig a hole/tunnel B2
+dilemma noun B2
+dimension noun ASPECT B2
+dimension noun MEASUREMENT B2
+dip verb PUT INTO LIQUID B2
+dip verb BECOME LOWER B2
+diplomat noun B2
+direct adjective NOTHING BETWEEN B2
+in sb's direction B2
+directly adverb CLEARLY B2
+disability noun B2
+disagreement noun B2
+disappear verb STOP EXISTING B2
+disappearance noun B2
+disapprove verb B2
+disaster noun DAMAGE B2
+disaster noun FAILURE B2
+disc noun SHAPE B2
+discipline noun RULES B2
+discourage verb MAKE LESS CONFIDENT B2
+discourage sb from doing sth B2
+discovery noun FINDING B2
+disgrace noun LOSS OF RESPECT B2
+be a disgrace B2
+disguise noun B2
+disguise verb DIFFERENT APPEARANCE B2
+dishonest adjective B2
+dishonesty noun B2
+dislike noun NOT LIKING B2
+disorganized adjective OF SOMETHING B2
+disorganized adjective OF SOMEONE B2
+display noun SHOW B2
+display verb ON SCREEN B2
+disposal noun REMOVAL B2
+disrupt verb B2
+dissatisfaction noun B2
+dissatisfied adjective B2
+distance noun PLACE B2
+distant adjective FAR AWAY B2
+distinction noun DIFFERENCE B2
+distinguish verb RECOGNIZE DIFFERENCES B2
+distinguish verb SHOW DIFFERENCES B2
+distinguish verb SEE/HEAR B2
+distinguished adjective B2
+distract verb B2
+distressing adjective B2
+distribute verb GIVE OUT B2
+disturb verb INTERRUPT B2
+dive noun ENTRY INTO WATER B2
+dive noun SWIMMING UNDER WATER B2
+diverse adjective B2
+divide verb PLACE B2
+divided adjective B2
+division noun PART B2
+division noun ORGANIZATION B2
+division noun SPORT B2
+divorce verb B2
+dizzy adjective B2
+do auxiliary verb FOR EMPHASIS B2
+do sb good B2
+do damage/harm, etc. B2
+be/have to do with sth B2
+do up sth or do sth up B2
+do without (sb/sth) B2
+domestic adjective HOME B2
+domestic adjective COUNTRY B2
+dominate verb HAVE CONTROL B2
+donate verb GIVE MONEY B2
+donation noun B2
+dose noun MEDICINE B2
+a dose of sth B2
+dot noun MARK B2
+double verb B2
+be in doubt B2
+without (a) doubt B2
+doubt verb FEEL UNCERTAIN B2
+doubtful adjective NOT PROBABLE B2
+doubtful adjective NOT CERTAIN B2
+down adjective UNHAPPY B2
+draft noun B2
+drag verb PULL B2
+dramatic adjective B2
+dramatically adverb B2
+draw into/out/away, etc. B2
+draw verb ATTRACT B2
+draw (sb's) attention to sth/sb B2
+draw a conclusion B2
+draw near/close B2
+dreadful adjective B2
+be in a dream B2
+dress noun STYLE B2
+drive sb mad/crazy, etc. B2
+drop verb LOWER B2
+drop verb STOP ACTIVITY B2
+drop noun REDUCTION B2
+drown verb DIE B2
+drug noun MEDICINE B2
+drug noun ILLEGAL SUBSTANCE B2
+drunk adjective B2
+duty noun JOB B2
+on/off duty B2
+dynamic adjective ACTIVE B2
+eager adjective B2
+eagerly adverb B2
+eagerness noun B2
+eagle noun B2
+not believe your ears B2
+earn a/your living B2
+earnings noun B2
+earth noun SUBSTANCE B2
+earthquake noun B2
+ease noun NOT DIFFICULT B2
+at ease B2
+the East B2
+eastern adjective ASIA B2
+eat up (sth) or eat (sth) up B2
+ecological adjective B2
+ecologically adverb B2
+economic adjective B2
+economical adjective B2
+economist noun B2
+economy noun B2
+edge noun BLADE B2
+edit verb B2
+edition noun B2
+editor noun B2
+educate verb TEACH B2
+educate verb GIVE INFORMATION B2
+educated adjective B2
+educational adjective B2
+effective adjective B2
+effectively adverb SUCCESS B2
+efficiency noun B2
+efficiently adverb B2
+egg noun BABY B2
+(be) in your eighties B2
+the eighties B2
+either side/end, etc. B2
+the elder B2
+the eldest B2
+elect verb B2
+electrician noun B2
+electronically adverb B2
+electronics noun B2
+elegant adjective B2
+elegantly adverb B2
+element noun PART B2
+element noun SIMPLE SUBSTANCE B2
+or else B2
+elsewhere adverb B2
+embarrassment noun B2
+emerge verb APPEAR B2
+emotion noun B2
+emotional adjective EMOTIONS B2
+emotional adjective STRONG FEELINGS B2
+emotionally adverb B2
+emphasis noun B2
+emphasize verb B2
+enable verb B2
+enclose verb SEND B2
+encounter verb B2
+encouragement noun B2
+encouraging adjective B2
+end noun STOP B2
+for hours/days, etc. on end B2
+no end B2
+put an end to sth B2
+endangered adjective B2
+endless adjective B2
+endure verb B2
+enemy noun COUNTRY/ARMY B2
+energetic adjective B2
+enjoyment noun B2
+enough determiner, pronoun NEGATIVE COMMENT B2
+strangely enough B2
+fair enough B2
+enquire verb B2
+ensure verb B2
+entertainer noun B2
+entertaining adjective B2
+enthusiasm noun B2
+enthusiastic adjective B2
+enthusiastically adverb B2
+entire adjective B2
+entirely adverb B2
+entitle verb GIVE RIGHT B2
+environment noun SURROUNDINGS B2
+environmentally adverb B2
+environmentally friendly adjective B2
+envy verb B2
+envy noun FEELING OF WANTING B2
+episode noun EVENT B2
+episode noun PART OF STORY B2
+equal adjective AS IMPORTANT B2
+equal noun B2
+equality noun B2
+equally adverb SAME WAY B2
+equip verb B2
+era noun B2
+error noun B2
+escalator noun B2
+escape verb AVOID B2
+escape noun FORGETTING PROBLEMS B2
+especially adverb ONLY B2
+essentially adverb B2
+establish verb START B2
+estate noun LAND B2
+estate noun BUILDINGS B2
+estimate verb B2
+estimate noun B2
+estimated adjective B2
+even if B2
+even though B2
+eventually adverb B2
+ever so B2
+every determiner POSSIBLE B2
+be/mean everything B2
+evidence noun PROOF B2
+evident adjective B2
+evidently adverb B2
+evil adjective B2
+evil noun B2
+evolution noun NATURAL WORLD B2
+evolution noun GRADUAL CHANGE B2
+exactly adverb AGREEMENT B2
+not exactly B2
+examination noun CAREFUL LOOK B2
+examine verb LOOK AT B2
+set an example B2
+example noun VERY GOOD B2
+exception noun NOT INCLUDED B2
+exceptional adjective GOOD B2
+exchange verb SHOP B2
+exchange looks, opinions, views, etc. B2
+exclamation mark noun B2
+exclusive adjective EXPENSIVE B2
+excuse verb EXPLAIN B2
+exhausting adjective B2
+exhaustion noun B2
+existence noun BEING B2
+existing adjective B2
+exotic adjective B2
+expand verb B2
+expansion noun B2
+expect verb BEHAVE B2
+I expect B2
+be expecting (a baby) B2
+expectation noun B2
+expected adjective B2
+expense noun MONEY SPENT B2
+experiment verb TRY B2
+expert adjective B2
+exploit verb USE UNFAIRLY B2
+exploit verb USE WELL B2
+explore verb LOOK INTO B2
+explosion noun BOMB B2
+export verb B2
+export noun B2
+expose verb MAKE PUBLIC B2
+be exposed to sth B2
+express verb B2
+expression noun PHRASE B2
+expression noun LOOK B2
+expression noun SHOWING THOUGHTS B2
+extend verb MAKE BIGGER B2
+extend verb MAKE LAST B2
+extension noun EXTRA TIME B2
+extension noun TELEPHONE B2
+extension noun DEVELOPMENT B2
+extensive adjective B2
+extent noun SIZE B2
+to a great/large, etc. extent B2
+to some extent/to a certain extent B2
+external adjective OUTSIDE B2
+external adjective FROM A DIFFERENT PLACE B2
+extract verb B2
+extract noun B2
+extraordinarily adverb B2
+extreme adjective VERY LARGE B2
+extreme adjective SERIOUS B2
+in sb's eyes B2
+keep your/an eye on sb/sth B2
+can't keep/take your eyes off sb/sth B2
+have an eye for sth B2
+look sb in the eye/eyes B2
+eyebrow noun B2
+eyelash noun B2
+eyelid noun B2
+eyesight noun B2
+face verb PROBLEM B2
+can't face sb/sth/doing sth B2
+face verb ACCEPT B2
+face up to sth B2
+facility noun B2
+fact noun REAL THINGS B2
+the fact (of the matter) is B2
+factor noun B2
+fade verb B2
+fade away B2
+fail to do sth B2
+fail verb NOT SUCCEED B2
+fail verb STOP WORKING B2
+failure noun NO SUCCESS B2
+failure to do sth B2
+failure noun STOP WORKING B2
+faint adjective SLIGHT B2
+faint verb B2
+fairly adverb IN THE RIGHT WAY B2
+faith noun TRUST B2
+faith noun STRONG BELIEF B2
+faith noun RELIGION B2
+faithful adjective LOYAL B2
+Yours faithfully B2
+fall apart BREAK B2
+fall apart HAVE PROBLEMS B2
+fall for sb B2
+fall out B2
+fall through B2
+fall noun MOVEMENT B2
+false adjective NOT REAL B2
+fame noun B2
+be familiar with sth/sb B2
+fancy verb PERSON B2
+fantastically adverb B2
+fantasy noun B2
+far adverb VERY MUCH B2
+far adjective DISTANT B2
+fascinated adjective B2
+fascinating adjective B2
+fasten sth on/to/together, etc. B2
+fat noun B2
+fatal adjective CAUSING DEATH B2
+fatal adjective SERIOUS B2
+fate noun WHAT HAPPENS B2
+fate noun POWER B2
+father-in-law noun B2
+fault noun PROBLEM B2
+fault noun BAD QUALITY B2
+faulty adjective B2
+be in favour of sth B2
+favourable adjective LIKING B2
+fear verb BE WORRIED B2
+fear verb BE FRIGHTENED OF B2
+feather noun B2
+feature noun PART B2
+feature noun FACE B2
+feature verb B2
+fed up adjective B2
+feedback noun B2
+feel verb TOUCH B2
+feel different/strange, etc. B2
+feel verb BE AWARE B2
+feeling noun OPINION B2
+fellow adjective B2
+female noun B2
+fence noun B2
+field noun AREA OF STUDY B2
+fierce adjective VIOLENT B2
+fierce adjective STRONG B2
+fierce adjective FEELING B2
+(be) in your fifties B2
+the fifties B2
+fight verb JOIN WAR B2
+fight verb ARGUE B2
+fight verb TRY TO STOP B2
+fight verb TRY TO ACHIEVE B2
+fight noun EFFORT B2
+fight noun ARGUMENT B2
+fighting noun B2
+figure noun TYPE OF PERSON B2
+figure noun PERSON B2
+figure out sth/sb or figure sth/sb out B2
+fill sb with anger/joy/pride, etc. B2
+finance noun CONTROL OF MONEY B2
+sb's finances B2
+finance verb B2
+financially adverb B2
+find yourself somewhere/doing sth B2
+be found B2
+find sb guilty/not guilty B2
+fine adjective EXCELLENT B2
+fine verb B2
+fine adverb B2
+finely adverb B2
+fingernail noun B2
+finish with sb B2
+fire verb SHOOT B2
+fire verb REMOVE FROM A JOB B2
+fire brigade noun B2
+firm adjective NOT SOFT B2
+firm adjective FIXED B2
+firmly adverb CERTAINLY B2
+firmly adverb STRONGLY B2
+at first sight B2
+in the first place B2
+first language noun B2
+firstly adverb B2
+the first person noun B2
+fisherman noun B2
+fit verb PUT IN POSITION B2
+fit in with sth SUITABLE B2
+fix verb DECIDE B2
+fix sth onto/to/under, etc. B2
+fixed adjective ARRANGED B2
+flame noun B2
+flash verb SHINE B2
+flash noun BRIGHT LIGHT B2
+flash noun CAMERA B2
+flat adjective WITHOUT AIR B2
+flat adverb LEVEL B2
+fall flat on your face B2
+flexibility noun B2
+flexible adjective ABLE TO CHANGE B2
+flood verb ARRIVE OR FILL B2
+fluency noun B2
+fluent adjective ABILITY B2
+fluent adjective LANGUAGE B2
+fluently adverb B2
+fly verb CONTROL AIRCRAFT B2
+focus (sth) on/upon sb/sth B2
+follow up sth or follow sth up B2
+following preposition B2
+the following B2
+fond adjective HAPPY B2
+make a fool (out) of sb B2
+make a fool of yourself B2
+fool verb B2
+foolish adjective B2
+foolishly adverb B2
+for preposition SUPPORT B2
+for the moment B2
+for once B2
+for real B2
+forbid verb B2
+force noun POWER B2
+force noun GROUP B2
+force verb GIVE NO CHOICE B2
+foreign adjective OTHER COUNTRIES B2
+forever adverb A LONG TIME B2
+forget it B2
+forgive me B2
+form noun TYPE B2
+form verb BEGIN TO EXIST B2
+form verb START B2
+formal adjective SERIOUS AND CORRECT B2
+the former B2
+formerly adverb B2
+forthcoming adjective HAPPENING SOON B2
+fortunate adjective B2
+fortune noun MONEY B2
+fortune noun LUCK B2
+(be) in your forties B2
+the forties B2
+forward adverb FUTURE B2
+found verb START B2
+fox noun B2
+frame noun STRUCTURE B2
+frankly adverb B2
+free adjective NOT LIMITED B2
+free adjective NOT A PRISONER B2
+set sb/sth free B2
+free adjective NOT USED B2
+free adverb NO LIMIT/CONTROL B2
+free verb B2
+freedom noun BEING ALLOWED B2
+freely adverb B2
+freeze verb PERSON B2
+freeze verb NOT MOVE B2
+fresh adjective RECENT B2
+friendliness noun B2
+frighten verb B2
+from preposition CAUSE B2
+from preposition CHANGE B2
+from preposition POSITION B2
+from preposition PREVENTING B2
+from side to side B2
+from time to time B2
+a week/six months/ten years, etc. from now B2
+frost noun B2
+frustration noun B2
+full adjective FOOD B2
+make fun of sb/sth B2
+function noun PURPOSE B2
+functional adjective B2
+funeral noun B2
+furious adjective B2
+furiously adverb B2
+further adverb MORE B2
+furthermore adverb B2
+in the near future B2
+gambling noun B2
+gang noun YOUNG PEOPLE B2
+gang noun CRIMINALS B2
+gap noun DIFFERENCE B2
+gap noun ABSENT THING B2
+gap noun TIME B2
+gardener noun B2
+gardening noun B2
+gas noun SUBSTANCE B2
+gather verb COME TOGETHER B2
+gather verb COLLECT B2
+gaze at/into/out of, etc. B2
+gear noun VEHICLE PART B2
+first/second/third, etc. gear B2
+gear noun EQUIPMENT B2
+gender noun SEX B2
+gender noun GRAMMAR B2
+general adjective MOST PEOPLE B2
+general adjective NOT LIMITED B2
+in general B2
+generally adverb AS A WHOLE B2
+generally adverb BY MOST PEOPLE B2
+generate verb CREATE B2
+generate verb MAKE ENERGY B2
+generation noun TIME B2
+generation noun PRODUCT B2
+generation noun ENERGY B2
+generosity noun B2
+generously adverb B2
+genetics noun B2
+gentleman noun B2
+gently adverb B2
+genuine adjective REAL B2
+genuinely adverb B2
+get rid of sth B2
+get sb/sth to do sth B2
+get the feeling/idea/impression, etc. B2
+get on sb's nerves B2
+get to do sth B2
+get verb UNDERSTAND/HEAR B2
+get across sth or get sth across B2
+get at sth B2
+get away ESCAPE B2
+get away GO SOMEWHERE B2
+get away with sth B2
+get sb down B2
+get down to sth B2
+get in BE CHOSEN B2
+get into sth BE CHOSEN B2
+get on with sth B2
+get out of sth/doing sth B2
+get over sth/sb GET BETTER B2
+get over sth/sb B2
+get round to sth B2
+get through sth SUCCEED B2
+get to B2
+get up B2
+give a performance/speech, etc. B2
+give away sth or give sth away SECRET B2
+give in ADMIT DEFEAT B2
+give up (sth/doing sth) or give (sth) up B2
+glad adjective WILLING B2
+glance at/over/through, etc. B2
+glance noun QUICK LOOK B2
+global adjective B2
+globally adverb B2
+global warming noun B2
+go verb SONG B2
+go verb TIME B2
+go red B2
+it goes without saying B2
+go ahead START B2
+go ahead ALLOW B2
+go by TIME B2
+go down with sth B2
+go for sth TRY TO GET B2
+go off MAKE NOISE B2
+go off FOOD B2
+go off sth/sb B2
+go on CONTINUE DOING B2
+go on TALK AGAIN B2
+go over sth B2
+go through sth EXPERIENCE B2
+go through sth EXAMINE B2
+go noun ATTEMPT B2
+god noun SPIRIT B2
+golden adjective SPECIAL B2
+it's a good thing B2
+Good for you! B2
+good noun HELP B2
+be no good or be not any/much good B2
+Google verb B2
+gossip noun B2
+gossip verb B2
+govern verb B2
+government noun PROCESS B2
+grab verb TAKE QUICKLY B2
+gradual adjective B2
+gradually adverb B2
+graduate noun B2
+graduate verb B2
+grant verb GIVE B2
+take sb/sth for granted B2
+take it for granted B2
+graph noun B2
+grave noun B2
+great adjective IMPORTANT B2
+great big/long, etc. B2
+a great deal B2
+greatly adverb B2
+greatness noun B2
+greedy adjective B2
+green adjective ENVIRONMENT B2
+grey adjective WEATHER B2
+grief noun SADNESS B2
+grip verb HOLD B2
+grip noun HOLD B2
+ground noun SOIL B2
+grow tired/old/calm, etc. B2
+growing adjective B2
+grown-up noun B2
+grown-up adjective B2
+growth noun B2
+guarantee verb B2
+guarantee noun B2
+guard verb PROTECT B2
+guard verb WATCH B2
+I guess so/not B2
+guest noun TV B2
+guidance noun B2
+guilt noun FEELING B2
+guilt noun ILLEGAL B2
+guilty adjective RESPONSIBLE B2
+gum noun MOUTH B2
+guts noun BRAVERY B2
+gymnastic adjective B2
+habit noun BAD ACTIVITY B2
+hair noun SINGLE PIECE B2
+half noun, pronoun, determiner A LOT B2
+not half as good/bad/exciting, etc. B2
+hammer noun B2
+on the one hand ... on the other hand B2
+hand in hand B2
+hand over sb/sth or hand sb/sth over B2
+a handful of B2
+handle noun B2
+handout noun B2
+hang verb KILL B2
+happily adverb WILLING B2
+be hard on sb B2
+hard adjective NOT KIND B2
+hard drive noun B2
+hardly adverb CERTAINLY NOT B2
+hard-working adjective B2
+harm noun HURT B2
+harm verb B2
+harmful adjective B2
+harmless adjective NO HARM B2
+harmony noun PEACE B2
+harvest noun B2
+haunt verb GHOST B2
+haunt verb MEMORY/FEELING B2
+have sb over/round/to stay, etc. B2
+have a word with sb B2
+have nothing to do with sb/sth B2
+have nothing to do with sb B2
+head back/down/towards, etc. B2
+head verb LEADER B2
+be heading for sth B2
+the headlines B2
+headquarters noun B2
+heal verb B2
+have heard of sb/sth B2
+heart noun SHAPE B2
+with all your heart B2
+heat up sth or heat sth up B2
+heaven noun AFTER LIFE B2
+heaven noun SOMETHING NICE B2
+hedge noun B2
+heel noun BODY PART B2
+hell noun RELIGION B2
+hell noun BAD EXPERIENCE B2
+the hell B2
+helmet noun B2
+help verb MAKE BETTER B2
+help out (sb) or help (sb) out B2
+help noun THING THAT HELPS B2
+helper noun B2
+here adverb AT THIS POINT B2
+here and there B2
+herself pronoun EMPHASIS B2
+hesitate verb PAUSE B2
+don't hesitate to do sth B2
+hidden adjective NOT KNOW ABOUT B2
+high adjective IMPORTANT B2
+highlight verb B2
+highlight verb NOTICE B2
+highlight noun B2
+highly adverb HIGH LEVEL B2
+high-tech adjective B2
+himself pronoun EMPHASIS B2
+hint noun SUGGESTION B2
+hint noun ADVICE B2
+hip noun B2
+hire verb EMPLOY B2
+hit verb AFFECT B2
+hit it off B2
+hit noun INTERNET B2
+hi-tech adjective B2
+hold verb PRISONER B2
+hold verb COMPETITION B2
+hold noun SUPPORT B2
+catch/get/grab/take hold of sth/sb B2
+get hold of sth/sb B2
+honestly adverb HONEST B2
+honesty noun QUALITY B2
+honour noun RESPECT B2
+in honour of sb/sth B2
+honour noun PRIDE B2
+hood noun B2
+hook noun B2
+be/get hooked on sth B2
+hopefully adverb HOPEFUL WAY B2
+hopeless adjective BAD AT SOMETHING B2
+horn noun SOUND B2
+horror noun FEELING B2
+host noun PERSON B2
+hourly adjective EVERY HOUR B2
+hourly adjective PER HOUR B2
+household noun B2
+however cold/difficult/slowly, etc. B2
+human rights noun B2
+humour noun B2
+hundreds B2
+hunger noun NOT ENOUGH FOOD B2
+hunt verb SEARCH B2
+hunting noun B2
+hurry up sb/sth or hurry sb/sth up B2
+hyphen noun B2
+icon noun COMPUTER B2
+icon noun FAMOUS PERSON/THING B2
+icy adjective WITHOUT FEELING B2
+idea noun THOUGHT B2
+ideal adjective B2
+ideally adverb PERFECTLY B2
+ideally adverb PERFECT SITUATION B2
+identical adjective B2
+identification noun RECOGNIZING B2
+identify verb RECOGNIZE B2
+identify verb DISCOVER B2
+identify with sb/sth B2
+identity noun WHO SOMEONE IS B2
+identity noun CHARACTERISTICS B2
+idiom noun B2
+idiot noun B2
+if conjunction WOULD/MIGHT/COULD HAVE B2
+if so B2
+as if B2
+ignore verb B2
+illegal adjective B2
+illegally adverb B2
+illness noun BEING ILL B2
+illustrate verb PICTURE B2
+image noun PUBLIC B2
+image noun PICTURE B2
+imagine verb SUPPOSE B2
+immediate adjective WITHOUT WAITING B2
+immediate adjective IMPORTANT NOW B2
+immigrant noun B2
+immigration noun COMING INTO A COUNTRY B2
+immoral adjective B2
+impact noun EFFECT B2
+impatient adjective EASILY ANNOYED B2
+impatient adjective WANTING SOMETHING TO HAPPEN B2
+impatiently adverb B2
+imperative noun B2
+implement verb B2
+impolite adjective B2
+import verb B2
+importantly adverb B2
+impress verb B2
+impressed adjective B2
+impression noun OPINION B2
+impression noun EFFECT B2
+be under the impression B2
+impressive adjective B2
+improved adjective B2
+in two/half B2
+in preposition RESULT B2
+in other words B2
+in writing B2
+in season B2
+in secret B2
+in good/high/low, etc. spirits B2
+in view of sth B2
+in person B2
+in place of sth B2
+in practice B2
+in private B2
+in progress B2
+in relation to sth B2
+in this respect/in many respects B2
+in response to B2
+in a row B2
+in stock B2
+in turn B2
+in adverb TRANSPORT B2
+in adverb SENT B2
+inaccurate adjective B2
+incident noun B2
+income noun B2
+inconvenient adjective B2
+increase noun RISE B2
+increasingly adverb B2
+incredible adjective NOT BELIEVE B2
+incredibly adverb EXTREMELY B2
+independence noun WITHOUT HELP B2
+independence noun FREE STATE B2
+independent adjective NOT INFLUENCED B2
+independent adjective NOT RULED B2
+independently adverb B2
+indicate verb SAY B2
+individual noun PERSON B2
+industrial adjective B2
+industry noun PRODUCTION B2
+inexperienced adjective B2
+infection noun B2
+inflation noun B2
+influence noun POWER B2
+be a bad/good influence (on sb) B2
+influence verb B2
+informal adjective B2
+ingredient noun SUCCESS B2
+inhabitant noun B2
+initial adjective B2
+initially adverb B2
+injured adjective B2
+injury noun B2
+inner adjective LOCATION B2
+inner adjective FEELINGS B2
+innocent adjective NOT GUILTY B2
+innocent adjective NO EXPERIENCE B2
+innocent adjective NOT DESERVED B2
+innocently adverb B2
+input noun IDEAS B2
+input noun COMPUTER B2
+inquire verb B2
+inside adverb FEELING B2
+inside adjective UNDER SURFACE B2
+inside noun INNER PART B2
+inside out B2
+insist verb SAY FIRMLY B2
+inspector noun PERSON WHO INSPECTS B2
+inspector noun POLICE B2
+inspiration noun IDEAS B2
+inspire verb ENCOURAGE B2
+inspire verb FEELING B2
+inspire verb PROVIDE IDEA B2
+instant adjective B2
+instantly adverb B2
+institute noun B2
+institution noun ORGANIZATION B2
+institution noun PLACE B2
+insult noun RUDE REMARK B2
+insult verb B2
+insurance noun B2
+intellectual adjective THOUGHT B2
+intelligence noun B2
+intensive adjective B2
+intention noun B2
+interact verb B2
+interactive adjective COMPUTER GAMES B2
+interfere verb TRY TO CONTROL B2
+interior noun B2
+internal adjective B2
+interpret verb LANGUAGE B2
+interrupt verb STOP HAPPENING B2
+interruption noun B2
+intransitive adjective B2
+introduce verb SOMETHING NEW B2
+introduction noun FIRST MEETING B2
+introduction noun TEXT B2
+introduction noun SOMETHING NEW B2
+introduction noun BASIC KNOWLEDGE B2
+invade verb WAR B2
+invasion noun WAR B2
+invent verb NOT TRUE B2
+inventor noun B2
+inverted commas noun B2
+invest verb MONEY B2
+invest verb TIME/ENERGY, ETC. B2
+investigate verb B2
+investigation noun B2
+investigator noun B2
+investment noun MONEY B2
+investment noun TIME/EFFORT, ETC. B2
+investor noun B2
+invisible adjective B2
+involve verb TAKE PART B2
+be/get involved (in/with sth) B2
+involvement noun B2
+irregular adjective TIME B2
+irregular adjective SHAPE B2
+irresponsible adjective B2
+irritated adjective B2
+irritating adjective B2
+issue noun MAGAZINE B2
+it pronoun SEEM B2
+it's sb/sth B2
+itch verb SKIN B2
+item noun NEWS B2
+in itself B2
+jam noun TRAFFIC B2
+jaw noun B2
+jealous adjective WANTING SOMETHING B2
+jealously adverb B2
+jewel noun B2
+job noun RESPONSIBILITY B2
+do a good/excellent, etc. job B2
+joint adjective B2
+journalism noun B2
+joy noun HAPPINESS B2
+joy noun CAUSE OF HAPPINESS B2
+judge noun COURT B2
+judging by/from B2
+judgment noun OPINION B2
+jump verb FEAR B2
+junior adjective LOW RANK B2
+junior adjective YOUNG PEOPLE B2
+junk food noun B2
+jury noun COURT B2
+just as B2
+justice noun FAIRNESS B2
+justice noun LAW B2
+justify verb GIVE/BE REASON B2
+justify yourself B2
+keep sb waiting B2
+keep a/your promise B2
+keep notes/records, etc. B2
+keep verb FOOD B2
+keep verb ANIMALS B2
+keep sb/sth in mind B2
+keep (sb/sth) away B2
+keep (sb/sth) back B2
+keep down sth or keep sth down B2
+keep sth off (sb/sth) B2
+keep to sth B2
+keep up (with sb/sth) SAME SPEED B2
+keep up (with sb/sth) UNDERSTAND B2
+key noun KEYBOARD B2
+key adjective IMPORTANT B2
+key in sth or key sth in B2
+kill time B2
+kind of B2
+kindness noun B2
+kingdom noun COUNTRY B2
+kneel verb B2
+knock sth down B2
+knock sb out HIT SOMEONE B2
+knock sb out DEFEAT IN COMPETITION B2
+knock sth/sb over B2
+know better (than to do sth) B2
+I know B2
+you never know B2
+know of sth/sb B2
+to (the best of) my knowledge B2
+a working knowledge of sth B2
+known adjective FAMILIAR B2
+lack verb NOT HAVE B2
+land noun NOT SEA B2
+landing noun B2
+landlady noun B2
+landlord noun B2
+lane noun ROAD B2
+lane noun PART B2
+lap noun BODY B2
+lap noun SPORTS B2
+largely adverb B2
+laser noun B2
+the last person/thing, etc. B2
+last adverb AFTER ALL OTHERS B2
+last but not least B2
+the last B2
+the day/week/year, etc. before last B2
+lastly adverb B2
+the last minute noun B2
+last-minute adjective B2
+late adverb NEAR THE END B2
+later adjective IN THE FUTURE B2
+latter adjective B2
+the latter B2
+laughter noun B2
+launch verb BEGIN B2
+launch verb NEW PRODUCT B2
+laundry noun B2
+law noun RULE B2
+the law B2
+lay eggs B2
+layer noun B2
+laziness noun B2
+lazy adjective RELAXED B2
+lead into/to/towards, etc. B2
+lead verb BE WINNING B2
+lead verb CONTROL B2
+lead a busy/normal/quiet, etc. life B2
+lead to sth B2
+lead noun WINNING B2
+leading adjective B2
+leaflet noun B2
+leak verb LIQUID B2
+leak noun HOLE B2
+lean (sth) back/forward/out, etc. B2
+lean (sth) against/on sth B2
+learn verb CHANGE BEHAVIOUR B2
+learner noun B2
+learning noun B2
+at least B2
+last but not least B2
+least pronoun LESS B2
+least determiner B2
+leave verb STAY IN SAME CONDITION B2
+leave sb alone B2
+leave out sb/sth or leave sb/sth out B2
+lecturer noun B2
+leek noun B2
+legal adjective TO DO WITH LAW B2
+legal adjective ALLOWED B2
+legally adverb B2
+legend noun STORY B2
+lend verb BANK B2
+length noun TIME B2
+leopard noun B2
+more or less B2
+lesson noun EXPERIENCE B2
+learn your lesson B2
+let sb/sth in/past/through, etc. B2
+let me/us B2
+let sb down or let down sb B2
+let sb off or let off sb B2
+let out sb/sth or let sb/sth out B2
+level noun AMOUNT B2
+level noun HEIGHT B2
+level adjective B2
+liar noun B2
+liberty noun FREEDOM B2
+lick verb B2
+lid noun B2
+life noun PERSON'S EXISTENCE B2
+life noun ENERGY B2
+lifestyle noun B2
+lifetime noun B2
+light verb MAKE BRIGHT B2
+lighting noun B2
+like preposition TYPICAL OF B2
+like mad B2
+limit verb B2
+limited adjective WITHIN RANGE B2
+line noun TELEPHONE B2
+line (sb/sth) up or line up (sb/sth) B2
+link noun CONNECTION B2
+link verb B2
+list verb B2
+literally adverb B2
+literary adjective B2
+litter noun B2
+little adjective SHORT B2
+little adjective EMPHASIZE B2
+little by litte B2
+a little B2
+live for sth/sb B2
+live on sth MONEY B2
+live on sth FOOD B2
+live together B2
+live up to sth B2
+live with sb B2
+liver noun B2
+living adjective B2
+living noun B2
+load noun AMOUNT CARRIED B2
+load verb VEHICLE B2
+load verb MACHINE B2
+loaf noun B2
+lobby noun B2
+locate verb FIND B2
+lock sth/sb away/in, etc. B2
+lock in sb or lock sb in B2
+lock out sb or lock sb out B2
+log in/on B2
+log off/out B2
+logical adjective B2
+lonely adjective PLACE B2
+before (very/too) long B2
+long-distance adjective B2
+long-term adjective B2
+in the long term B2
+look as if/as though B2
+look verb DIRECTION B2
+look at sth THINK B2
+look at sth READ B2
+look at sth EXAMINE B2
+look back B2
+look down on sb B2
+look forward to sth/doing sth LETTER B2
+look into sth B2
+look out for sb/sth B2
+look through sth B2
+look up to sb B2
+look noun APPEARANCE B2
+the look of sb/sth B2
+loose adjective NOT FIXED B2
+lose your life B2
+lose interest/patience, etc. B2
+lose your temper B2
+lose verb TIME/OPPORTUNITY B2
+lose touch B2
+lose track B2
+lose your voice B2
+loss noun NOT HAVING B2
+loss noun DEATH B2
+love noun INTEREST B2
+low adjective BAD QUALITY B2
+low adjective SOUND B2
+lower verb MOVE B2
+lower verb REDUCE B2
+loyal adjective B2
+loyalty noun B2
+luck noun SUCCESS B2
+lung noun B2
+luxury noun THING THAT GIVES PLEASURE B2
+lyrics noun B2
+like mad B2
+Dear Madam B2
+magic noun SPECIAL QUALITY B2
+magical adjective WONDERFUL B2
+magical adjective MAGIC B2
+the main thing B2
+maintain verb CONTINUE TO HAVE B2
+maintain verb KEEP IN GOOD CONDITION B2
+maintenance noun B2
+major adjective B2
+majority noun B2
+make verb EARN B2
+make the/sb's bed B2
+make the most of sth B2
+make the best of sth B2
+make a (big) difference B2
+to make matters worse B2
+make a fool (out) of sb B2
+make a fool of yourself B2
+make fun of sb/sth B2
+make sense B2
+make for sth B2
+make sth into sth B2
+make out sth/sb or make sth/sb out B2
+make up sth or make sth up B2
+make up for sth B2
+maker noun B2
+male noun B2
+man noun PEOPLE B2
+management noun B2
+mankind noun B2
+manner noun WAY B2
+manners B2
+manner noun BEHAVIOUR B2
+manual adjective PHYSICAL WORK B2
+manual adjective WITH HANDS B2
+manual noun B2
+manufacture verb B2
+manufacturer noun B2
+manufacturing noun B2
+marathon noun B2
+mark noun DIFFERENT AREA B2
+mark verb PIECE OF WORK B2
+mark verb SHOW PLACE B2
+marketing noun B2
+martial art noun B2
+mask noun B2
+a mass of sth B2
+masses B2
+massive adjective B2
+master noun IN CHARGE B2
+match noun STICK B2
+material noun PHYSICAL SUBSTANCE B2
+mathematical adjective B2
+matter noun SITUATION B2
+to make matters worse B2
+as a matter of fact B2
+no matter how/what/when, etc. B2
+mature adjective B2
+may have B2
+may as well B2
+mayor noun B2
+mean adjective NOT GENEROUS B2
+mean adjective NOT KIND B2
+meaning noun PURPOSE B2
+meaningful adjective USEFUL B2
+meaningful adjective WITH MEANING B2
+means noun METHOD B2
+in the meantime B2
+measure verb FIND SIZE B2
+measure noun METHOD B2
+measurement noun SIZE B2
+mechanical adjective MACHINES B2
+medal noun B2
+the media B2
+medical adjective B2
+medieval adjective B2
+melt verb B2
+memorable adjective B2
+mental adjective B2
+mentally adverb B2
+not to mention B2
+mention noun B2
+mere adjective SMALL B2
+merely adverb ONLY B2
+mess noun PROBLEMS B2
+mess up sth or mess sth up B2
+message noun IDEA B2
+microphone noun B2
+in the middle of nowhere B2
+middle adjective CENTRAL B2
+might have B2
+might as well B2
+mild adjective FOOD B2
+military adjective B2
+millions B2
+bear/keep sb/sth in mind B2
+to my mind B2
+cross your mind B2
+have/keep an open mind B2
+mine noun UNDERGROUND B2
+minister noun B2
+minor adjective B2
+minority noun LESS THAN HALF B2
+mint noun B2
+(at) any minute; any minute now B2
+the last minute B2
+miracle noun B2
+miserable adjective UNPLEASANT B2
+misery noun B2
+misleading adjective B2
+miss verb FAIL TO DO B2
+miss verb NOT HIT B2
+miss out B2
+mission noun PURPOSE B2
+mist noun B2
+misty adjective B2
+misunderstand verb NOT UNDERSTAND B2
+misunderstanding noun B2
+mix verb MEET B2
+mix up sb/sth or mix sb/sth up B2
+mixture noun SUBSTANCE B2
+mixture noun STYLES/IDEAS B2
+modest adjective NOT LARGE B2
+for the moment B2
+monitor noun B2
+monument noun STRUCTURE B2
+be in a mood B2
+be over the moon B2
+moonlight noun B2
+moral adjective BELIEFS B2
+morally adverb B2
+more and more B2
+more or less B2
+moreover adverb B2
+most pronoun MORE B2
+make the most of sth B2
+mother tongue B2
+mother-in-law noun B2
+motivated adjective B2
+motivation noun B2
+motive noun B2
+motor noun B2
+motorist noun B2
+move verb TIME B2
+move verb FEELING B2
+movement noun CHANGE OF POSITION B2
+moving adjective B2
+mud noun B2
+muddy adjective B2
+mumble verb B2
+muscle noun IN BODY B2
+musical noun B2
+must modal verb LIKELY B2
+mutter verb B2
+myself pronoun EMPHASIS B2
+mysterious adjective B2
+myth noun STORY B2
+nail noun METAL B2
+nail noun BODY PART B2
+naked adjective NO CLOTHES B2
+name noun REPUTATION B2
+name verb CHOOSE B2
+narrowly adverb B2
+nasty adjective ANGRY B2
+nation noun B2
+nationwide adjective B2
+nationwide adverb B2
+native adjective PLACE BORN B2
+your native language/tongue B2
+native adjective FIRST PEOPLE B2
+native speaker noun B2
+natural adjective EXPECTED B2
+naturally adverb AS EXPECTED B2
+naturally adverb NORMALLY B2
+nature noun CHARACTER B2
+naughty adjective B2
+navy noun B2
+near preposition TIME B2
+near adverb TIME B2
+in the near future B2
+necessarily adverb B2
+need noun NECESSARY THING B2
+no need B2
+be in need of sth B2
+needs B2
+needle noun SEWING B2
+negative adjective BAD B2
+negative adjective NO B2
+negatively adverb B2
+neighbour noun BEING NEAR B2
+neighbouring adjective B2
+neither adverb B2
+neither pronoun, determiner B2
+neither ... nor B2
+nerves noun NERVOUS B2
+steady/strong nerves B2
+get on sb's nerves B2
+nervously adverb B2
+network noun CONNECTED PARTS B2
+network noun COMPUTERS B2
+never adverb NOT B2
+nevertheless adverb B2
+newly adverb B2
+next pronoun THING FOLLOWING B2
+the weekend/week/Thursday, etc. after next B2
+nicely adverb WELL B2
+nicely adverb PLEASANTLY B2
+(be) in your nineties B2
+the nineties B2
+no wonder B2
+no need B2
+be no good or be not any/much good B2
+no such thing B2
+no matter how/what/when, etc. B2
+nod verb B2
+be none of sb's business B2
+nonsense noun SILLY B2
+non-smoking adjective B2
+neither ... nor B2
+nor adverb B2
+normally adverb ORDINARY B2
+not at all B2
+not only B2
+not half as good/bad/exciting, etc. B2
+not to mention B2
+not quite B2
+note noun EXPLANATION B2
+note down sth or note sth down B2
+nothing but B2
+have nothing to do with sb/sth B2
+be/have nothing to do with sb B2
+for nothing B2
+novelist noun B2
+now adverb LENGTH OF TIME B2
+now and then B2
+any day/minute/time, etc. now B2
+now conjunction B2
+in the middle of nowhere B2
+from/out of nowhere B2
+nuclear adjective POWER B2
+nuclear adjective WEAPONS B2
+nuisance noun B2
+a number of sth B2
+nursery noun B2
+nut noun B2
+oak noun B2
+obey verb B2
+object verb B2
+objection noun B2
+objective noun B2
+objective adjective B2
+obligation noun B2
+be obliged to do sth B2
+observation noun WATCHING B2
+observe verb WATCH B2
+be obsessed by/with sb/sth B2
+obsession noun B2
+obtain verb B2
+occasion noun PARTICULAR TIME B2
+occasionally adverb B2
+occupy verb FILL B2
+occupy verb KEEP BUSY B2
+occur verb B2
+odd adjective STRANGE B2
+of preposition JUDGMENT B2
+off preposition NEAR B2
+off duty B2
+off adjective FOOD B2
+offence noun CRIME B2
+offence noun UPSET FEELINGS B2
+offend verb B2
+offender noun B2
+offensive adjective B2
+on offer B2
+officer noun MILITARY B2
+official adjective APPROVED B2
+often adverb NORMAL/TRUE B2
+on preposition TOUCH/HIT B2
+on preposition FOOD/FUEL B2
+on account of sth B2
+on behalf of sb or on sb's behalf B2
+on balance B2
+on condition that B2
+on duty B2
+on top of sth B2
+on the one hand ... on the other hand B2
+on offer B2
+on adverb HAPPENING B2
+on adverb MOVING FORWARD B2
+on adverb WORKING B2
+for once B2
+(every) once in a while B2
+once conjunction B2
+one by one B2
+one at a time B2
+one after another B2
+one determiner FUTURE TIME B2
+one determiner PARTICULAR TIME B2
+one determiner SINGLE B2
+one determiner ONLY B2
+one way or another B2
+one way or the other B2
+I only hope (that) ... /I only wish ... (that) B2
+not only B2
+onto preposition CHANGING SUBJECT B2
+have/keep an open mind B2
+open adjective NOT COVERED B2
+open verb START OFFICIALLY B2
+open up (sth) or open (sth) up B2
+opening noun CEREMONY B2
+opening noun BEGINNING B2
+operate verb MACHINE B2
+operate verb ORGANIZATION B2
+operator noun PERSON CONTROLLING MACHINE B2
+operator noun COMPANY B2
+opinion noun OF GROUP B2
+opponent noun SPORT B2
+opponent noun PERSON WHO DISAGREES B2
+opportunity noun CHANCE OF JOB B2
+take the/this opportunity to do sth B2
+oppose verb B2
+opposite adjective DIFFERENT B2
+optimistic adjective B2
+optional adjective B2
+or conjunction CHANGE B2
+or else B2
+oral adjective B2
+orchestral adjective B2
+order noun INSTRUCTION B2
+order noun TIDY B2
+order verb INSTRUCT B2
+organic adjective B2
+organize verb ARRANGING B2
+organized adjective PLANNED B2
+organized adjective GOOD AT PLANNING B2
+organizer noun B2
+origin noun CAUSE B2
+original adjective PAINTING, ETC. B2
+original noun B2
+originally adverb B2
+in other words B2
+the other way round/around B2
+others B2
+otherwise adverb NOT INCLUDING B2
+ought to modal verb TRUE B2
+out adverb LIGHT/FIRE B2
+outer adjective B2
+outline noun DESCRIPTION B2
+outline verb B2
+out of preposition NO LONGER IN CONDITION B2
+out of preposition BECAUSE OF B2
+be out of sth B2
+be out of breath B2
+out of control B2
+out of nowhere B2
+be out of practice B2
+out of stock B2
+outrageous adjective B2
+outside adjective NOT IN BUILDING B2
+the outside B2
+outskirts noun B2
+outstanding adjective B2
+oval adjective B2
+over preposition USING B2
+over adverb DIFFERENT SURFACE B2
+over and over (again) B2
+all over again B2
+overall adverb, adjective B2
+overcome verb DEAL WITH B2
+overlook verb SEE FROM ABOVE B2
+overseas adjective, adverb B2
+overtake verb VEHICLE B2
+overtime noun B2
+overweight adjective B2
+owe sb an apology/explanation/favour, etc. B2
+owing to preposition B2
+owl noun B2
+oxygen noun B2
+pace noun SPEED B2
+pack up (sth) or pack (sth) up B2
+pack noun SET OF PRODUCTS B2
+package noun PARCEL B2
+package noun GROUP OF THINGS B2
+packed adjective B2
+pain noun EMOTIONAL B2
+be a pain B2
+painful adjective EMOTIONAL B2
+pale adjective FACE B2
+pancake noun B2
+panic noun B2
+panic verb B2
+paperwork noun B2
+parachute noun B2
+parade noun B2
+parliament noun B2
+have/play a part in sth B2
+part noun MACHINE B2
+partial adjective B2
+participate verb B2
+particular adjective SPECIAL B2
+partner noun BUSINESS B2
+partnership noun B2
+pass (the) time B2
+pass a law B2
+pass around/round sth or pass sth around/round B2
+pass away B2
+pass out B2
+pass noun TEST RESULT B2
+passage noun CONNECTING WAY B2
+passage noun PART B2
+passion noun LOVE B2
+passionate adjective B2
+passionately adverb B2
+passive adjective NO ACTION B2
+past preposition, adverb AFTER LIMIT B2
+path noun ACTIONS B2
+patience noun B2
+patiently adverb B2
+pattern noun WAY B2
+pattern noun GUIDE B2
+pause noun B2
+pause verb EQUIPMENT B2
+paw noun B2
+pay sb/sth a visit or pay a visit to sb/sth B2
+pay off sth or pay sth off B2
+pay off B2
+payment noun AMOUNT PAID B2
+payment noun ACT B2
+peace noun NO VIOLENCE B2
+peaceful adjective NO VIOLENCE B2
+peacefully adverb B2
+peak noun HIGHEST POINT B2
+peculiar adjective STRANGE B2
+pedal noun B2
+peel verb FOOD B2
+penalty noun PUNISHMENT B2
+penalty noun SPORT B2
+pension noun B2
+percentage noun B2
+the perfect (tense) B2
+perfectly adverb EMPHASIS B2
+perform verb DO B2
+performance noun HOW SUCCESSFUL B2
+permanently adverb B2
+in person B2
+personality noun CHARACTER B2
+personality noun FAMOUS PERSON B2
+personally adverb NOT SOMEONE ELSE B2
+persuade verb MAKE SOMEONE BELIEVE B2
+pessimistic adjective B2
+petrified adjective B2
+pharmacist noun B2
+phase noun B2
+philosopher noun B2
+philosophy noun STUDY B2
+photograph verb B2
+physical adjective BODY B2
+physically adverb B2
+pick on sb B2
+pick up sth or pick sth up B2
+picture noun IDEA B2
+picture noun TV B2
+picturesque adjective B2
+piece noun ART/LITERATURE/MUSIC B2
+be a piece of cake B2
+a pile of/ piles of sth B2
+pile up B2
+pine noun B2
+pint noun B2
+pitch noun SPORTS AREA B2
+pitch a tent B2
+pity noun SYMPATHY B2
+in place of sth B2
+take sb's place B2
+in the first place B2
+all over the place B2
+place sth in/on, etc. B2
+plan noun DRAWING B2
+planning noun DECIDING B2
+plant a bomb B2
+platform noun RAISED SURFACE B2
+play a joke/trick on sb B2
+play a part in sth B2
+play noun CHILDREN B2
+plot noun STORY B2
+plug sth in B2
+plumber noun B2
+plus noun B2
+point noun SHARP END B2
+point noun IMPORTANT OPINION B2
+the point B2
+point noun REASON B2
+point noun TIME B2
+point noun MATHEMATICS B2
+be at/on the point of doing sth B2
+up to a point B2
+point out sth or point sth out B2
+point of view noun OPINION B2
+point of view noun WAY OF THINKING B2
+poison noun B2
+poison verb KILL B2
+poison verb MAKE DANGEROUS B2
+poisonous adjective SUBSTANCE B2
+poisonous adjective ANIMAL B2
+polar bear noun B2
+policy noun PLAN B2
+politeness noun B2
+pollute verb B2
+pond noun B2
+pool noun LIQUID B2
+poor adjective BAD B2
+poor adjective NO SKILL B2
+be poor in sth B2
+pop in/out/over, etc. B2
+popular adjective GENERAL B2
+popularity noun B2
+population noun PEOPLE B2
+portion noun FOOD B2
+portrait noun B2
+posh adjective EXPENSIVE B2
+position noun RANK B2
+position noun JOB B2
+positive adjective GOOD B2
+positive adjective YES B2
+positive adjective CERTAIN B2
+positively adverb B2
+possession noun B2
+possibility noun OPTION B2
+whenever possible B2
+wherever possible B2
+possibly adverb EMPHASIS B2
+post noun JOB B2
+potential adjective B2
+potential noun B2
+potentially adverb B2
+pottery noun OBJECTS B2
+pottery noun ACTIVITY B2
+pound noun WEIGHT B2
+pound verb B2
+pour into/out/from, etc. B2
+pour sth out or pour out sth B2
+poverty noun B2
+power noun CONTROL B2
+powerful adjective EFFECT B2
+powerfully adverb B2
+practical adjective REAL B2
+practically adverb B2
+be out of practice B2
+in practice B2
+praise verb B2
+prawn noun B2
+pray verb HOPE B2
+precious adjective VALUABLE B2
+precious adjective IMPORTANT B2
+precise adjective EXACT B2
+to be precise B2
+precisely adverb EXACT B2
+precisely adverb FOR EMPHASIS B2
+predictable adjective B2
+prediction noun B2
+preferable adjective B2
+preferably adverb B2
+preference noun B2
+prefix noun B2
+prejudice noun B2
+preparations B2
+be prepared to do sth B2
+prepared adjective MADE EARLIER B2
+presence noun IN A PLACE B2
+present verb GIVE B2
+present verb TV/RADIO B2
+present verb PLAY/FILM B2
+presentation noun CEREMONY B2
+presenter noun B2
+preserve verb B2
+presidency noun B2
+presidential adjective B2
+the press B2
+pressure noun MAKE SOMEONE DO B2
+put pressure on sb B2
+pressure noun PROBLEMS B2
+presumably adverb B2
+pretend verb B2
+pretty much/well B2
+prevention noun B2
+priceless adjective VALUABLE B2
+pride noun SATISFACTION B2
+pride noun RESPECT FOR YOURSELF B2
+primarily adverb B2
+primary adjective B2
+prime minister noun B2
+principal noun B2
+print verb BOOKS/NEWSPAPERS B2
+print verb INCLUDE WRITING B2
+priority noun B2
+privacy noun B2
+private adjective NOT OFFICIAL B2
+in private B2
+privately adverb B2
+the pros and cons B2
+probable adjective B2
+procedure noun B2
+process noun ACTIONS B2
+process noun CHANGES B2
+process verb B2
+produce verb CAUSE B2
+producer noun FILM, ETC. B2
+production noun MAKING B2
+production noun AMOUNT B2
+production noun FILM/MUSIC B2
+productive adjective USEFUL B2
+productive adjective LARGE AMOUNT B2
+profession noun PEOPLE B2
+professional adjective JOB B2
+professional noun PAID B2
+profile noun DESCRIPTION B2
+profit noun B2
+profitable adjective MONEY B2
+programme noun PLAN B2
+programming noun B2
+in progress B2
+progress verb IMPROVE B2
+progressive adjective MODERN B2
+prohibit verb B2
+project noun WORK B2
+promise to be sth B2
+keep/break a promise B2
+promote verb ADVERTISE B2
+promotion noun ADVERTISEMENT B2
+promotion noun JOB B2
+prompt adjective B2
+promptly adverb B2
+proof noun B2
+proper noun noun B2
+property noun BUILDING B2
+proposal noun PLAN B2
+proposal noun MARRY B2
+propose verb SUGGEST B2
+propose to do sth B2
+propose verb MARRY B2
+proposed adjective B2
+prospect noun POSSIBILITY B2
+sb's prospects B2
+protection noun B2
+protective adjective GIVING PROTECTION B2
+protest noun B2
+protest (about/against/at sth) B2
+protest verb COMPLAIN B2
+be too proud (to do sth) B2
+proudly adverb B2
+prove verb RESULT B2
+provided (that) conjunction B2
+psychological adjective B2
+psychologically adverb B2
+psychologist noun B2
+psychology noun B2
+public adjective PEOPLE B2
+in public B2
+publication noun BOOK, ETC. B2
+publication noun PRINTING B2
+publicity noun B2
+publisher noun B2
+pudding noun B2
+pull yourself along/up, etc. B2
+pull down sth or pull sth down B2
+pull in/into sth B2
+pull out B2
+pull over B2
+pull up B2
+punch noun B2
+punch verb B2
+punishment noun B2
+purchase verb B2
+purchase noun THING BOUGHT B2
+purchase noun ACT OF BUYING B2
+pure adjective EMPHASIS B2
+push (sb) for sth/to do sth B2
+push yourself B2
+put verb CAUSE B2
+put an end to sth B2
+put pressure on sb B2
+put sth aside SAVE MONEY B2
+put down sb or put sb down B2
+put off sb or put sb off (sb/sth/doing sth) B2
+put sth together or put together sth JOIN PARTS B2
+put up sth or put sth up BUILD B2
+put up sb or put sb up B2
+put up with sth/sb B2
+puzzled adjective B2
+pyjamas noun B2
+qualified adjective HAVING SKILLS B2
+qualify verb PASS EXAMS B2
+qualify verb BE ALLOWED B2
+qualify verb SPORT B2
+quality noun CHARACTER B2
+quantity noun LARGE AMOUNT B2
+quarrel noun B2
+quarrel verb B2
+query noun B2
+question noun PROBLEM B2
+question noun DOUBT B2
+question verb ASK B2
+question verb EXPRESS DOUBT B2
+queue verb B2
+quiet noun B2
+not quite B2
+racial adjective B2
+racism noun B2
+rage noun ANGER B2
+rainbow noun B2
+raise a question/subject, etc. B2
+raise verb MONEY B2
+raise verb CHILD B2
+range noun AMOUNT B2
+range noun MOUNTAINS B2
+range from sth to sth/between sth and sth B2
+rape verb B2
+rape noun B2
+rapid adjective B2
+rapidly adverb B2
+rate noun HOW MANY B2
+rate noun PAYMENT B2
+rather adverb MORE EXACTLY B2
+raw adjective NATURAL B2
+ray noun BEAM B2
+razor noun B2
+reach a decision/agreement/conclusion, etc. B2
+reach verb LEVEL B2
+reach verb STRETCH B2
+can/can't/could, etc. reach (sth) B2
+reach verb TELEPHONE B2
+reach noun DISTANCE B2
+reach noun TOUCH B2
+react verb SAY OR DO B2
+reaction noun CAUSED BY SOMETHING B2
+reaction noun BAD EFFECT B2
+read out sth or read sth out B2
+read over/through sth or read sth over/through B2
+readily adverb EASILY B2
+readily adverb WILLINGLY B2
+real adjective IMPORTANT B2
+real adjective FOR EMPHASIS B2
+for real B2
+realistic adjective ACCEPTING SITUATION B2
+reality noun FACTS B2
+the reality/realities of sth B2
+become a reality B2
+rear adjective B2
+rearrange verb B2
+reason noun RIGHT B2
+reasonable adjective FAIR B2
+reasonable adjective BASED ON FACTS B2
+reasonably good/successful/well, etc. B2
+reasonably adverb GOOD JUDGMENT B2
+rebel noun B2
+rebel verb B2
+rebuild verb IMPROVE B2
+recall verb B2
+receipt noun RECEIVING B2
+reception noun PARTY B2
+recession noun B2
+reckon verb THINK B2
+recognize verb ACCEPT B2
+recommend verb ADVISE B2
+recommendation noun ADVICE B2
+recommendation noun SUITABLE B2
+record verb STORE INFORMATION B2
+record noun INFORMATION B2
+recording noun PROCESS B2
+recover verb SITUATION B2
+recovery noun B2
+recreation noun B2
+rectangular adjective B2
+go red B2
+reduction noun B2
+redundant adjective JOB B2
+refer to sb/sth TALK OR WRITE B2
+referee noun B2
+with/in reference to sth B2
+reference noun NAME/BOOK TITLE B2
+reference noun LETTER B2
+reflect verb IMAGE B2
+reflect verb SHOW B2
+reflection noun IMAGE B2
+refugee noun B2
+regain verb B2
+regard verb CONSIDER B2
+as regards sth B2
+in/with regard to sth B2
+regional adjective B2
+regret verb SORRY TO SAY B2
+regret noun B2
+regular adjective SAME TIME/SPACE B2
+regulation noun RULE B2
+rehearsal noun B2
+reject verb NOT ACCEPT B2
+reject verb JOB/COURSE B2
+reject verb PERSON B2
+related adjective FAMILY B2
+related adjective CONNECTED B2
+relations B2
+relation noun CONNECTION B2
+in relation to sth B2
+relationship noun CONNECTION B2
+relatively good/bad/cheap, etc. B2
+relaxed adjective SITUATION B2
+release verb MAKE FREE B2
+release verb RECORD/FILM B2
+release noun B2
+relevant adjective B2
+relief noun GOOD FEELING B2
+relieved adjective B2
+religious adjective OF RELIGION B2
+religious adjective PERSON B2
+rely on/upon sb/sth NEED B2
+rely on/upon sb/sth TRUST B2
+remain a secret/mystery, etc. B2
+remain at/in/with, etc. B2
+remain verb CONTINUE TO EXIST B2
+remaining adjective B2
+remains noun B2
+remark verb B2
+remark noun B2
+remarkable adjective B2
+remedy noun FOR AN ILLNESS B2
+remedy noun FOR A PROBLEM B2
+remote adjective FAR AWAY B2
+remove verb TAKE OFF B2
+renew verb B2
+repay verb MONEY B2
+repay verb KINDNESS B2
+replace verb BE USED INSTEAD B2
+replacement noun THING OR PERSON B2
+represent verb BE B2
+represent verb COMPETITION B2
+represent verb BE SYMBOL B2
+representative noun B2
+reputation noun B2
+require sb to do sth B2
+requirement noun B2
+research verb B2
+researcher noun B2
+reserve noun AREA B2
+resident noun B2
+residential adjective WHERE PEOPLE LIVE B2
+resign verb LEAVE JOB B2
+resist verb NOT DO B2
+resource noun B2
+in this respect/in many respects B2
+with respect to sth B2
+respect verb ACCEPT IMPORTANCE B2
+respectable adjective GOOD BEHAVIOUR B2
+respected adjective B2
+respond verb B2
+response noun ANSWER B2
+in response to B2
+responsibility noun DUTY B2
+take/accept/claim responsibility for sth B2
+be responsible for sth/doing sth B2
+responsible adjective GOOD JUDGMENT B2
+responsible adjective IMPORTANT B2
+rest your eyes/feet/legs, etc. B2
+restore verb REPAIR B2
+result in sth B2
+retired adjective B2
+retirement noun LEAVING JOB B2
+retirement noun LIFE PERIOD B2
+return to sth B2
+return verb HAPPEN AGAIN B2
+in return B2
+reveal verb TELL B2
+revenge noun B2
+reverse verb DRIVE BACKWARDS B2
+review verb GIVE OPINION B2
+revise verb CHANGE B2
+revolution noun POLITICS B2
+revolution noun CHANGE B2
+revolutionary adjective CHANGE B2
+revolutionary adjective POLITICS B2
+reward verb B2
+rewrite verb B2
+rhythm noun B2
+rib noun B2
+rich adjective FOOD B2
+rich adjective CONTAINING A LOT B2
+get rid of sth B2
+ridiculous adjective B2
+right adjective MORALLY ACCEPTABLE B2
+right adverb CORRECTLY B2
+right noun BEHAVIOUR B2
+right noun LAW B2
+rightly adverb B2
+ring noun CIRCLE B2
+ring noun SOUND B2
+rip verb TEAR B2
+ripe adjective FRUIT, ETC. B2
+rise verb INCREASE B2
+rise noun INCREASE B2
+risk noun BAD POSSIBILITY B2
+at risk B2
+take a risk B2
+risk verb DO SOMETHING B2
+risk verb POSSIBLY LOSE B2
+risky adjective B2
+robbery noun B2
+rocket noun VEHICLE B2
+role noun PURPOSE B2
+roll (sth) across/around/over, etc. B2
+roll verb TURN OVER B2
+roll down/in/off, etc. B2
+roll noun TUBE B2
+roommate noun B2
+root noun PLANT PART B2
+roots B2
+rope noun FOR TYING B2
+rotten adjective B2
+rough adjective SEA/WEATHER B2
+rough adjective DIFFICULT B2
+roughly adverb NOT EXACTLY B2
+round and round B2
+first/second/third/final, etc., round B2
+in a row B2
+row verb B2
+row noun B2
+royal adjective B2
+rub verb PRESS WITH HANDS B2
+rub sth into/on, etc. B2
+rub out sth or rub sth out B2
+rubber noun SUBSTANCE B2
+rubbish noun BAD QUALITY B2
+rude adjective WORDS/JOKES B2
+ruin verb B2
+rule noun USUAL WAY B2
+rule verb CONTROL SOMEWHERE B2
+rule verb INFLUENCE SOMEONE B2
+rumour noun B2
+run verb TRAVEL B2
+run verb LIQUID B2
+run verb USE COMPUTER B2
+run away B2
+run into sth B2
+run into sb B2
+run out ALL USED B2
+run over sb/sth or run sb/sth over B2
+run noun SPORT B2
+in the long run B2
+rural adjective B2
+rush verb HURRY B2
+rush to do sth B2
+rush noun HURRY B2
+rush hour noun B2
+rusty adjective METAL B2
+rusty adjective SKILL B2
+sack verb B2
+the sack B2
+sadly adverb NOT HAPPY B2
+sadly adverb NOT SATISFACTORY B2
+sadness noun B2
+safety noun BEING SAFE B2
+sail verb MOVE ON WATER B2
+for the sake of sb/sth; for sb's/sth's sake B2
+sale noun SELL B2
+sales B2
+salon noun B2
+salty adjective B2
+the same B2
+sample noun PART OF GROUP B2
+sample noun SMALL AMOUNT B2
+satellite noun B2
+satisfaction noun FEELING B2
+satisfactory adjective B2
+satisfy verb PLEASE B2
+save a goal B2
+savings noun B2
+be said to be B2
+it goes without saying B2
+scale noun SIZE B2
+scale noun MEASURE B2
+scale noun COMPARISON B2
+scales B2
+scandal noun B2
+scar noun ON SKIN B2
+scene noun VIEW B2
+scene noun PLACE B2
+the club/gay/music, etc. scene B2
+scent noun B2
+schedule noun B2
+schedule verb B2
+scheduled adjective PLANNED B2
+scheduled adjective FLIGHT B2
+scheme noun B2
+scientifically adverb B2
+scratch verb RUB SKIN B2
+scratch verb HURT/DAMAGE B2
+scratch verb RUB SURFACE B2
+scratch noun B2
+script noun WORDS B2
+seal noun B2
+search verb POLICE B2
+search noun FIND ANSWER B2
+in season B2
+seasonal adjective B2
+be seated B2
+second adverb IN LIST B2
+secondly adverb B2
+the second person noun B2
+the secret B2
+in secret B2
+secure adjective SAFE B2
+secure adjective CONFIDENT B2
+see verb INFORMATION B2
+see verb CONSIDER B2
+see off sb or see sb off B2
+see through sb/sth B2
+see to sth/sb B2
+seed noun PLANT B2
+seek verb TRY TO FIND B2
+It seems... B2
+seize verb HOLD B2
+seize a chance/opportunity B2
+seldom adverb B2
+selection noun ACT OF CHOOSING B2
+selection noun THINGS CHOSEN B2
+self-confidence noun B2
+self-confident adjective B2
+sell verb A LOT B2
+sell out B2
+semicolon noun B2
+semi-final noun B2
+seminar noun B2
+send verb MAKE GO B2
+send off sth or send sth off B2
+senior adjective MORE IMPORTANT B2
+senior adjective OLDER B2
+sensation noun PHYSICAL B2
+sensation noun FEELING/IDEA B2
+sensation noun EXCITEMENT B2
+sense noun GOOD JUDGMENT B2
+sense noun ABILITY B2
+sense noun NATURAL ABILITY B2
+make sense B2
+sense noun MEANING B2
+sensitive adjective UPSET B2
+sensitive adjective REACTING B2
+sensitive adjective EASILY DAMAGED B2
+sensitive adjective SUBJECT B2
+sensitive adjective KIND B2
+sentence noun PUNISHMENT B2
+sentence verb B2
+separate adjective NOT RELATED B2
+separate verb DIVIDE B2
+separate verb MOVE APART B2
+separate verb HUSBAND/WIFE B2
+separately adverb B2
+separation noun APART B2
+separation noun NOT LIVE TOGETHER B2
+series noun THINGS B2
+series noun BOOKS B2
+serious adjective NEEDING ATTENTION B2
+seriously adverb NOT JOKING B2
+take sb/sth seriously B2
+servant noun B2
+service noun EXTRA MONEY B2
+service noun GOVERNMENT DEPARTMENT B2
+service noun ARMED FORCES B2
+set verb EQUIPMENT B2
+set verb BE IN PLACE B2
+set verb CONDITION B2
+set verb ACHIEVE B2
+set an example B2
+set a record B2
+set out sth or set sth out B2
+set up sth or set sth up EVENT/ACTIVITY B2
+set noun TENNIS B2
+set noun FILM/PLAY B2
+setting noun POSITION B2
+setting noun BOOK/FILM, ETC. B2
+settle verb LIVE B2
+settle verb DECIDE B2
+settle down FEEL COMFORTABLE B2
+(be) in your seventies B2
+the seventies B2
+severe adjective BAD B2
+severe adjective STRICT B2
+severely adverb B2
+sexual adjective SEX B2
+sexy adjective B2
+shade noun COLOUR B2
+shake verb FEAR B2
+shake your head B2
+shallow adjective NOT DEEP B2
+in good/bad, etc. shape B2
+keep in shape B2
+share verb DO TOGETHER B2
+share noun PART B2
+a sharp rise/increase/drop, etc. B2
+sharp adjective MIND B2
+sharply adverb B2
+shed noun B2
+shell noun B2
+shelter noun PLACE B2
+shelter noun PROTECTION B2
+shift noun WORK B2
+shiver verb B2
+shock verb B2
+shooting noun B2
+shopkeeper noun B2
+short adjective NAME B2
+shortage noun B2
+shortly adverb SOON B2
+short-term adjective B2
+in the short term B2
+shot noun WEAPON B2
+shot noun SPORT B2
+shot noun FILM B2
+why should/shouldn't...? B2
+show verb PROVE B2
+show verb EXPRESS B2
+show off B2
+show noun PUBLIC EVENT B2
+shower verb WASH B2
+shrink verb B2
+shut (sth) down or shut down (sth) B2
+shut (sb) up B2
+keep your mouth shut B2
+be sick of sth B2
+sickness noun B2
+side noun PART OF SITUATION B2
+side noun CHARACTER B2
+side by side B2
+from side to side B2
+side noun OPPOSING GROUP B2
+side noun OPINION B2
+sigh verb B2
+sigh noun B2
+the sight of sb/sth B2
+sight noun AREA SEEN B2
+at first sight B2
+sign noun MARK B2
+no sign of sb/sth B2
+signal noun ACTION B2
+signal noun WAVE B2
+significant adjective B2
+significantly adverb B2
+silence noun PERIOD OF TIME B2
+silent adjective NO SPEAKING B2
+silently adverb B2
+similarity noun B2
+simple adjective IMPORTANT B2
+simply adverb EMPHASIS B2
+simply adverb ONLY B2
+simply adverb NOT COMPLICATED B2
+simultaneously adverb B2
+since adverb B2
+single adjective ONE B2
+sink verb FALL B2
+Dear Sir B2
+sister-in-law noun B2
+sit verb TEST/EXAM B2
+(be) in your sixties B2
+the sixties B2
+skeleton noun B2
+skilful adjective GOOD AT B2
+skilled adjective B2
+skin noun FRUIT B2
+skip verb NOT DO B2
+slam verb CLOSE B2
+slam sth down/onto/into, etc. B2
+slap verb B2
+slash noun B2
+slave noun B2
+slice verb B2
+slide (sth) across/down/along, etc. B2
+slight adjective B2
+slightly adverb B2
+slope noun B2
+slow adjective NOT EXCITING B2
+slow (sb/sth) down/up or slow down/up (sb/sth) B2
+slow down B2
+smash verb B2
+smell verb ABILITY B2
+smell noun ABILITY B2
+smell noun UNPLEASANT B2
+smoker noun B2
+smoothly adverb WITHOUT PROBLEMS B2
+sneeze verb B2
+snore verb B2
+if so B2
+so as to B2
+soak verb PUT IN LIQUID B2
+soak up sth or soak sth up B2
+soaked adjective B2
+soaking adjective B2
+sob verb B2
+so-called adjective NOT AS NAMED B2
+so-called adjective KNOWN AS B2
+social adjective SOCIETY B2
+socialize verb B2
+society noun ORGANIZATION B2
+softness noun B2
+soil noun B2
+solar adjective B2
+solid adjective HARD B2
+solid adjective STRONG B2
+solo adjective, adverb B2
+solo noun B2
+some determiner LARGE AMOUNT B2
+somehow adverb REASON NOT CLEAR B2
+somewhere around/between, etc. B2
+son-in-law noun B2
+sooner or later B2
+sophisticated adjective WITH EXPERIENCE B2
+sophisticated adjective ADVANCED B2
+sorry adjective SAYING NO B2
+sort of B2
+sort verb ORDER B2
+sort out sth or sort sth out SOLVE PROBLEM B2
+sort out sth or sort sth out TIDY B2
+soul noun SPIRIT B2
+soul noun PERSON B2
+sound angry/happy/rude, etc. B2
+soundtrack noun B2
+source noun COME FROM B2
+space noun AREA AROUND B2
+sparkling adjective SHINING B2
+generally/personally, etc. speaking B2
+speak verb IN PUBLIC B2
+speak up B2
+special attention/care/treatment B2
+specialist noun B2
+specialize verb B2
+species noun B2
+specific adjective PARTICULAR THING B2
+specify verb B2
+spectator noun B2
+speech noun FORMAL TALK B2
+speed noun MOVEMENT B2
+spirit noun WAY OF FEELING B2
+in good/high/low, etc. spirits B2
+spirit noun GHOST B2
+spiritual adjective B2
+splash verb LIQUID B2
+splash about/around/through, etc. B2
+splash noun SOUND B2
+split verb DIVIDE B2
+sponsor verb B2
+sponsor noun B2
+spot noun PLACE B2
+spot noun SKIN B2
+spot verb B2
+spray noun B2
+spray verb B2
+spread verb GRADUALLY AFFECT B2
+spread verb INFORMATION B2
+spread verb COVER AREA B2
+spread out B2
+spread noun MOVEMENT B2
+spreadsheet noun B2
+squash verb CRUSH FLAT B2
+squash verb PUSH INTO B2
+squeeze verb PRESS B2
+squeeze (sb/sth) in/squeeze (sb/sth) into sth B2
+stab verb B2
+stage noun PART B2
+stain noun B2
+stamp verb MARK B2
+stand (sth) in/against/by, etc. sth B2
+stand back B2
+stand by sb B2
+stand for sth REPRESENT B2
+stand for sth LETTERS B2
+stand out BE BETTER B2
+stand out EASY TO SEE B2
+stand up sb or stand sb up B2
+stand up for sth/sb B2
+standard noun QUALITY B2
+standard of living B2
+standard adjective B2
+stare verb B2
+start verb BUSINESS B2
+start verb SWITCH ON B2
+to start with B2
+starving adjective ILL/DYING B2
+starving adjective HUNGRY B2
+state noun CONDITION B2
+state verb B2
+state adjective B2
+statement noun THING SAID B2
+statistics noun B2
+stay out B2
+stay over B2
+stay up B2
+steadily adverb B2
+steady adjective GRADUAL B2
+steady adjective STILL B2
+steam noun GAS B2
+steel noun B2
+steer verb CONTROL DIRECTION B2
+steering wheel noun B2
+step noun STAGE B2
+stepfather noun B2
+stepmother noun B2
+stick (sth) in/into/through, etc. B2
+stick out B2
+stick to sth B2
+stick together B2
+stick with sth/sb B2
+stiff adjective HARD B2
+stiff adjective DIFFICULT TO MOVE B2
+bored/scared/worried, etc. stiff B2
+better/worse still B2
+still adjective NOT MOVING B2
+stimulate verb ENCOURAGE B2
+stimulate verb MAKE EXCITED B2
+stock noun SHOP B2
+in stock/out of stock B2
+stool noun B2
+stop over B2
+stopover noun B2
+storage noun B2
+store verb KEEP B2
+store verb COMPUTER B2
+storey noun B2
+stormy adjective WEATHER B2
+story noun REPORT B2
+straight adjective HONEST B2
+straight adjective LEVEL B2
+sit up/stand up straight B2
+come/get straight to the point B2
+straightforward adjective B2
+strain noun PRESSURE B2
+strain noun WORRY B2
+strain verb INJURE B2
+strangely adverb B2
+strategy noun B2
+a stream of sth B2
+strength noun STRONG B2
+strengthen verb B2
+stress noun PRONUNCIATION B2
+stress verb EMPHASIZE B2
+stress verb PRONOUNCE B2
+stretch verb MAKE BIGGER B2
+stretch verb BODY B2
+strict adjective RULE B2
+strict adjective BEHAVIOUR B2
+strictly adverb EXACTLY B2
+strictly forbidden/prohibited B2
+strike verb THINK B2
+what struck me/the first thing that struck me... B2
+strike verb STOP WORK B2
+striking adjective B2
+string noun ROPE B2
+string noun MUSICAL INSTRUMENT B2
+stroke noun ILLNESS B2
+stroke verb B2
+strong adjective GOOD QUALITY B2
+strong adjective DETERMINED B2
+strong adjective PERSONALITY B2
+strongly adverb B2
+structure noun WAY PARTS ARE ARRANGED B2
+struggle verb TRY HARD B2
+struggle verb FIGHT B2
+struggle noun EFFORT B2
+struggle noun FIGHT B2
+stubborn adjective B2
+stuck adjective NOT MOVE B2
+studio noun ART B2
+study noun LEARNING B2
+study noun EXAMINING B2
+study verb EXAMINE B2
+study verb LOOK AT B2
+stunning adjective B2
+style noun QUALITY B2
+change the subject B2
+submit verb GIVE B2
+substance noun MATERIAL B2
+substantial adjective B2
+substitute verb B2
+substitute noun B2
+suburb noun B2
+subway noun B2
+successful adjective WORK B2
+successful adjective POPULAR B2
+successfully adverb B2
+such determiner REFER TO PERSON/THING B2
+no such thing B2
+sudden adjective B2
+all of a sudden B2
+suffer verb FEEL PAIN B2
+suffer verb EXPERIENCE B2
+suffering noun B2
+sufficient adjective B2
+suffix noun B2
+suggest verb SEEM TRUE B2
+suicide noun B2
+suit verb BE RIGHT B2
+suit verb LOOK ATTRACTIVE B2
+suitably adverb B2
+sum up (sth/sb) or sum (sth/sb) up B2
+summary noun B2
+sunlight noun B2
+superb adjective B2
+supernatural adjective B2
+the supernatural B2
+supervise verb B2
+supplier noun B2
+supply noun B2
+supply verb B2
+support verb AGREE B2
+support verb ENCOURAGE B2
+support noun AGREEMENT B2
+support noun MONEY B2
+supporter noun OF IDEA/PERSON, ETC. B2
+be supposed to be sth B2
+be supposed to do sth B2
+be sure of sth B2
+be sure of yourself B2
+surely adverb LIKELY B2
+surely adverb EXPRESS SURPRISE B2
+surface noun TOP B2
+surface noun PERSON B2
+surgery noun PLACE B2
+surgery noun OPERATION B2
+surprise noun FEELING B2
+surrounding adjective B2
+surroundings noun B2
+survey noun B2
+survival noun B2
+survive verb B2
+survivor noun B2
+suspect verb THINK LIKELY B2
+suspect verb THINK GUILTY B2
+suspect noun B2
+suspend verb NOT ALLOW B2
+suspicion noun BELIEF B2
+suspicious adjective SEEMING WRONG B2
+suspicious adjective NOT TRUSTING B2
+suspiciously adverb B2
+swallow verb EAT B2
+swan noun B2
+swear verb RUDE WORDS B2
+swear verb PROMISE B2
+sweat noun B2
+sweat verb B2
+sweep verb CLEAN B2
+be/get swept along/away, etc. B2
+swing verb B2
+swing noun B2
+switch verb B2
+swollen adjective B2
+sword noun B2
+syllable noun B2
+symbol noun B2
+sympathetic adjective PROBLEMS B2
+sympathy noun CARING B2
+symptom noun ILLNESS B2
+system noun METHOD B2
+tabloid noun B2
+tabloid adjective B2
+tackle verb DEAL WITH B2
+tackle verb SPORT B2
+tail noun ANIMAL B2
+take milk/sugar, etc. B2
+take verb REMOVE NUMBER B2
+take verb GRAMMAR B2
+can't take sth B2
+take sth/sb seriously B2
+take pleasure/pride/an interest, etc. B2
+take account of sth B2
+take into account sth B2
+take advantage of sb/sth B2
+take your breath away B2
+take charge B2
+take control B2
+take a deep breath B2
+take sb's word for it B2
+take sb/sth for granted B2
+take it for granted B2
+take the/this opportunity to do sth B2
+take sb's place B2
+take after sb B2
+take sb around/round (sth/swh) B2
+take away sth or take sth away NUMBERS B2
+take away sth or take sth away REMOVE B2
+take down sth or take sth down B2
+be taken in B2
+take off sth or take sth off NOT WORK B2
+take off SUCCEED B2
+take on sb or take sb on B2
+take out sth or take sth out MONEY B2
+take over (sth) or take (sth) over B2
+take up sth or take sth up FILL B2
+tale noun B2
+talk verb DISCUSS B2
+talk verb LECTURE B2
+talk sb into sth/doing sth B2
+talk over sth or talk sth over B2
+talk noun TO GROUP B2
+tan noun B2
+tap noun KNOCK B2
+tap verb B2
+target noun OBJECT/PERSON SHOT AT B2
+target noun AIM B2
+task noun B2
+taste noun WHAT YOU LIKE B2
+taste noun SHORT EXPERIENCE B2
+taste noun ABILITY B2
+tease verb B2
+teaspoon noun B2
+technical adjective SCIENCE/INDUSTRY B2
+technical adjective PRACTICAL SKILL B2
+technological adjective B2
+telecommunications noun B2
+telescope noun B2
+can tell B2
+tell verb UNDERSTAND FROM B2
+tell off sb or tell sb off B2
+temper noun ANGER B2
+lose your temper B2
+temporarily adverb B2
+be tempted B2
+temptation noun B2
+tend to do sth B2
+tense adjective NERVOUS B2
+tense adjective SITUATION B2
+tension noun FEELING B2
+tension noun BETWEEN PEOPLE/GROUPS B2
+term noun WORD B2
+terminal noun B2
+terms noun RULES B2
+in ... terms/in terms of sth B2
+terrace noun B2
+terribly adverb VERY BADLY B2
+terrify verb B2
+terrifying adjective B2
+territory noun COUNTRY'S LAND B2
+territory noun PERSON'S/ANIMAL'S LAND B2
+terror noun B2
+terrorism noun B2
+terrorist noun B2
+test noun SITUATION B2
+test verb CHECK B2
+test verb PROVE QUALITY/STRENGTH, ETC. B2
+text noun BOOK/PLAY B2
+thanks to sb/sth B2
+thanks noun B2
+that's it B2
+that pronoun REACTION B2
+that pronoun PAST B2
+that adverb B2
+the determiner TIME B2
+the determiner COMPARE B2
+theft noun B2
+theme noun B2
+themselves pronoun EMPHASIS B2
+then adverb IN ADDITION B2
+now and then B2
+theory noun IDEA B2
+in theory B2
+therapy noun B2
+there adverb POINT B2
+here and there B2
+thermometer noun B2
+thesis noun WRITING B2
+they pronoun PEOPLE B2
+thick adjective SMOKE, ETC. B2
+thigh noun B2
+thing noun IDEA B2
+the whole thing B2
+among other things B2
+no such thing B2
+the thing is... B2
+it's a good thing B2
+not a single thing B2
+the main thing B2
+thing noun PERSON/ANIMAL B2
+think verb CONSIDER PEOPLE B2
+think over sth or think sth over B2
+think through sth or think sth through B2
+third noun B2
+the third person noun B2
+thirst noun WANTING DRINK B2
+(be) in your thirties B2
+the thirties B2
+thorough adjective B2
+thoroughly adverb VERY MUCH B2
+thoroughly adverb CAREFULLY B2
+those who/which/that B2
+even though B2
+as though B2
+though conjunction BUT B2
+though adverb B2
+thought noun THINKING B2
+thoughtful adjective KIND B2
+thousands B2
+threat noun DAMAGE B2
+threat noun THING SAID B2
+threaten verb HARM B2
+thrilled adjective B2
+thrilling adjective B2
+throughout preposition WHOLE TIME B2
+throw out sb or throw sb out B2
+throw up (sth) or throw (sth) up B2
+thus adverb B2
+tide noun B2
+tie up sb/sth or tie sb/sth up B2
+tight adjective FIRM B2
+tight adjective CONTROLLED B2
+tight adjective NOT MUCH B2
+tight adverb B2
+tighten verb B2
+tightly adverb B2
+time noun HISTORICAL PERIOD B2
+from time to time B2
+for some time B2
+time verb MEASURE HOW LONG B2
+times preposition B2
+timetable noun PLAN B2
+timing noun B2
+tin noun FOR STORING B2
+tiredness noun B2
+to preposition RANGE B2
+to date B2
+to my mind B2
+today adverb PRESENT TIME B2
+today noun PRESENT TIME B2
+toenail noun B2
+together adverb CONNECTED B2
+together adverb COMBINED B2
+tolerate verb ACCEPT B2
+tomb noun B2
+ton noun WEIGHT B2
+tons of sth B2
+tone noun VOICE B2
+tone noun TELEPHONE B2
+mother tongue B2
+tool noun MAKE/REPAIR B2
+tool noun EQUIPMENT B2
+on top of sth B2
+top adverb B2
+torch noun B2
+tornado noun B2
+total adjective VERY GREAT B2
+touch verb GET CLOSE B2
+touch verb EMOTION B2
+lose touch B2
+touch noun HAND B2
+touch noun ABILITY B2
+tough adjective DIFFICULT B2
+tough adjective STRONG PERSON B2
+tough adjective FOOD B2
+towards preposition IN RELATION TO B2
+toxic adjective B2
+trace noun B2
+track noun MUSIC B2
+track noun TYPE OF SPORT B2
+track noun MARKS B2
+lose track B2
+trade noun JOB B2
+trade verb B2
+tradition noun B2
+traditionally adverb B2
+tragedy noun B2
+tragic adjective B2
+trail noun PATH B2
+train verb TEACH B2
+train verb LEARN B2
+transfer verb CHANGE JOB/TEAM B2
+transfer noun B2
+transform verb B2
+transitive adjective B2
+transparent adjective B2
+transport noun GOODS/PEOPLE B2
+transport verb B2
+trap noun CATCHING ANIMALS B2
+trap noun DANGEROUS SITUATION B2
+be trapped B2
+tray noun B2
+treasure noun GOLD/JEWELS, ETC. B2
+treat verb DEAL WITH B2
+treat verb MEDICAL B2
+treat verb CONSIDER B2
+treat verb SPECIAL B2
+treatment noun MEDICAL B2
+treatment noun DEALING WITH B2
+trekking noun B2
+tremble verb B2
+tremendous adjective GOOD B2
+tremendous adjective LARGE B2
+tremendously adverb B2
+trial noun IN COURT B2
+triangle noun B2
+tribe noun B2
+trick noun METHOD B2
+trick verb B2
+tricky adjective B2
+trip verb B2
+trivial adjective B2
+trolley noun B2
+trophy noun B2
+tropical adjective B2
+trouble noun EXTRA WORK B2
+trouble noun DIFFICULT SITUATION B2
+the trouble with sb/sth B2
+trouble noun FIGHTING B2
+truly adverb VERY B2
+trunk noun B2
+trust noun B2
+truth noun BEING TRUE B2
+try out sth or try sth out B2
+try noun B2
+tube noun PIPE B2
+turn verb GO ROUND B2
+turn blue/cold/nasty, etc. B2
+turn (sth) back B2
+turn down sb/sth or turn sb/sth down B2
+turn out HAPPEN B2
+turn out BE DISCOVERED B2
+turn out GO B2
+turn to sb/sth B2
+turn up (somewhere) B2
+take turns or take it in turns B2
+turn noun CHANGE IN DIRECTION B2
+tutor noun B2
+(be) in your twenties B2
+the twenties B2
+twisted adjective BENT B2
+typically adverb EXPECTED CHARACTERISTICS B2
+ultimate adjective MOST B2
+unacceptable adjective B2
+unattractive adjective NOT BEAUTIFUL B2
+unavailable adjective IMPOSSIBLE TO GET B2
+unaware adjective B2
+unbearable adjective B2
+unbelievable adjective UNLIKELY B2
+uncertain adjective NOT SURE B2
+uncertain adjective NOT KNOWN B2
+unchanged adjective B2
+unclear adjective DIFFICULT TO UNDERSTAND B2
+be unclear about sth B2
+unconscious adjective AS THOUGH SLEEPING B2
+under preposition IN A PARTICULAR STATE B2
+under attack/control/investigation, etc. B2
+be under the impression B2
+underestimate verb NOT KNOW SIZE B2
+underground adjective, adverb B2
+underground adjective, adverb B2
+underline verb EMPHASIZE B2
+underneath adverb B2
+understandable adjective B2
+understanding noun KNOWLEDGE B2
+understanding noun SYMPATHY B2
+understanding adjective B2
+underwater adjective, adverb B2
+undo verb OPEN B2
+undo verb CHANGE BACK B2
+undoubtedly adverb B2
+undressed adjective B2
+uneasy adjective B2
+unexpectedly adverb B2
+unfair adjective NOT TRUE B2
+unfairly adverb B2
+unfamiliar adjective NOT KNOWN B2
+be unfamiliar with sth B2
+unfashionable adjective B2
+unfit adjective NOT GOOD ENOUGH B2
+unfortunate adjective BAD SITUATION B2
+unfortunate adjective UNLUCKY B2
+unhappiness noun B2
+unhelpful adjective NO HELP B2
+union noun JOINING B2
+unique adjective DIFFERENT B2
+unique adjective SPECIAL B2
+united adjective JOINED B2
+united adjective IN AGREEMENT B2
+universal adjective B2
+unlike preposition DIFFERENT B2
+unlimited adjective B2
+unlock verb B2
+unnatural adjective B2
+unpopular adjective B2
+unpredictable adjective B2
+unrealistic adjective B2
+unreasonable adjective B2
+unreliable adjective B2
+unsatisfactory adjective B2
+unsuccessful adjective B2
+unsuitable adjective B2
+unsure adjective NOT CERTAIN B2
+untie verb B2
+unusually big/strong/good,etc. B2
+unwilling adjective B2
+up adverb INCREASE B2
+up adverb COMPLETE B2
+up and down B2
+upbringing noun B2
+update verb MAKE MORE MODERN B2
+update noun NEW INFORMATION B2
+update noun NEW FORM B2
+upgrade verb B2
+upgrade noun B2
+upon preposition ON B2
+upright adjective, adverb B2
+upset stomach B2
+upset verb B2
+upside down adverb, adjective B2
+urban adjective B2
+use verb WORD B2
+use up sth or use sth up B2
+use noun WORD B2
+be (of) any/some use B2
+be (of) no use B2
+be no use doing sth B2
+make use of sth B2
+vacant adjective EMPTY B2
+vacant adjective JOB B2
+valid adjective GOOD REASON B2
+valid adjective OFICIALLY ACCEPTABLE B2
+valuable adjective INFORMATION B2
+values B2
+value verb IMPORTANCE B2
+vanish verb B2
+variation noun DIFFERENCE B2
+varied adjective B2
+vary verb BE DIFFERENT B2
+vary verb CHANGE B2
+vast adjective B2
+venue noun B2
+verse noun B2
+version noun FORM B2
+victim noun B2
+victory noun B2
+view noun ABILITY TO SEE B2
+in view of sth B2
+viewer noun B2
+vinegar noun B2
+violence noun HURT B2
+violent adjective ACTION B2
+violent adjective PERSON B2
+violently adverb B2
+virtual adjective USING COMPUTER B2
+virtually adverb ALMOST B2
+virtually adverb COMPUTER B2
+virtual reality noun B2
+virus noun SMALL ORGANISM B2
+visible adjective CAN BE SEEN B2
+vision noun IDEA B2
+vision noun SIGHT B2
+visual adjective B2
+vital adjective B2
+vitamin noun B2
+vivid adjective DESCRIPTIONS B2
+vivid adjective COLOURS B2
+vividly adverb B2
+lose your voice B2
+volcano noun B2
+volume noun AMOUNT B2
+volunteer noun B2
+vote noun DECIDE B2
+voyage noun B2
+waist noun B2
+wait noun B2
+a short/ten-minute, etc. walk B2
+wander verb WALK SLOWLY B2
+ward noun B2
+warm verb B2
+warmly adverb KEEP WARM B2
+warmly adverb FRIENDLY B2
+warmth noun HEAT B2
+warmth noun FEELING B2
+wasp noun B2
+waste noun UNWANTED MATTER B2
+watch verb BE CAREFUL B2
+watch out B2
+water verb PLANTS B2
+waterproof adjective B2
+wave noun ENERGY B2
+one way or another B2
+one way or the other B2
+the other way round/around B2
+make your way B2
+all the way B2
+in a way; in some/many ways B2
+weak adjective CHARACTER B2
+weak adjective TASTE B2
+weak adjective SLIGHT B2
+weakness noun NOT STRONG B2
+weakness noun NOT EFFECTIVE B2
+wealth noun MONEY B2
+wealthy adjective B2
+weapon noun B2
+wear verb HAIR B2
+wear off B2
+wear sb out or wear out sb B2
+weigh verb CONSIDER CAREFULLY B2
+weight noun HEAVINESS B2
+weight noun OBJECT B2
+weird adjective B2
+welcome verb ENCOURAGE B2
+welcome adjective PLEASING B2
+welfare noun HEALTH B2
+may/might as well B2
+may/might/could well B2
+well adverb EMPHASIS B2
+it's just as well B2
+well-balanced adjective FOOD B2
+well-built adjective B2
+well-organized adjective B2
+well-paid adjective B2
+(the) West B2
+What ...for? B2
+what's/what is more B2
+whatever pronoun NO DIFFERENCE B2
+or whatever B2
+whatever determiner NO DIFFERENCE B2
+wheat noun B2
+the wheel B2
+when conjunction ALTHOUGH B2
+whenever possible B2
+where conjunction PROCESS/ACTIVITY B2
+whereas conjunction B2
+wherever possible B2
+which pronoun AFTER PREPOSITION B2
+which pronoun GIVING OPINION B2
+whichever determiner ANY B2
+whichever determiner NOT IMPORTANT B2
+whichever pronoun B2
+while conjunction ALTHOUGH B2
+(every) once in a while B2
+whisky noun B2
+whisper verb B2
+whistle verb B2
+whistle noun B2
+Who cares? B2
+whoever pronoun PERSON B2
+whoever pronoun NOT IMPORTANT B2
+as a whole B2
+whom pronoun B2
+wide adverb APART B2
+widely adverb INCLUDING A LOT B2
+differ/vary widely B2
+widen verb MAKE WIDER B2
+widen verb INCREASE B2
+widow noun B2
+width noun B2
+wild adjective LAND B2
+wild adjective ENERGETIC B2
+wildly adverb WITHOUT CONTROL B2
+will have B2
+will noun MENTAL POWER B2
+willingly adverb B2
+willingness noun B2
+win verb ARGUMENT B2
+wind (sth) around/round, etc. sth B2
+wind along/through, etc. B2
+winding adjective B2
+wing noun AIRCRAFT B2
+wipe verb CLEAN B2
+wipe sth away/from/off, etc. B2
+wire noun METAL THREAD B2
+wire noun ELECTRICITY B2
+wisdom noun KNOWLEDGE B2
+wise adjective B2
+wish to do sth B2
+wish noun WANT B2
+with preposition CAUSE B2
+with preposition RELATING TO B2
+with respect to sth B2
+within preposition LIMIT B2
+witness noun B2
+witness verb B2
+witty adjective B2
+wolf noun B2
+no wonder B2
+have a word (with sb) B2
+in other words B2
+work noun CREATION B2
+work at sth B2
+work on sth B2
+work sth out or work out sth B2
+work out BECOME BETTER B2
+a working knowledge of sth B2
+worldwide adjective, adverb B2
+worm noun B2
+worry verb MAKE SOMEONE ANXIOUS B2
+worry noun BEING ANXIOUS B2
+worrying adjective B2
+worse and worse B2
+to make matters worse B2
+worst of all B2
+worst adverb B2
+worthwhile adjective B2
+would modal verb OFTEN B2
+wound noun B2
+wound verb B2
+wrap verb PROTECT B2
+wrist noun B2
+writing noun WORK B2
+in writing B2
+wrong adjective NOT MORAL B2
+wrongly adverb INCORRECTLY B2
+X-ray noun B2
+yacht noun B2
+yawn verb B2
+yell verb B2
+yell noun B2
+the best/worst, etc. yet B2
+yet again B2
+the young B2
+Yours faithfully B2
+yourself pronoun EMPHASIS B2
+yourself pronoun PEOPLE GENERALLY B2
+sb's youth B2
+zebra noun B2
+zip noun B2

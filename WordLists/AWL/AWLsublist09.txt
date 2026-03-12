@@ -1,0 +1,260 @@
+accommodate 
+	accommodated 
+	accommodates 
+	accommodating 
+	accommodation 
+analogy 
+	analogies 
+	analogous 
+anticipate 
+	anticipated  
+	anticipates 
+	anticipating 
+	anticipation 
+	unanticipated 
+assure 
+	assurance 
+	assurances 
+	assured 
+	assuredly    
+	assures 
+	assuring 
+attain  
+	attainable 
+	attained 
+	attaining 
+	attainment 
+	attainments
+	attains 
+	unattainable 
+behalf 
+bulk 
+	bulky 
+cease  
+	ceased 
+	ceaseless 
+	ceases 
+	ceasing 
+coherent 
+	coherence
+	coherently 
+	incoherent 
+	incoherently 
+coincide 
+	coincided 
+	coincides 
+	coinciding 
+	coincidence 
+	coincidences
+	coincident
+	coincidental
+commence 
+	commenced 
+	commences 
+	commencement 
+	commencing 
+	recommences 
+	recommenced 
+	recommencing 
+compatible 
+	compatibility 
+	incompatibility  
+	incompatible  
+concurrent 
+	concurrently 
+confine 
+	confined 
+	confines 
+	confining 
+	unconfined 
+controversy  
+	controversies
+	controversial 
+	controversially 
+	uncontroversial 
+converse 
+	conversely 
+device 
+	devices 
+devote 
+	devoted 
+	devotedly
+	devotes 
+	devoting 
+	devotion
+	devotions
+diminish 
+	diminished 
+	diminishes 
+	diminishing 
+	diminution 
+	undiminished 
+distort 
+	distorted 
+	distorting 
+	distortion 
+	distortions 
+	distorts 
+duration 
+erode 
+	eroded 
+	erodes 
+	eroding 
+	erosion 
+ethic  
+	ethical 
+	ethically 
+	ethics 
+	unethical 
+format 
+	formatted 
+	formatting 
+	formats
+found
+	founded 
+	founder
+	founders 
+	founding 
+	unfounded 
+inherent 
+	inherently 
+insight 
+	insightful 
+	insights 
+integral 
+intermediate 
+manual 
+	manually 
+	manuals 
+mature 
+	immature
+	immaturity
+	maturation
+	maturational
+	matured 
+	matures 
+	maturing 
+	maturity 
+mediate 
+	mediated 
+	mediates 
+	mediating 
+	mediation 
+medium 
+military 
+minimal 
+	minimalisation 
+	minimalise 
+	minimalises 
+	minimalised 
+	minimalising 
+	minimalist 
+	minimalists 
+	minimalistic 
+	minimalization 
+	minimalize
+	minimalized 
+	minimalizes
+	minimalizing 
+	minimally 
+mutual 
+	mutually 
+norm 
+	norms 
+overlap 
+	overlapped 
+	overlapping 
+	overlaps 
+passive 
+	passively
+	passivity 
+portion 
+	portions 
+preliminary 
+	preliminaries 
+protocol 
+	protocols 
+qualitative 
+	qualitatively 
+refine 
+	refined 
+	refinement 
+	refinements 
+	refines 
+	refining 
+relax 
+	relaxation 
+	relaxed 
+	relaxes 
+	relaxing 
+restrain 
+	restrained 
+	restraining 
+	restrains 
+	restraint 
+	restraints 
+	unrestrained 
+revolution 
+	revolutionary 
+	revolutionaries
+	revolutionise 
+	revolutionised 
+	revolutionises 
+	revolutionising 
+	revolutionist
+	revolutionists
+	revolutionize 
+	revolutionized 
+	revolutionizes 
+	revolutionizing 
+	revolutions  
+rigid 
+	rigidities 
+	rigidity 
+	rigidly 
+route 
+	routed
+	routes 
+	routing
+scenario 
+	scenarios 
+sphere 
+	spheres 
+	spherical
+	spherically 
+subordinate 
+	subordinates 
+	subordination 
+supplement 
+	supplementary  
+	supplemented 
+	supplementing 
+	supplements 
+suspend 
+	suspended 
+	suspending 
+	suspends 
+	suspension 
+team 
+	teamed 
+	teaming 
+	teams  
+temporary 
+	temporarily 
+trigger 
+	triggered 
+	triggering 
+	triggers 
+unify 
+	unification 
+	unified 
+	unifies 
+	unifying 
+violate 
+	violated 
+	violates 
+	violating 
+	violation 
+	violations 
+vision 
+	visions 

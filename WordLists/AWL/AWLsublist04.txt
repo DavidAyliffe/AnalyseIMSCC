@@ -1,0 +1,293 @@
+access
+	accessed
+	accesses
+	accessibility
+	accessible
+	accessing
+	inaccessible
+adequate
+	adequacy
+	adequately
+	inadequacies
+	inadequacy
+	inadequate
+	inadequately
+annual
+	annually
+apparent
+	apparently 
+approximate
+	approximated
+	approximately
+	approximates
+	approximating
+	approximation
+	approximations
+attitude
+	attitudes 
+attribute
+	attributable 
+	attributed 
+	attributes
+	attributing
+	attribution
+civil
+code
+	coded 
+	codes
+	coding 
+commit
+	commitment 
+	commitments
+	commits
+	committed
+	committing
+communicate
+	communicable
+	communicated
+	communicates
+	communicating
+	communication
+	communications
+	communicative
+	communicatively
+	uncommunicative 
+concentrate 
+	concentrated 
+	concentrates
+	concentrating
+	concentration
+confer
+	conference 
+	conferences
+	conferred
+	conferring
+	confers
+contrast 
+	contrasted
+	contrasting
+	contrastive
+	contrasts
+cycle
+	cycled
+	cycles
+	cyclic
+	cyclical
+	cycling
+debate
+	debatable
+	debated
+	debates
+	debating
+despite 
+dimension
+	dimensional
+	dimensions 
+	multidimensional
+domestic 
+	domestically
+	domesticate
+	domesticated
+	domesticating
+	domestics
+emerge 
+	emerged 
+	emergence 
+	emergent 
+	emerges 
+	emerging 
+error
+	erroneous
+	erroneously
+	errors
+ethnic
+	ethnicity
+goal
+	goals
+grant
+	granted
+	granting
+	grants
+hence
+hypothesis 
+	hypotheses
+	hypothesise
+	hypothesised
+	hypothesises
+	hypothesising
+	hypothesize
+	hypothesized
+	hypothesizes
+	hypothesizing
+	hypothetical  
+	hypothetically
+implement
+	implementation
+	implemented 
+	implementing 
+	implements
+implicate
+	implicated
+	implicates
+	implicating
+	implication 
+	implications
+impose
+	imposed
+	imposes
+	imposing
+	imposition
+integrate
+	integrated 
+	integrates
+	integrating
+	integration
+internal 
+	internalise
+	internalised
+	internalises
+	internalising
+	internalize 
+	internalized 
+	internalizes
+	internalizing
+	internally
+investigate 
+	investigated 
+	investigates 
+	investigating 
+	investigation
+	investigations
+	investigative
+	investigator
+	investigators
+job
+	jobs
+label
+	labeled
+	labeling
+	labelled
+	labelling
+	labels
+mechanism 
+	mechanisms 
+obvious
+	obviously
+occupy 
+	occupancy
+	occupant
+	occupants
+	occupation 
+	occupational  
+	occupations 
+	occupied
+	occupier
+	occupiers 
+	occupies 
+	occupying 
+option
+	optional
+	options
+output
+	outputs
+overall 
+parallel
+	paralleled
+	parallelled
+	parallelling
+	parallels
+	unparalleled
+parameter
+	parameters
+phase
+	phased
+	phases
+	phasing
+predict
+	predictability
+	predictable
+	predictably
+	predicted
+	predicting
+	prediction
+	predictions
+	predicts
+	unpredictability 
+	unpredictable
+principal
+	principally
+prior
+professional
+	professionally
+	professionals
+	professionalism
+project
+	projected
+	projecting
+	projection
+	projections
+	projects
+promote
+	promoted
+	promoter
+	promoters
+	promotes
+	promoting
+	promotion
+	promotions
+regime
+	regimes
+resolve 
+	resolution 
+	resolved
+	resolves 
+	resolving
+	unresolved
+retain
+	retained
+	retaining
+	retainer
+	retainers
+	retains
+	retention
+	retentive
+series
+statistic 
+	statistician
+	statisticians
+	statistical 
+	statistically 
+	statistics 
+status
+stress
+	stressed
+	stresses
+	stressful
+	stressing
+	unstressed
+subsequent
+	subsequently
+sum
+	summation
+	summed
+	summing
+	sums
+summary
+	summaries
+	summarise
+	summarised
+	summarises
+	summarising
+	summarisation
+	summarisations
+	summarization
+	summarizations
+	summarize
+	summarized
+	summarizes
+	summarizing
+undertake
+	undertaken 
+	undertakes
+	undertaking 
+	undertook

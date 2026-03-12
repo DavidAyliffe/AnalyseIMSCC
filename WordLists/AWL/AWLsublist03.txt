@@ -1,0 +1,366 @@
+alternative
+	alternatively
+	alternatives
+circumstance
+	circumstances 
+comment
+	commentaries
+	commentary
+	commentator
+	commentators
+	commented
+	commenting
+	comments
+compensate
+	compensated 
+	compensates
+	compensating
+	compensation
+	compensations
+	compensatory 
+component 
+	componentry
+	components
+consent
+	consensus
+	consented
+	consenting
+	consents
+considerable
+	considerably
+constant 
+	constancy
+	constantly
+	constants
+	inconstancy
+	inconstantly
+constrain
+	constrained
+	constraining
+	constrains
+	constraint 
+	constraints
+	unconstrained 
+contribute 
+	contributed 
+	contributes
+	contributing 
+	contribution
+	contributions
+	contributor
+	contributors
+convene 
+	convention
+	convenes	
+	convened
+	convening
+	conventional
+	conventionally
+	conventions 
+	unconventional
+coordinate
+	coordinated 
+	coordinates
+	coordinating
+	coordination
+	coordinator 
+	coordinators
+	co-ordinate
+	co‑ordinated 
+	co‑ordinates
+	co‑ordinating
+	co‑ordination 
+	co‑ordinator
+	co‑ordinators
+core
+	cores
+	coring
+	cored 
+corporate 
+	corporates 
+	corporation
+	corporations 
+correspond
+	corresponded
+	correspondence
+	corresponding
+	correspondingly 
+	corresponds 
+criteria
+	criterion
+deduce
+	deduced
+	deduces
+	deducing
+	deduction
+	deductions
+demonstrate 
+	demonstrable
+	demonstrably 
+	demonstrated
+	demonstrates 
+	demonstrating
+	demonstration 
+	demonstrations
+	demonstrative
+	demonstratively
+	demonstrator
+	demonstrators
+document
+	documentation
+	documented
+	documenting
+	documents 
+dominate
+	dominance
+	dominant
+	dominated
+	dominates
+	dominating
+	domination
+emphasis 
+	emphasise
+	emphasised
+	emphasising
+	emphasize
+	emphasized
+	emphasizes
+	emphasizing
+	emphatic
+	emphatically
+ensure
+	ensured
+	ensures
+	ensuring
+exclude
+	excluded
+	excludes
+	excluding
+	exclusion
+	exclusionary
+	exclusionist
+	exclusions
+	exclusive
+	exclusively 
+framework 
+	frameworks
+fund
+	funded 
+	funder
+	funders
+	funding
+	funds
+illustrate 
+	illustrated 
+	illustrates 
+	illustrating
+	illustration 
+	illustrations
+	illustrative
+immigrate
+	immigrant
+	immigrants
+	immigrated
+	immigrates
+	immigrating
+	immigration
+imply
+	implied
+	implies
+	implying
+initial 
+	initially
+instance 
+	instances 
+interact
+	interacted
+	interacting
+	interaction
+	interactions
+	interactive
+	interactively
+	interacts
+justify 
+	justifiable
+	justifiably
+	justification
+	justifications
+	justified
+	justifies
+	justifying
+	unjustified
+layer
+	layered
+	layering
+	layers
+link
+	linkage
+	linkages
+	linked
+	linking
+	links
+locate
+	located
+	locating
+	location
+	locations
+	relocate
+	relocated
+	relocates
+	relocating
+	relocation
+maximise
+	max 
+	maximised
+	maximises
+	maximising
+	maximisation
+	maximize 
+	maximized
+	maximizes 
+	maximizing
+	maximization  
+	maximum
+minor
+	minorities
+	minority
+	minors
+negate 
+	negative
+	negated
+	negates
+	negating
+	negatively
+	negatives
+outcome
+	outcomes
+partner
+	partners
+	partnership
+	partnerships 
+philosophy 
+	philosopher
+	philosophers
+	philosophical
+	philosophically 
+	philosophies
+	philosophise 
+	philosophised
+	philosophises
+	philosophising
+	philosophize
+	philosophized
+	philosophizes
+	philosophizing
+physical 
+	physically
+proportion 
+	disproportion
+	disproportionate
+	disproportionately
+	proportional
+	proportionally
+	proportionate
+	proportionately 
+	proportions
+publish
+	published 
+	publisher 
+	publishers
+	publishes
+	publishing
+	unpublished
+react 
+	reacted 
+	reacts
+	reacting
+	reaction
+	reactionaries
+	reactionary
+	reactions
+	reactive
+	reactivate
+	reactivation
+	reactor
+	reactors
+register
+	deregister 
+	deregistered 
+	deregistering
+	deregisters 
+	deregistration 
+	registered 
+	registering
+	registers
+	registration 
+rely
+	reliability 
+	reliable
+	reliably
+	reliance
+	reliant 
+	relied
+	relies
+	relying
+	unreliable
+remove
+	removable
+	removal
+	removals
+	removed
+	removes
+	removing
+scheme
+	schematic
+	schematically
+	schemed
+	schemes
+	scheming
+sequence
+	sequenced
+	sequences
+	sequencing
+	sequential
+	sequentially
+sex
+	sexes 
+	sexism 
+	sexual
+	sexuality
+	sexually
+shift
+	shifted
+	shifting
+	shifts
+specify
+	specifiable
+	specified 
+	specifies
+	specifying
+	unspecified
+sufficient
+	sufficiency
+	insufficient
+	insufficiently
+	sufficiently
+task
+	tasks
+technical 
+	technically
+technique
+	techniques
+technology
+	technological
+	technologically
+valid
+	invalidate
+	invalidity
+	validate
+	validated
+	validating
+	validation
+	validity
+	validly
+volume
+	volumes   
+	vol

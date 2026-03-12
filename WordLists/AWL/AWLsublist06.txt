@@ -1,0 +1,335 @@
+abstract 
+	abstraction 
+	abstractions 
+	abstractly 
+	abstracts 
+accurate 
+	accuracy
+	accurately 
+	inaccuracy 
+	inaccuracies 
+	inaccurate 
+acknowledge 
+	acknowledged 
+	acknowledges 
+	acknowledging 
+	acknowledgement 
+	acknowledgemens 
+aggregate  
+	aggregated 
+	aggregates 
+	aggregating 
+	aggregation 
+allocate 
+	allocated 
+	allocates 
+	allocating 
+	allocation 
+	allocations 
+assign 
+	assigned 
+	assigning 
+	assignment 
+	assignments 
+	assigns 
+	reassign 
+	reassigned 
+	reassigning 
+	reassigns 
+	unassigned 
+attach 
+	attached 
+	attaches 
+	attaching 
+	attachment 
+	attachments 
+	unattached 
+author 
+	authored 
+	authoring 
+	authors 
+	authorship 
+bond 
+	bonded 
+	bonding 
+	bonds 
+brief 
+	brevity 
+	briefed 
+	briefing 
+	briefly
+	briefs 
+capable 
+	capabilities  
+	capability 
+	incapable 
+cite  
+	citation
+	citations
+	cited 
+	citing  
+	cites 
+cooperate 
+	cooperated 
+	cooperates 
+	cooperating
+	cooperation 
+	cooperative  
+	cooperatively
+	co-operate 
+	co‑operated 
+	co‑operates 
+	co‑operation 
+	co‑operative  
+	co‑operatively 
+discriminate 
+	discriminated 
+	discriminates 
+	discriminating 
+	discrimination  
+display 
+	displayed 
+	displaying 
+	displays 
+diverse  
+	diversely 
+	diversification 
+	diversified 
+	diversifies 
+	diversify 
+	diversifying 
+	diversity 
+domain 
+	domains  
+edit
+	edited
+	editing 
+	edition 
+	editions 
+	editor 
+	editorial 
+	editorials 
+	editors 
+	edits
+enhance 
+	enhanced 
+	enhancement 
+	enhances 
+	enhancing 
+estate 
+	estates 
+exceed 
+	exceeded 
+	exceeding 
+	exceeds 
+expert 
+	expertise 
+	expertly
+	experts 
+explicit 
+	explicitly  
+federal 
+	federation 
+	federations 
+fee 
+	fees 
+flexible 
+	flexibility 
+	inflexible 
+	inflexibility 
+furthermore 
+gender 
+	genders 
+ignorant
+	ignorance
+	ignore 
+	ignored 
+	ignores 
+	ignoring 
+incentive 
+	incentives  
+incidence
+	incident  
+	incidentally 
+	incidents 
+incorporate 
+	incorporated 
+	incorporates 
+	incorporating  
+	incorporation 
+index 
+	indexed 
+	indexes 
+	indexing 
+inhibit 
+	inhibited 
+	inhibiting 
+	inhibition 
+	inhibitions 
+	inhibits 
+initiate 
+	initiated 
+	initiates 
+	initiating 
+	initiation 
+	initiations
+	initiative 
+	initiatives  
+	initiator
+	initiators
+input 
+	inputs 
+instruct 
+	instruction
+	instructed 
+	instructing 
+	instructions 
+	instructive 
+	instructor 
+	instructors
+	instructs 
+intelligent 
+	intelligence
+	intelligently 
+	unintelligent 
+interval 
+	intervals 
+lecture 
+	lectured 
+	lecturer 
+	lecturers 
+	lectures 
+	lecturing 
+migrate  
+	migrant 
+	migrants 
+	migrated 
+	migrates 
+	migrating 
+	migration 
+	migrations 
+	migratory 
+minimum 
+ministry 
+	ministered
+	ministering
+	ministerial 
+	ministries  
+motive
+	 motivate 
+	motivated 
+	motivates 
+	motivating 
+	motivation 
+	motivations
+	motives 
+	unmotivated 
+neutral 
+	neutralisation
+	neutralise 
+	neutralised 
+	neutralises 
+	neutralising 
+	neutrality
+	neutralization
+	neutralize 
+	neutralized 
+	neutralizes 
+	neutralizing 
+nevertheless   
+overseas  
+precede 
+	preceded 
+	precedence 
+	precedent 
+	precedes 
+	preceding 
+	unprecedented 
+presume 
+	presumably  
+	presumed 
+	presumes 
+	presuming 
+	presumption 
+	presumptions 
+	presumptuous
+rational 
+	irrational 
+	rationalisation
+	rationalisations
+	rationalise 
+	rationalised 
+	rationalises 
+	rationalising 
+	rationalism
+	rationality
+	rationalization
+	rationalizations
+	rationalize 
+	rationalized 
+	rationalizes
+	rationally
+recover 
+	recoverable 
+	recovered 
+	recovering 
+	recovers
+	recovery 
+reveal 
+	revealed 
+	revealing 
+	reveals 
+	revelation 
+	revelations 
+scope 
+subsidy 
+	subsidiary 
+	subsidies 
+	subsidise 
+	subsidised 
+	subsidises 
+	subsidising 
+	subsidize
+	subsidized 
+	subsidizes 
+	subsidizing 
+tape 
+	taped 
+	tapes 
+	taping 
+trace 
+	traceable 
+	traced 
+	traces 
+	tracing 
+transform 
+	transformation 
+	transformations 
+	transformed  
+	transforming 
+	transforms 
+transport  
+	transportation 
+	transported 
+	transporter   
+	transporters 
+	transporting 
+	transports 
+underlie 
+	underlay
+	underlies 
+	underlying 
+utilise 
+	utilisation 
+	utilised 
+	utilises
+	utilising
+	utiliser
+	utilisers 
+	utility 
+	utilities 
+	utilization 
+	utilize 
+	utilized 
+	utilizes 
+	utilizing

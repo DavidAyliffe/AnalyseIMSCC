@@ -1,0 +1,939 @@
+a determiner NOT PARTICULAR A1
+a determiner ANY/EVERY A1
+a determiner ONE A1
+a determiner TYPE A1
+about preposition SUBJECT A1
+about adverb A1
+above adverb, preposition HIGHER POSITION A1
+address noun BUILDING DETAILS A1
+address noun ELECTRONIC A1
+adult noun A1
+after preposition TIME/EVENT A1
+afternoon noun A1
+again adverb ONE MORE TIME A1
+age noun HOW OLD A1
+all determiner, pronoun EVERY ONE A1
+all determiner, pronoun WHOLE TIME A1
+all right adjective, adverb WITHOUT PROBLEMS A1
+all right exclamation A1
+alright exclamation A1
+also adverb A1
+always adverb EVERY TIME A1
+a.m. adverb A1
+an determiner A1
+and conjunction ALSO A1
+and conjunction AFTER A1
+and conjunction NUMBERS A1
+animal noun NOT A HUMAN A1
+answer noun REACTION A1
+answer verb REACT A1
+any determiner, pronoun SOME A1
+any determiner, pronoun NOT IMPORTANT WHICH A1
+anything pronoun IN QUESTIONS/NEGATIVES A1
+anything pronoun NO MATTER WHICH A1
+apple noun A1
+April noun A1
+arm noun BODY A1
+as adverb; preposition JOB A1
+as well A1
+ask verb QUESTION A1
+at preposition PLACE A1
+at preposition TIME A1
+at preposition DIRECTION A1
+at preposition EMAIL ADDRESS A1
+August noun A1
+baby noun CHILD A1
+back adverb RETURNING A1
+bad adjective UNPLEASANT A1
+bag noun A1
+ball noun ROUND OBJECT A1
+banana noun A1
+band noun MUSIC A1
+bank noun MONEY A1
+bar noun DRINKING PLACE A1
+basketball noun A1
+bath noun WASH A1
+bath noun CONTAINER A1
+bathroom noun ROOM A1
+I am Spanish/a teacher, etc. A1
+there is/there are/there was, etc. A1
+be verb POSITION A1
+beach noun A1
+beard noun A1
+beautiful adjective ATTRACTIVE A1
+beautiful adjective PLEASANT A1
+because conjunction A1
+bed noun FOR SLEEP A1
+bedroom noun A1
+beer noun A1
+before preposition EARLIER A1
+begin verb START TO HAPPEN A1
+behind preposition BACK A1
+below adverb, preposition POSITION A1
+best adjective BETTER THAN ALL A1
+best adverb MOST A1
+better adjective HIGHER STANDARD A1
+better adjective HEALTHY A1
+between preposition SPACE A1
+between preposition TIME A1
+between preposition INVOLVE A1
+big adjective SIZE A1
+bird noun A1
+birthday noun A1
+biscuit noun A1
+black adjective COLOUR A1
+blue adjective COLOUR A1
+board noun CLASSROOM A1
+boat noun FOR TRAVEL ON WATER A1
+body noun PERSON A1
+book noun FOR READING A1
+bored adjective A1
+boring adjective A1
+both determiner, pronoun A1
+bottom noun LOWEST PART A1
+box noun CONTAINER A1
+boy noun A1
+bread noun A1
+breakfast noun A1
+brother noun A1
+brown adjective A1
+bus noun A1
+business noun SELLING A1
+but conjunction DIFFERENT STATEMENT A1
+butter noun A1
+buy verb A1
+bye exclamation A1
+café noun A1
+cake noun FOOD A1
+be called sth A1
+camera noun A1
+can modal verb ABILITY A1
+can modal verb REQUEST A1
+can modal verb OFFER A1
+can modal verb POSSIBILITY A1
+cannot modal verb A1
+car noun A1
+carry verb HOLD A1
+cat noun A1
+catch verb TAKE HOLD A1
+catch verb TRAVEL A1
+CD noun A1
+CD player noun A1
+chair noun A1
+change verb START SOMETHING NEW A1
+cheap adjective COSTING LITTLE A1
+cheese noun A1
+child noun A1
+chip noun FRIED FOOD A1
+chocolate noun FOOD A1
+choose verb A1
+cinema noun BUILDING A1
+city noun A1
+class noun TEACHING GROUP A1
+class noun LESSON A1
+classroom noun A1
+clean adjective NOT DIRTY A1
+clean verb A1
+clever adjective ABLE TO LEARN A1
+clock noun TIME A1
+close verb DOOR/WINDOW A1
+close adjective NEAR A1
+closed adjective NOT OPEN A1
+closed adjective BUSINESS/SHOP A1
+clothes noun A1
+coat noun A1
+coffee noun A1
+cold adjective TEMPERATURE A1
+colour noun RED/BLUE, ETC. A1
+colour verb A1
+come verb MOVE TO SPEAKER A1
+come verb GO WITH SOMEONE A1
+come verb ARRIVE A1
+come from swh/sth A1
+computer noun A1
+conversation noun A1
+cook verb A1
+country noun POLITICAL UNIT A1
+course noun CLASSES A1
+of course A1
+cow noun A1
+credit card noun A1
+cross noun MARK A1
+cup noun DRINKING CONTAINER A1
+dad noun A1
+dance verb A1
+dance noun MOVING A1
+dancing noun A1
+dark adjective NOT PALE A1
+date noun PARTICULAR DAY A1
+daughter noun A1
+day noun 24 HOURS A1
+dear adjective IN LETTERS A1
+December noun A1
+desk noun A1
+dictionary noun A1
+die verb STOP LIVING A1
+different adjective NOT SAME A1
+difficult adjective NOT EASY A1
+dining room noun A1
+dinner noun A1
+do auxiliary verb QUESTIONS/NEGATIVES A1
+do verb ACTION A1
+do verb STUDY A1
+do the cleaning/cooking, etc. A1
+what does sb do? A1
+doctor noun A1
+dog noun A1
+doll noun A1
+dollar noun A1
+door noun A1
+down adverb SURFACE A1
+draw verb PICTURE A1
+dress noun A1
+drink noun LIQUID A1
+drink verb LIQUID A1
+drive verb USE VEHICLE A1
+driver noun A1
+DVD noun A1
+each pronoun A1
+each determiner A1
+ear noun ON HEAD A1
+early adverb BEGINNING A1
+easy adjective A1
+eat verb SWALLOW FOOD A1
+eat verb HAVE MEAL A1
+egg noun FOOD A1
+eight number A1
+eighteen number A1
+eleven number A1
+email noun SYSTEM A1
+email noun MESSAGE A1
+end noun FINAL PART A1
+enjoy verb PLEASURE A1
+evening noun A1
+every determiner EACH A1
+every determiner HOW OFTEN A1
+example noun TYPICAL CASE A1
+for example A1
+excited adjective A1
+exciting adjective A1
+Excuse me A1
+expensive adjective A1
+eye noun BODY PART A1
+face noun HEAD A1
+factory noun A1
+family noun RELATED PEOPLE A1
+famous adjective A1
+farm noun A1
+fast adjective A1
+fat adjective A1
+father noun A1
+favourite adjective A1
+February noun A1
+feel verb EXPERIENCE A1
+fifteen number A1
+film noun MOVING PICTURES A1
+find verb DISCOVER WHEN SEARCHING A1
+fine adjective WELL A1
+(that's) fine A1
+finish verb COMPLETE A1
+finish verb END A1
+first adjective BEFORE A1
+first adverb BEFORE A1
+fish noun ANIMAL A1
+fish noun FOOD A1
+five number A1
+flat noun A1
+floor noun SURFACE A1
+flower noun A1
+fly verb TRAVEL A1
+food noun A1
+foot noun BODY PART A1
+football noun GAME A1
+football noun BALL A1
+for preposition GIVEN/USED A1
+for preposition TIME/DISTANCE A1
+Don't forget... A1
+four number A1
+fourteen number A1
+Friday noun A1
+friend noun PERSON YOU LIKE A1
+from preposition STARTING PLACE A1
+from preposition ORIGIN A1
+from preposition TIME A1
+from preposition DISTANCE A1
+fruit noun FOOD A1
+fun noun PLEASURE A1
+funny adjective MAKING YOU LAUGH A1
+game noun ACTIVITY/SPORT A1
+garden noun BY HOUSE A1
+get verb OBTAIN A1
+get verb RECEIVE A1
+get here/there/home/to work, etc. A1
+get a bus/train/taxi, etc. A1
+get (sb) up A1
+girl noun FEMALE CHILD A1
+give verb PROVIDE A1
+glass noun SUBSTANCE A1
+glass noun CONTAINER A1
+glasses noun A1
+go verb MOVE/TRAVEL A1
+go verb DO SOMETHING A1
+go shopping A1
+go out LEAVE A1
+good adjective PLEASANT A1
+good adjective HIGH QUALITY A1
+good adjective PLEASED A1
+good adjective HEALTHY A1
+good adjective SUCCESSFUL A1
+good adjective KIND A1
+good for you A1
+good afternoon exclamation A1
+goodbye exclamation A1
+good evening exclamation A1
+good morning exclamation A1
+good night exclamation A1
+grass noun A1
+great adjective EXCELLENT A1
+green adjective COLOUR A1
+grey adjective COLOUR A1
+group noun SET A1
+group noun MUSIC A1
+guitar noun A1
+hair noun ON HEAD A1
+half past one/two/three, etc. A1
+hand noun BODY PART A1
+happy adjective PLEASED A1
+Happy Birthday/New Year, etc. A1
+hard adjective DIFFICULT A1
+hard adverb USING EFFORT A1
+hat noun A1
+have verb POSSESS A1
+have verb BE ILL A1
+have verb EAT/DRINK A1
+he pronoun A1
+head noun BODY A1
+hear verb RECEIVE SOUND A1
+hello exclamation GREETING A1
+hello exclamation ON PHONE A1
+help verb DO PART OF WORK A1
+her pronoun A1
+her determiner A1
+here adverb THIS PLACE A1
+here adverb ON THE PHONE A1
+hi exclamation A1
+him pronoun A1
+his determiner A1
+holiday noun NO WORK/SCHOOL A1
+holiday noun VISIT A1
+home noun A1
+homework noun A1
+horse noun A1
+hospital noun A1
+hot adjective VERY WARM A1
+hotel noun A1
+hour noun 60 MINUTES A1
+house noun A1
+How are you? A1
+how adverb QUANTITY A1
+hungry adjective A1
+husband noun A1
+I pronoun A1
+ice cream noun A1
+important adjective VALUABLE A1
+in preposition INSIDE A1
+in preposition DURING A1
+inside preposition CONTAINER A1
+interesting adjective A1
+the Internet noun A1
+into preposition IN A1
+invite verb SOCIAL A1
+it pronoun THING A1
+it pronoun SUBJECT/OBJECT A1
+its determiner A1
+jacket noun A1
+January noun A1
+jeans noun A1
+job noun PAID EMPLOYMENT A1
+juice noun A1
+July noun A1
+June noun A1
+key noun FOR LOCKS A1
+kick verb HIT A1
+kind noun A1
+kitchen noun A1
+knife noun A1
+know verb HAVE INFORMATION A1
+know verb ASK FOR INFORMATION A1
+language noun ENGLISH/SPANISH/JAPANESE, ETC. A1
+last week/year/Monday, etc. A1
+last night A1
+late adjective AFTER A1
+late adjective NEAR THE END A1
+see you later A1
+learn verb GET KNOWLEDGE A1
+leave verb GO AWAY A1
+leg noun A1
+lesson noun TEACHING PERIOD A1
+letter noun MESSAGE A1
+life noun TIME A1
+light adjective PALE A1
+like verb ENJOY A1
+would like sth/to do sth A1
+Would you like...? A1
+listen verb HEAR A1
+little adjective SMALL A1
+little adjective YOUNG A1
+live in/at, etc. A1
+living room noun A1
+long adjective TIME A1
+long adjective DISTANCE A1
+look verb SEE A1
+look verb SEARCH A1
+a lot/lots A1
+a lot A1
+love verb LIKE SOMETHING A1
+love verb FRIENDS/FAMILY A1
+love verb ROMANCE/SEX A1
+lunch noun A1
+make verb PRODUCE A1
+man noun MALE A1
+many determiner, pronoun LARGE NUMBER A1
+how many A1
+March noun A1
+May noun A1
+me pronoun A1
+meal noun A1
+meat noun A1
+meet verb INTRODUCE A1
+meet verb COME TOGETHER A1
+message noun INFORMATION A1
+milk noun A1
+minute noun 60 SECONDS A1
+Miss noun A1
+mobile noun A1
+mobile phone noun A1
+Monday noun A1
+money noun A1
+month noun PART OF YEAR A1
+month noun FOUR WEEKS A1
+more determiner, pronoun IN ADDITION A1
+more determiner, pronoun GREATER AMOUNT A1
+more beautiful/difficult/easily, etc. A1
+morning noun PART OF DAY A1
+(Good) morning A1
+in the morning A1
+mother noun A1
+mouth noun FACE A1
+movie noun A1
+Mr noun A1
+Mrs noun A1
+much determiner, pronoun QUESTION A1
+very much A1
+mum noun A1
+museum noun A1
+music noun SOUNDS A1
+my determiner A1
+name noun CALL A1
+nationality noun A1
+near preposition DISTANCE A1
+need verb MUST HAVE A1
+need to do sth A1
+never adverb NOT EVER A1
+new adjective RECENTLY CREATED A1
+new adjective NOT KNOWN BEFORE A1
+new adjective DIFFERENT A1
+newspaper noun TO READ A1
+next week/year/Monday, etc. A1
+nice adjective PLEASANT A1
+nice adjective KIND A1
+night noun DARK PERIOD A1
+night noun EVENING A1
+nine number A1
+nineteen number A1
+no adverb NEGATIVE ANSWER A1
+no determiner NOT ANY A1
+noise noun A1
+nose noun ON FACE A1
+not adverb AFTER BE/CAN, ETC. A1
+not adverb NEGATIVE WORD/S A1
+note noun LETTER A1
+November noun A1
+now adverb AT PRESENT A1
+number noun SYMBOL A1
+number noun TELEPHONE A1
+number noun SHOWING SOMETHING A1
+one/two/three, etc. o'clock A1
+October noun A1
+of preposition BELONG A1
+of preposition AMOUNT A1
+of preposition CONTAINING A1
+of preposition NUMBER A1
+often adverb REGULARLY A1
+oh exclamation NEW IDEA A1
+oh exclamation EXPRESS EMOTION A1
+OK exclamation AGREEING A1
+OK adjective NOT ILL/UPSET, ETC. A1
+old adjective EXISTED MANY YEARS A1
+old adjective AGE A1
+on preposition SURFACE A1
+on preposition DAY/DATE A1
+on preposition CONNECTED A1
+one number A1
+only adverb NOT MORE A1
+only adjective A1
+open adjective DOING BUSINESS A1
+open verb NOT CLOSED A1
+or conjunction POSSIBILITIES A1
+orange adjective A1
+orange noun FRUIT A1
+other determiner ADDITIONAL A1
+our determiner A1
+outside adverb NOT IN BUILDING A1
+page noun PAPER A1
+paint noun A1
+paint verb MAKE PICTURE A1
+pair noun TWO PEOPLE A1
+paper noun FLAT MATERIAL A1
+parent noun A1
+park noun A1
+part noun PIECE A1
+party noun EVENT A1
+past preposition, adverb TIME A1
+pay verb BUY A1
+pen noun A1
+pencil noun A1
+people noun MORE THAN ONE A1
+person noun HUMAN A1
+pet noun A1
+phone noun A1
+phone verb A1
+photo noun A1
+picnic noun A1
+picture noun DRAWING, ETC. A1
+pig noun A1
+pizza noun A1
+place noun SOMEWHERE A1
+plane noun A1
+plant noun A1
+plate noun A1
+play verb CHILDREN A1
+play verb SPORT A1
+player noun SPORT/GAME A1
+please exclamation POLITE REQUEST A1
+Yes, please A1
+p.m. adverb A1
+poor adjective NO MONEY A1
+possible adjective CAN HAPPEN A1
+potato noun A1
+practise verb A1
+the present A1
+problem noun DIFFICULT SITUATION A1
+put sth down/in/on, etc. A1
+quarter noun TIME A1
+question noun ASKING A1
+quick adjective FAST A1
+radio noun EQUIPMENT A1
+the radio A1
+rain noun A1
+it rains/it is raining A1
+read verb WORDS A1
+reading noun BOOKS A1
+ready adjective PREPARED A1
+really adverb VERY GREAT A1
+red adjective COLOUR A1
+remember verb IN YOUR MIND A1
+restaurant noun A1
+rice noun A1
+ride verb A1
+right adjective CORRECT A1
+river noun A1
+road noun TO DRIVE ON A1
+Road A1
+room noun PART OF BUILDING A1
+run verb MOVE FAST A1
+sad adjective A1
+safe adjective NOT IN DANGER A1
+salt noun A1
+the same A1
+same adjective NOT ANOTHER A1
+sandwich noun A1
+Saturday noun A1
+say verb SPEAK A1
+school noun PLACE A1
+sea noun A1
+second ordinal number, determiner AFTER FIRST A1
+see verb USE EYES A1
+see you A1
+see you later/soon/tomorrow, etc. A1
+see verb MEET A1
+send verb POST A1
+sentence noun WORD GROUP A1
+September noun A1
+seven number A1
+seventeen number A1
+she pronoun A1
+sheep noun A1
+shirt noun A1
+shoe noun A1
+shop noun A1
+shopping noun ACTIVITY A1
+short adjective LENGTH/DISTANCE/HEIGHT A1
+short adjective TIME A1
+show verb MAKE SEEN A1
+shower noun WASH A1
+shower noun BATHROOM EQUIPMENT A1
+sing verb A1
+sister noun A1
+sit verb BODY POSITION A1
+six number A1
+sixteen number A1
+skirt noun A1
+sleep verb NOT AWAKE A1
+slim adjective THIN A1
+slow adjective NOT FAST A1
+small adjective LITTLE A1
+small adjective YOUNG A1
+smoke verb A1
+smoking noun A1
+snow noun A1
+some determiner UNKNOWN AMOUNT A1
+some pronoun UNKNOWN AMOUNT A1
+some pronoun NOT ALL A1
+something pronoun THING A1
+sometimes adverb A1
+son noun A1
+see you soon A1
+sorry adjective APOLOGY A1
+soup noun A1
+speak verb SAY WORDS A1
+speak verb LANGUAGE A1
+sport noun GAME A1
+sport noun PHYSICAL ACTIVITY A1
+start verb BEGIN A1
+station noun TRAINS A1
+stay verb NOT LEAVE A1
+stop verb FINISH A1
+stop noun PLACE A1
+street noun A1
+Street A1
+student noun A1
+study verb UNIVERSITY/SCHOOL A1
+subject noun STUDY A1
+sugar noun A1
+summer noun A1
+sun noun A1
+Sunday noun A1
+supermarket noun A1
+sweet adjective TASTE A1
+swim verb A1
+swimming pool noun A1
+table noun FURNITURE A1
+take verb CARRY A1
+take verb GO WITH SOMEONE A1
+take a picture/photo(graph) A1
+talk verb SAY A1
+tall adjective GREATER HEIGHT A1
+taxi noun A1
+tea noun DRINK A1
+teach verb GIVE LESSONS A1
+teacher noun A1
+television noun EQUIPMENT A1
+television noun PROGRAMMES A1
+tell verb SPEAK A1
+ten number A1
+tennis noun A1
+test noun EXAM A1
+than preposition, conjunction COMPARING A1
+thanks exclamation THANK YOU A1
+thank you exclamation GRATEFUL A1
+that determiner CAN BE SEEN A1
+that determiner ALREADY MENTIONED A1
+that pronoun CAN BE SEEN A1
+that pronoun ALREADY MENTIONED A1
+the determiner PARTICULAR A1
+the determiner ONLY ONE A1
+the determiner PLACE A1
+their determiner BELONGING TO GROUP A1
+them pronoun GROUP A1
+then adverb AT THAT TIME A1
+then adverb NEXT A1
+There is/are/was, etc. A1
+there adverb PLACE A1
+there adverb DIRECTION A1
+these determiner, pronoun A1
+they pronoun GROUP A1
+thing noun OBJECT A1
+things A1
+think verb BELIEVE TO BE TRUE A1
+think verb OPINION A1
+thirteen number A1
+this determiner ALREADY MENTIONED A1
+this determiner CAN BE SEEN A1
+this determiner TIME A1
+those determiner, pronoun A1
+three number A1
+Thursday noun A1
+ticket noun A1
+time noun PARTICULAR POINT A1
+tired adjective WANTING REST A1
+to infinitive marker INFINITIVE A1
+to preposition PLACE A1
+to preposition TELLING THE TIME A1
+today adverb THIS DAY A1
+today noun THIS DAY A1
+together adverb WITH EACH OTHER A1
+toilet noun CONTAINER A1
+tomato noun A1
+tomorrow adverb A1
+tomorrow noun DAY AFTER TODAY A1
+tonight adverb A1
+too small/hard/much, etc. A1
+too adverb ALSO A1
+tooth noun IN MOUTH A1
+town noun PLACE PEOPLE LIVE/WORK A1
+train noun VEHICLE A1
+travel verb MAKE JOURNEY A1
+tree noun A1
+trousers noun A1
+T-shirt noun A1
+Tuesday noun A1
+TV noun A1
+twelve number A1
+twenty number NUMBER A1
+two number NUMBER A1
+under preposition LOWER POSITION A1
+understand verb KNOW MEANING A1
+university noun A1
+until preposition TIME A1
+up adverb VERTICAL A1
+us pronoun A1
+use verb PURPOSE A1
+vegetable noun A1
+very adverb EMPHASIS A1
+not very good/tall/happy, etc. A1
+village noun A1
+visit verb SEE A PERSON A1
+visit verb SEE A PLACE A1
+wait verb STAY A1
+waiter noun A1
+waitress noun A1
+wake (sb) up or wake up (sb) A1
+walk verb A1
+wall noun A1
+want verb A1
+warm adjective TEMPERATURE A1
+wash verb CLEAN THING A1
+wash verb CLEAN BODY A1
+watch verb LOOK AT A1
+watch noun A1
+water noun LIQUID A1
+we pronoun GROUP A1
+wear verb CLOTHES A1
+weather noun WIND, RAIN, ETC. A1
+website noun A1
+Wednesday noun A1
+week noun SEVEN DAYS A1
+week noun MONDAY TO FRIDAY A1
+weekend noun A1
+well adverb IN A GOOD WAY A1
+Well done! A1
+well adjective HEALTHY A1
+well exclamation EXPRESSING DOUBT A1
+what pronoun QUESTION A1
+what determiner QUESTION A1
+when adverb A1
+where adverb A1
+which determiner A1
+white adjective COLOUR A1
+who pronoun NAME A1
+why adverb ASK ABOUT REASON A1
+wife noun A1
+will modal verb ABLE/WILLING A1
+wind noun A1
+window noun GLASS A1
+wine noun A1
+winter noun A1
+with preposition TOGETHER A1
+with preposition HAVING A1
+woman noun A1
+word noun LANGUAGE UNIT A1
+work noun PLACE A1
+work noun JOB A1
+work verb DO JOB A1
+world noun THE EARTH A1
+Don't worry (about sth) A1
+Would you like ...? A1
+write verb PRODUCE A1
+writing noun SKILL A1
+wrong adjective NOT CORRECT A1
+year noun TWELVE MONTHS A1
+be ... years old A1
+yellow adjective A1
+yes adverb AGREE A1
+yes adverb ANSWER A1
+yesterday adverb A1
+you pronoun PERSON/PEOPLE ADDRESSED A1
+young adjective A1
+your determiner PERSON/PEOPLE ADDRESSED A1
+zoo noun A1
+student noun A1
+study verb UNIVERSITY/SCHOOL A1
+subject noun STUDY A1
+sugar noun A1
+summer noun A1
+sun noun A1
+Sunday noun A1
+supermarket noun A1
+sweet adjective TASTE A1
+swim verb A1
+swimming pool noun A1
+table noun FURNITURE A1
+take verb CARRY A1
+take verb GO WITH SOMEONE A1
+take a picture/photo(graph) A1
+talk verb SAY A1
+tall adjective GREATER HEIGHT A1
+taxi noun A1
+tea noun DRINK A1
+teach verb GIVE LESSONS A1
+teacher noun A1
+television noun EQUIPMENT A1
+television noun PROGRAMMES A1
+tell verb SPEAK A1
+ten number A1
+tennis noun A1
+test noun EXAM A1
+than preposition, conjunction COMPARING A1
+thanks exclamation THANK YOU A1
+thank you exclamation GRATEFUL A1
+that determiner CAN BE SEEN A1
+that determiner ALREADY MENTIONED A1
+that pronoun CAN BE SEEN A1
+that pronoun ALREADY MENTIONED A1
+the determiner PARTICULAR A1
+the determiner ONLY ONE A1
+the determiner PLACE A1
+their determiner BELONGING TO GROUP A1
+them pronoun GROUP A1
+then adverb AT THAT TIME A1
+then adverb NEXT A1
+There is/are/was, etc. A1
+there adverb PLACE A1
+there adverb DIRECTION A1
+these determiner, pronoun A1
+they pronoun GROUP A1
+thing noun OBJECT A1
+things A1
+think verb BELIEVE TO BE TRUE A1
+think verb OPINION A1
+thirteen number A1
+this determiner ALREADY MENTIONED A1
+this determiner CAN BE SEEN A1
+this determiner TIME A1
+those determiner, pronoun A1
+three number A1
+Thursday noun A1
+ticket noun A1
+time noun PARTICULAR POINT A1
+tired adjective WANTING REST A1
+to infinitive marker INFINITIVE A1
+to preposition PLACE A1
+to preposition TELLING THE TIME A1
+today adverb THIS DAY A1
+today noun THIS DAY A1
+together adverb WITH EACH OTHER A1
+toilet noun CONTAINER A1
+tomato noun A1
+tomorrow adverb A1
+tomorrow noun DAY AFTER TODAY A1
+tonight adverb A1
+too small/hard/much, etc. A1
+too adverb ALSO A1
+tooth noun IN MOUTH A1
+town noun PLACE PEOPLE LIVE/WORK A1
+train noun VEHICLE A1
+travel verb MAKE JOURNEY A1
+tree noun A1
+trousers noun A1
+T-shirt noun A1
+Tuesday noun A1
+TV noun A1
+twelve number A1
+twenty number NUMBER A1
+two number NUMBER A1
+under preposition LOWER POSITION A1
+understand verb KNOW MEANING A1
+university noun A1
+until preposition TIME A1
+up adverb VERTICAL A1
+us pronoun A1
+use verb PURPOSE A1
+vegetable noun A1
+very adverb EMPHASIS A1
+not very good/tall/happy, etc. A1
+village noun A1
+visit verb SEE A PERSON A1
+visit verb SEE A PLACE A1
+wait verb STAY A1
+waiter noun A1
+waitress noun A1
+wake (sb) up or wake up (sb) A1
+walk verb A1
+wall noun A1
+want verb A1
+warm adjective TEMPERATURE A1
+wash verb CLEAN THING A1
+wash verb CLEAN BODY A1
+watch verb LOOK AT A1
+watch noun A1
+water noun LIQUID A1
+we pronoun GROUP A1
+wear verb CLOTHES A1
+weather noun WIND, RAIN, ETC. A1
+website noun A1
+Wednesday noun A1
+week noun SEVEN DAYS A1
+week noun MONDAY TO FRIDAY A1
+weekend noun A1
+well adverb IN A GOOD WAY A1
+Well done! A1
+well adjective HEALTHY A1
+well exclamation EXPRESSING DOUBT A1
+what pronoun QUESTION A1
+what determiner QUESTION A1
+when adverb A1
+where adverb A1
+which determiner A1
+white adjective COLOUR A1
+who pronoun NAME A1
+why adverb ASK ABOUT REASON A1
+wife noun A1
+will modal verb ABLE/WILLING A1
+wind noun A1
+window noun GLASS A1
+wine noun A1
+winter noun A1
+with preposition TOGETHER A1
+with preposition HAVING A1
+woman noun A1
+word noun LANGUAGE UNIT A1
+work noun PLACE A1
+work noun JOB A1
+work verb DO JOB A1
+world noun THE EARTH A1
+Don't worry (about sth) A1
+Would you like ...? A1
+write verb PRODUCE A1
+writing noun SKILL A1
+wrong adjective NOT CORRECT A1
+year noun TWELVE MONTHS A1
+years old A1
+yellow adjective A1
+yes adverb AGREE A1
+yes adverb ANSWER A1
+yesterday adverb A1
+you pronoun PERSON/PEOPLE ADDRESSED A1
+young adjective A1
+your determiner PERSON/PEOPLE ADDRESSED A1
+zoo noun A1

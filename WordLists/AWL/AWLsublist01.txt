@@ -1,0 +1,453 @@
+analyse
+	analysed
+	analyser
+	analysers
+	analyses
+	analysing
+	analysis
+	analyst
+	analysts
+	analytic
+	analytical
+	analytically
+	analyze
+	analyzed
+	analyzes
+	analyzing
+approach
+	approachable
+	approached
+	approaches
+	approaching
+	unapproachable
+area
+	areas 
+assess
+	assessable
+	assessed
+	assesses
+	assessing
+	assessment
+	assessments
+	reassess
+	reassessed 
+	reassessing 
+	reassessment
+	unassessed
+assume
+	assumed
+	assumes
+	assuming
+	assumption
+	assumptions
+authority	
+	authoritative 
+	authorities
+available
+	availability
+	unavailable
+benefit 
+	beneficial
+	beneficiary
+	beneficiaries
+	benefited
+	benefiting
+	benefits 
+concept 
+	conception 
+	concepts
+	conceptual
+	conceptualisation
+	conceptualise
+	conceptualised
+	conceptualises
+	conceptualising
+	conceptually
+consist
+	consisted
+	consistency
+	consistent
+	consistently
+	consisting
+	consists
+	inconsistencies 
+	inconsistency
+	inconsistent
+constitute 
+	constituencies 
+	constituency
+	constituent 
+	constituents 
+	constituted
+	constitutes 
+	constituting
+	constitution
+	constitutions  
+	constitutional
+	constitutionally
+	constitutive
+	unconstitutional
+context
+	contexts
+	contextual
+	contextualise 
+	contextualised 
+	contextualising 
+	uncontextualised 
+	contextualize 
+	contextualized 
+	contextualizing 
+	uncontextualized 
+contract
+	contracted
+	contracting
+	contractor
+	contractors
+	contracts 
+create
+	created
+	creates
+	creating
+	creation
+	creations
+	creative
+	creatively
+	creativity
+	creator
+	creators
+	recreate
+	recreated
+	recreates
+	recreating
+data
+define
+	definable
+	defined 
+	defines
+	defining
+	definition
+	definitions
+	redefine
+	redefined
+	redefines
+	redefining
+	undefined
+derive
+	derivation
+	derivations
+	derivative 
+	derivatives 
+	derived 
+	derives
+	deriving
+distribute
+	distributed
+	distributing
+	distribution 
+	distributional 
+	distributions
+	distributive
+	distributor 
+	distributors
+	redistribute
+	redistributed
+	redistributes
+	redistributing
+	redistribution
+economy
+	economic
+	economical
+	economically
+	economics 
+	economies
+	economist
+	economists
+	uneconomical
+environment 
+	environmental 
+	environmentalist  
+	environmentalists 
+	environmentally
+	environments
+establish
+	disestablish  
+	disestablished
+	disestablishes
+	disestablishing
+	disestablishment
+	established
+	establishes
+	establishing
+	establishment
+	establishments
+estimate 
+	estimated
+	estimates 
+	estimating
+	estimation
+	estimations
+	over‑estimate
+	overestimate
+	overestimated
+	overestimates
+	overestimating
+	underestimate
+	underestimated
+	underestimates
+	underestimating
+evident
+	evidenced
+	evidence
+	evidential 
+	evidently
+export
+	exported
+	exporter
+	exporters
+	exporting
+	exports
+factor
+	factored
+	factoring
+	factors
+finance
+	financed
+	finances
+	financial
+	financially
+	financier 
+	financiers
+	financing
+formula
+	formulae
+	formulas
+	formulate
+	formulated
+	formulating
+	formulation
+	formulations
+	reformulate
+	reformulated
+	reformulating
+	reformulation
+	reformulations
+function
+	functional
+	functionally
+	functioned
+	functioning
+	functions
+identify
+	identifiable 
+	identification  
+	identified
+	identifies 
+	identifying
+	identities
+	identity
+	unidentifiable 
+income
+	incomes
+indicate 
+	indicated
+	indicates 
+	indicating 
+	indication 
+	indications
+	indicative
+	indicator
+	indicators
+individual  
+	individualised
+	individuality
+	individualism
+	individualist
+	individualists
+	individualistic
+	individually
+	individuals 
+interpret
+	interpretation
+	interpretations  
+	interpretative 
+	interpreted
+	interpreting 
+	interpretive
+	interprets
+	misinterpret
+	misinterpretation
+	misinterpretations
+	misinterpreted
+	misinterpreting
+	misinterprets
+	reinterpret
+	reinterpreted
+	reinterprets
+	reinterpreting
+	reinterpretation
+	reinterpretations
+involve
+	involved
+	involvement
+	involves
+	involving
+	uninvolved
+issue
+	issued
+	issues
+	issuing
+labour
+	labor
+	labored
+	labors
+	laboured
+	labouring
+	labours
+legal
+	illegal  
+	illegality
+	illegally
+	legality
+	legally
+legislate
+	legislated
+	legislates
+	legislating
+	legislation
+	legislative
+	legislator
+	legislators
+	legislature
+major 
+	majorities
+	majority
+method
+	methodical
+	methodological
+	methodologies
+	methodology
+	methods 
+occur
+	occurred
+	occurrence 
+	occurrences
+	occurring
+	occurs
+	reoccur 
+	reoccurred 
+	reoccurring
+	reoccurs 
+percent 
+	percentage
+	percentages
+period
+	periodic
+	periodical
+	periodically
+	periodicals
+	periods
+policy
+	policies 
+principle
+	principled
+	principles
+	unprincipled
+proceed
+	procedural
+	procedure
+	procedures
+	proceeded
+	proceeding
+	proceedings
+	proceeds
+process
+	processed
+	processes
+	processing 
+require
+	required
+	requirement
+	requirements 
+	requires
+	requiring
+research
+	researched
+	researcher
+	researchers 
+	researches
+	researching
+respond
+	responded
+	respondent
+	respondents
+	responding
+	responds
+	response
+	responses
+	responsive
+	responsiveness
+	unresponsive 
+role
+	roles
+section
+	sectioned
+	sectioning
+	sections 
+sector
+	sectors
+significant
+	insignificant
+	insignificantly
+	 significance
+	significantly 
+	signified
+	signifies
+	signify
+	signifying
+similar
+	dissimilar
+	similarities
+	similarity 
+	similarly
+source
+	sourced
+	sources 
+	sourcing
+specific
+	specifically
+	specification 
+	specifications
+	specificity
+	specifics
+structure
+	restructure
+	restructured
+	restructures
+	restructuring
+	structural
+	structurally
+	structured 
+	structures
+	structuring
+	unstructured
+theory
+	theoretical
+	theoretically
+	theories
+	theorist
+	theorists
+vary
+	invariable
+	invariably
+	variability
+	variable 
+	variables
+	variably
+	variance
+	variant
+	variants
+	variation
+	variations 
+	varied
+	varies
+	varying

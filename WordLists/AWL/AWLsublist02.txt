@@ -1,0 +1,395 @@
+achieve 
+	achievable
+	achieved
+	achievement
+	achievements
+	achieves
+	achieving
+acquire
+	acquired 
+	acquires
+	acquiring
+	acquisition
+	acquisitions
+administrate
+	administrates
+	administration  
+	administrations  
+	administrative 
+	administratively
+	administrator
+	administrators
+affect
+	affected
+	affecting
+	affective
+	affectively
+	affects
+	unaffected
+appropriate 
+	appropriacy
+	appropriately
+	appropriateness
+	inappropriacy 
+	inappropriate
+	inappropriately
+aspect
+	aspects
+assist
+	assistance 
+	assistant
+	assistants
+	assisted
+	assisting
+	assists
+	unassisted
+category 
+	categories
+	categorisation
+	categorise
+	categorised
+	categorises
+	categorising
+	categorization
+	categorized
+	categorizes
+	categorizing 
+chapter
+	chapters
+commission
+	commissioned
+	commissioner
+	commissioners
+	commissioning
+	commissions
+community
+	communities
+complex 
+	complexities
+	complexity 
+compute 
+	computation
+	computational
+	computations
+	computable
+	computer
+	computed
+	computerised
+	computers
+	computing
+conclude
+	concluded
+	concludes
+	concluding
+	conclusion
+	conclusions 
+	conclusive
+	conclusively
+	inconclusive
+	inconclusively
+conduct
+	conducted 
+	conducting
+	conducts
+consequent
+	consequence
+	consequences
+	consequently
+construct 
+	constructed 
+	constructing 
+	construction
+	constructions
+	constructive 
+	constructs
+	reconstruct
+	reconstructed
+	reconstructing
+	reconstruction
+	reconstructs
+consume
+	consumed
+	consumer  
+	consumers 
+	consumes
+	consuming
+	consumption
+credit
+	credited
+	crediting
+	creditor
+	creditors
+	credits
+culture
+	cultural 
+	culturally
+	cultured
+	cultures  
+	uncultured
+design
+	designed 
+	designer
+	designers
+	designing
+	designs 
+distinct 
+	distinction
+	distinctions 
+	distinctive 
+	distinctively
+	distinctly
+	indistinct
+	indistinctly
+element
+	elements 
+equate 
+	equated 
+	equates
+	equating
+	equation
+	equations
+evaluate
+	evaluated
+	evaluates
+	evaluating
+	evaluation 
+	evaluations
+	evaluative
+	re-evaluate 
+	re-evaluated 
+	re-evaluates
+	re-evaluating 
+	re-evaluation
+feature
+	featured
+	features 
+	featuring
+final
+	finalise
+	finalised
+	finalises
+	finalising
+	finalize
+	finalized
+	finalizes
+	finalizing
+	finality
+	finally
+	finals
+focus
+	focused
+	focuses
+	focusing
+	focussed
+	focussing
+	refocus
+	refocused
+	refocuses
+	refocusing
+	refocussed 
+	refocusses
+	refocussing
+impact
+	impacted
+	impacting
+	impacts
+injure 
+	injured
+	injures
+	injuries
+	injuring
+	injury
+	uninjured
+institute 
+	instituted
+	institutes
+	instituting
+	institution
+	institutional
+	institutionalise 
+	institutionalised 
+	institutionalises 
+	institutionalising 
+	institutionalized
+	institutionalizes 
+	institutionalizing 
+	institutionally
+	institutions
+invest
+	invested
+	investing
+	investment
+	investments
+	investor
+	investors
+	invests
+	reinvest
+	reinvested
+	reinvesting
+	reinvestment
+	reinvests
+item
+	itemisation
+	itemise
+	itemised
+	itemises  
+	itemising
+	items
+journal 
+	journals
+maintain
+	maintained 
+	maintaining 
+	maintains
+	maintenance
+normal
+	abnormal
+	abnormally
+	normalisation
+	normalise
+	normalised
+	normalises
+	normalising
+	normalization
+	normalize
+	normalized
+	normalizes
+	normalizing
+	normality
+	normally
+obtain
+	obtainable
+	obtained 
+	obtaining
+	obtains
+	unobtainable 
+participate 
+	participant
+	participants
+	participated
+	participates
+	participating 
+	participation
+	participatory
+perceive
+	perceived 
+	perceives
+	perceiving 
+	perception 
+	perceptions 
+positive 
+	positively 
+potential
+	potentially 
+previous
+	previously 
+primary 
+	primarily 
+purchase 
+	purchased
+	purchaser
+	purchasers
+	purchases
+	purchasing
+range 
+	ranged
+	ranges
+	ranging
+region
+	regional
+	regionally
+	regions
+regulate
+	deregulated
+	deregulates
+	deregulating
+	deregulation
+	regulated
+	regulates
+	regulating
+	regulation 
+	regulations
+	regulator
+	regulators
+	regulatory
+	unregulated 
+relevant 
+	irrelevance
+	irrelevant
+	relevance
+reside 
+	resided
+	residence
+	resident
+	residential
+	residents
+	resides
+	residing
+resource
+	resourced
+	resourceful
+	resources
+	resourcing
+	unresourceful
+	under-resourced
+restrict
+	restricted 
+	restricting
+	restriction 
+	restrictions
+	restrictive
+	restrictively 
+	restricts
+	unrestricted
+	unrestrictive
+secure
+	insecure
+	insecurities
+	insecurity
+	secured
+	securely
+	secures
+	securing
+	securities
+	security 
+seek
+	seeking
+	seeks
+	sought
+select
+	selected
+	selecting
+	selection 
+	selections
+	selective
+	selectively
+	selector
+	selectors
+	selects
+site
+	sites
+strategy 
+	strategic 
+	strategies
+	strategically
+	strategist
+	strategists
+survey
+	surveyed
+	surveying
+	surveys
+text
+	texts
+	textual
+tradition 
+	non‑traditional
+	traditional
+	traditionalist
+	traditionally
+	traditions
+transfer
+	transferable
+	transference
+	transferred 
+	transferring
+	transfers

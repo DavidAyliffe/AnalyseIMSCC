@@ -1,0 +1,267 @@
+adapt  
+	adaptability 
+	adaptable 
+	adaptation 
+	adaptations 
+	adapted 
+	adapting  
+	adaptive 
+	adapts 
+adult 
+	adulthood 
+	adults 
+advocate 
+	advocacy 
+	advocated 
+	advocates 
+	advocating 
+aid 
+	aided 
+	aiding 
+	aids 
+	unaided 
+channel 
+	channelled 
+	channelling 
+	channels 
+chemical
+	chemically 
+	chemicals 
+classic 
+	classical 
+	classics 
+comprehensive 
+	comprehensively  
+comprise 
+	comprised 
+	comprises 
+	comprising 
+confirm 
+	confirmation 
+	confirmed 
+	confirming 
+	confirms 
+contrary 
+	contrarily 
+convert 
+	conversion 
+	conversions 
+	converted 
+	convertible 
+	converting 
+	converts 
+couple 
+	coupled 
+	coupling 
+	couples 
+decade 
+	decades 
+definite
+	definitely
+	definitive
+	indefinite
+	indefinitely
+deny 
+	deniable 
+	denial
+	denials
+	denied 
+	denies  
+	denying 
+	undeniable 
+differentiate  
+	differentiated  
+	differentiates 
+	differentiating 
+	differentiation  
+dispose
+	disposable 
+	disposal 
+	disposed 
+	disposes 
+	disposing 
+dynamic 
+	dynamically 
+	dynamics
+eliminate 
+	eliminated 
+	eliminates 
+	eliminating 
+	elimination 
+empirical  
+	empirically 
+	empiricism 
+equip   
+	equipment 
+	equipped 
+	equipping 
+	equips 
+extract 
+	extracted 
+	extracting 
+	extraction 
+	extracts 
+file 
+	filed 
+	files  
+	filing 
+finite 
+	infinite 
+	infinitely 
+foundation  
+	foundations  
+globe
+	 global
+	globally 
+	globalisation 
+	globalization 
+grade 
+	graded  
+	grades 
+	grading 
+guarantee 
+	guaranteed 
+	guaranteeing 
+	guarantees 
+hierarchy
+	hierarchical  
+	hierarchies 
+identical  
+	identically 
+ideology 
+	ideological 
+	ideologically 
+	ideologies 
+infer 
+	inference 
+	inferences 
+	inferred 
+	inferring 
+	infers   
+innovate 
+	innovation
+	innovated
+	innovates
+	innovating
+	innovations 
+	innovative 
+	innovator 
+	innovators 
+insert 
+	inserted 
+	inserting 
+	insertion 
+	inserts 
+intervene 
+	intervened
+	intervenes
+	intervening 
+	intervention 
+	interventions 
+isolate 
+	isolated 
+	isolates 
+	isolating 
+	isolation 
+	isolationism 
+media 
+mode 
+	modes
+paradigm 
+	paradigms 
+phenomenon 
+	phenomena 
+	phenomenal
+priority 
+	priorities 
+	prioritisation 
+	prioritise 
+	prioritised 
+	prioritises 
+	prioritising 
+	prioritization 
+	prioritize 
+	prioritized 
+	prioritizes 
+	prioritizing 
+prohibit 
+	prohibited 
+	prohibiting 
+	prohibition 
+	prohibitions 
+	prohibitive 
+	prohibits 
+publication  
+	publications  
+quote 
+	quotation 
+	quotations 
+	quoted 
+	quotes  
+	quoting  
+release 
+	released 
+	releases 
+	releasing 
+reverse 
+	reversal 
+	reversed 
+	reverses 
+	reversible 
+	reversing 
+	reversals 
+	irreversible 
+simulate 
+	simulated 
+	simulates 
+	simulating 
+	simulation  
+sole 
+	solely 
+somewhat 
+submit
+	submission 
+	submissions 
+	submits  
+	submitted 
+	submitting 
+successor 
+	succession 
+	successions 
+	successive 
+	successively 
+	successors 
+survive 
+	survival 
+	survived 
+	survives 
+	surviving 
+	survivor 
+	survivors 
+thesis 
+	theses 
+topic 
+	topical 
+	topics 
+transmit 
+	transmission  
+	transmissions 
+	transmitted 
+	transmitting 
+	transmits 
+ultimate 
+	ultimately  
+unique 
+	uniquely 
+	uniqueness 
+visible 
+	visibility
+	visibly 
+	invisible 
+	invisibility 
+voluntary 
+	voluntarily 
+	volunteer 
+	volunteering 
+	volunteered 
+	volunteers

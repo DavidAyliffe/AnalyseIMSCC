@@ -1,0 +1,339 @@
+academy
+	academia
+	academic 
+	academically 
+	academics 
+	academies
+adjust 
+	adjusted 
+	adjusting 
+	adjustment  
+	adjustments 
+	adjusts  
+	readjust 
+	readjusted 
+	readjusting 
+	readjustment 
+	readjustments 
+	readjusts 
+alter  
+	alterable 
+	alteration 
+	alterations 
+	altered 
+	altering 
+	alternate 
+	alternating  
+	alters  
+	unalterable 
+	unaltered 
+amend 
+	amended 
+	amending 
+	amendment 
+	amendments 
+	amends 
+aware 
+	awareness  
+	unaware 
+capacity  
+	capacities 
+	incapacitate
+	incapacitated
+challenge 
+	challenged 
+	challenger 
+	challengers 
+	challenges 
+	challenging 
+clause 
+	clauses 
+compound 
+	compounded 
+	compounding 
+	compounds 
+conflict 
+	conflicted 
+	conflicting 
+	conflicts 
+consult 
+	consultancy 
+	consultant 
+	consultants 
+	consultation 
+	consultations
+	consultative 
+	consulted 
+	consults
+	consulting 
+contact 
+	contactable 
+	contacted 
+	contacting 
+	contacts 
+decline 
+	declined 
+	declines 
+	declining 
+discrete 
+	discretely 
+	discretion 
+	discretionary 
+	indiscrete 
+	indiscretion 
+draft 
+	drafted 
+	drafting 
+	drafts  
+	redraft 
+	redrafted 
+	redrafting 
+	redrafts 
+enable 
+	enabled 
+	enables 
+	enabling 
+energy 
+	energetic 
+	energetically 
+	energies 
+enforce 
+	enforced 
+	enforcement  
+	enforces
+	enforcing 
+entity 
+	entities 
+equivalent 
+	equivalence 
+evolve  
+	evolution
+	evolved 
+	evolving 
+	evolves 
+	evolutionary 
+	evolutionist 
+	evolutionists 
+expand 
+	expanded 
+	expanding 
+	expands 	
+	expansion 
+	expansionism 
+	expansive 
+expose  
+	exposed 
+	exposes  
+	exposing 
+	exposure 
+	exposures
+external  
+	externalisation 
+	externalise 
+	externalised 
+	externalises 
+	externalising 
+	externality
+	externalization 
+	externalize 
+	externalized 
+	externalizes 
+	externalizing 
+	externally 
+facilitate 
+	facilitated 
+	facilitates 
+	facilities  
+	facilitating 
+	facilitation 
+	facilitator 
+	facilitators 
+	facility 
+fundamental 
+	fundamentally 
+generate 
+	generated  
+	generates 
+	generating 
+generation  
+	generations  
+image 
+	imagery 
+	images 
+liberal
+	liberalise 
+	liberalism
+	liberalisation 
+	liberalised
+	liberalises
+	liberalising 
+	liberalization 
+	liberalize
+	liberalized
+	liberalizes
+	liberalizing
+	liberate 
+	liberated 
+	liberates
+	liberation
+	liberations 
+	liberating
+	liberator
+	liberators
+	liberally 
+	liberals 
+licence 
+	licences 
+	license 
+	licensed 
+	licensing 
+	licenses
+	unlicensed 
+logic 
+	illogical 
+	illogically 
+	logical 
+	logically 
+	logician
+	logicians
+margin 
+	marginal 
+	marginally 
+	margins 
+medical 
+	medically 
+mental 
+	mentality 
+	mentally 
+modify 
+	modification  
+	modifications 
+	modified 
+	modifies 
+	modifying 
+	unmodified 
+monitor 
+	monitored 
+	monitoring  
+	monitors 
+	unmonitored 
+network 
+	networked 
+	networking 
+	networks 
+notion 
+	notions 
+objective  
+	objectively 
+	objectivity 
+orient 
+	orientate
+	orientated
+	orientates
+	orientation
+	orientating
+	oriented 
+	orienting 
+	orients 
+	reorient 
+	reorientation 
+perspective 
+	perspectives  
+precise 
+	imprecise 
+	precisely 
+	precision 
+prime 
+	primacy 
+psychology  
+	psychological 
+	psychologically  
+	psychologist  
+	psychologists  
+pursue 
+	pursued 
+	pursues 
+	pursuing 
+	pursuit 
+	pursuits 
+ratio 
+	 ratios 
+reject 
+	rejected 
+	rejecting 
+	rejection 
+	rejects 
+	rejections 
+revenue 
+	revenues 
+stable 
+	instability 
+	stabilisation
+	stabilise 
+	stabilised 
+	stabilises 
+	stabilising 
+	stabilization
+	stabilize 
+	stabilized 
+	stabilizes 
+	stabilizing 
+	stability 
+	unstable 
+style 
+	styled 
+	styles 
+	styling
+	stylish
+	stylise
+	stylised
+	stylises
+	stylising
+	stylize
+	stylized
+	stylizes
+	stylizing
+substitute 
+	substituted 
+	substitutes 
+	substituting 
+	substitution  
+sustain 
+	sustainable
+	sustainability  
+	sustained 
+	sustaining 
+	sustains 
+	sustenance
+	unsustainable 
+symbol 
+	symbolic 
+	symbolically 
+	symbolise 
+	symbolises 
+	symbolised 
+	symbolising 
+	symbolism 
+	symbolize
+	symbolized
+	symbolizes
+	symbolizing
+	symbols 
+target 
+	targeted 
+	targeting 
+	targets 
+transit  
+	transited 
+	transiting 
+	transition  
+	transitional 
+	transitions 
+	transitory 
+	transits 
+trend 
+	trends 
+version 
+	versions 
+welfare 
+whereas
