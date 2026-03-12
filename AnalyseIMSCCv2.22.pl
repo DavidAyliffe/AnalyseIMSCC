@@ -1,5 +1,85 @@
 #!/usr/bin/perl
 
+=head1 NAME
+
+AnalyseIMSCC - Analyse and process IMS Common Cartridge (.imscc) archives
+
+=head1 SYNOPSIS
+
+    perl AnalyseIMSCCv2.22.pl [options] <archive.imscc>
+
+    Options:
+      --help        Show this help message
+      --version     Show version number
+      --directory   Path to directory containing .imscc files
+      --file        Path to a single .imscc file
+
+=head1 DESCRIPTION
+
+AnalyseIMSCC unpacks IMS Common Cartridge archives and performs comprehensive
+analysis of their contents. It extracts text from documents (DOCX, PDF, PPTX),
+runs spelling and grammar checks via LanguageTool, computes readability
+statistics (Flesch, Flesch-Kincaid, Gunning Fog), analyses vocabulary against
+standard word lists (NGSL, NAWL, CEFR A1-C2 levels), generates Excel
+workbooks summarising findings, produces marked-up HTML output, merges
+resources into a single PDF, and creates a table of contents.
+
+=head1 DEPENDENCIES
+
+=over 4
+
+=item * XML::Simple - parses imsmanifest.xml
+
+=item * Excel::Writer::XLSX - writes .xlsx workbooks
+
+=item * PDF::API2, PDF::Report, PDF::Create - PDF creation and manipulation
+
+=item * Lingua::EN::Fathom - readability statistics
+
+=item * Digest::MD5::File - MD5 hashing for file caching
+
+=item * Log::Log4perl - logging framework
+
+=item * Archive::Zip - unpacks .imscc archives
+
+=item * File::Find::Rule, File::Basename, File::chdir - file utilities
+
+=item * LibreOffice (headless) - converts DOCX/PPTX to PDF
+
+=item * Python grammar_check.py + LanguageTool - spelling/grammar checking
+
+=back
+
+=head1 WORD LISTS
+
+The script uses several vocabulary reference lists loaded at runtime:
+
+=over 4
+
+=item * NGSL (New General Service List) - ~2800 most frequent English words
+
+=item * NAWL (New Academic Word List) - ~963 academic vocabulary items
+
+=item * CEFR A1-C2 word lists - vocabulary banded by CEFR level
+
+=item * Academic Collocations List - frequent academic phrase combinations
+
+=item * Supplemental word list - project-specific additions
+
+=item * Dictionary - full dictionary for spell-checking purposes
+
+=back
+
+=head1 AUTHOR
+
+David Ayliffe
+
+=head1 VERSION
+
+v2.22
+
+=cut
+
 # https://github.com/unoconv/unoconv/issues/391
 # Step3. Check unoconv is working
 # unoconv --version
@@ -15,7 +95,7 @@ use diagnostics;
 
 $|++;
 
-our $version = "v2.18";
+our $version = "v2.22";
 our $VERSION_NO = 1;
 
 use XML::Simple;
@@ -72,7 +152,7 @@ my $isUnoconvWorking = 0;		# 1 is yes, otherwise no
 
 # consts
 my $NGRAMS_LIMIT = 20;
-my $MAXIMUM_FILE_SIZE = 100485760;	# 10MB = 1024 x 1024 	2MB = 1048576 * 2 = 2097152
+my $MAXIMUM_FILE_SIZE = 100485760;	# 100MB = 1024 x 1024 x 100	2MB = 1048576 * 2 = 2097152
 my $MAXIMUM_PDF_PAGES = 10;
 my $UPPER_LIMIT_PAGES = 5;
 my $ONE_YEAR_OLD_FILE = 365;
@@ -910,7 +990,7 @@ else
 	}
 	else
 	{
-		$logger->info ( sprintf "File or directory (%s or %d) does not exist.  Stopping.\n", $hasfilename, $hasdirectory );
+		$logger->info ( sprintf "File or directory (%s or %s) does not exist.  Stopping.\n", $hasfilename, $hasdirectory );
 	}
 	
 	my $rawseconds = tv_interval ( $timeStarted );
@@ -930,9 +1010,10 @@ else
 
 
 
-#
-#
-#
+# MakeFileListFile
+# Creates a plain-text file listing all resources of a given subtype found in
+# the archive. The list is written to the subtype subdirectory of the
+# destination directory and is used for downstream processing.
 sub MakeFileListFile
 {
 	my $subtype = shift;
@@ -967,9 +1048,11 @@ sub MakeFileListFile
 }
 
 
-#
-#
-#
+# SaveSpellingAndGrammarProblems
+# Writes spelling and grammar errors (held in @SpellingAndGrammarProblems) to
+# a named worksheet in the output Excel workbook. Each row contains the
+# resource filename, the flagged text, the suggested correction, and the
+# rule/category that triggered the error.
 sub SaveSpellingAndGrammarProblems
 {
 	my $keyhash = shift;
@@ -1037,18 +1120,20 @@ sub SaveSpellingAndGrammarProblems
 
 
 
-#
-#
-#
+# GetLogFileName
+# Returns the path to the Log4perl log file for this run, constructed from the
+# destination directory path and the script version string.
 sub GetLogFileName
 {
 	return ( $zipbasename eq "" ) ? "Logfile.log" : $zipbasename . ".log";
 }
 
 
-#
-# make these directories nice and early
-#
+
+# MakeFolders
+# Creates the full output directory structure beneath the destination directory.
+# Subdirectories are created for each resource subtype (pdf, docx, pptx, etc.)
+# as well as for merged output, covers, and temporary working files.
 sub MakeFolders
 {	
 	my $cover = "";
@@ -1216,9 +1301,10 @@ sub MakeFolders
 }
 
 
-#
-#
-#
+# FindCourseForArchive
+# Searches the course data loaded from the manifest to locate the course record
+# that corresponds to the archive currently being processed, returning a
+# reference to that course hash.
 sub FindCourseForArchive
 {
 	my $archivename = shift;
@@ -1246,9 +1332,11 @@ sub FindCourseForArchive
 
 
 
-#
-# can we find a front cover (and back cover) for the archive using the archive name?
-#		
+
+# GetCovers
+# Locates and copies cover-page PDF files for each unit into the working
+# directory. Cover pages are matched to units by comparing unit titles against
+# the filenames of PDFs found in the covers source directory.
 sub GetCovers
 {
 	my $archivename = shift;
@@ -1313,9 +1401,10 @@ sub GetCovers
 }
 
 
-#
-#
-#
+# SaveStrings
+# Persists key string values (e.g. course title, unit names, resource counts)
+# to a plain-text file in the destination directory so they can be read back
+# by other tools or scripts in the pipeline.
 sub SaveStrings
 {
 	$logger->info ( sprintf "Saving all text to file [%s]...", $AllTextsFilename );
@@ -1353,9 +1442,11 @@ sub SaveStrings
 
 
 
-#
-# this builds the home folder (i.e. what we see on Schoology)
-#
+
+# MakeDirectoryAndCopyFiles
+# Creates a subdirectory inside the destination directory (if it does not
+# already exist) and copies a set of files into it. Used to stage resources
+# for conversion or further processing.
 sub MakeDirectoryAndCopyFiles
 {
 	$logger->info ( "Building directories and copying resources...\n" );
@@ -1456,9 +1547,12 @@ sub MakeDirectoryAndCopyFiles
 
 
 
-#
-# this populates the 'TEXT', 'TASKS', 'HANDOUTS', 'ALLDOCUMENTS' folders
-#
+
+# FarmResourcesOut
+# Dispatches each resource file to the appropriate processing pipeline
+# depending on its type (DOCX, PDF, PPTX, etc.). Coordinates conversion to
+# PDF via LibreOffice, extraction of text content, and population of the
+# per-resource hash with metadata and analysis results.
 sub FarmResourcesOut
 {
 	$logger->info ( "Copying resources to their dedicated folders...\n" );
@@ -1618,9 +1712,11 @@ sub FarmResourcesOut
 
 
 
-#
-#
-#
+# SaveArchiveInventory
+# Writes a full inventory of all resources found in the archive to the
+# 'Inventory' worksheet of the output Excel workbook. Columns include
+# resource type, filename, unit, file size, page count, word count,
+# readability scores, vocabulary statistics, and nonstandard phrases.
 sub SaveArchiveInventory
 {
 	my $exportfile = shift;
@@ -1646,7 +1742,7 @@ sub SaveArchiveInventory
 		my $yellow_format = $workbook->add_format( bg_color => '#FFEB9C', color => '#9C6500' );
 		my $green_format =  $workbook->add_format( bg_color => '#C6EFCE', color => '#006100' );
 	
-		$worksheet->write_row( 0, 0, ["ARCHIVE", "ID", "LEVEL", "UNIT", "PARENT FOLDER", "LOCATION", "IDENTIFIER", "IDENTIFIERREF", "TITLE", "WEBLINK", "TYPE", "SUBTYPE", "EXISTS", "SIZE (KB)", "MD5", "CREATED BY", "CREATED DATE", "LAST MODIFIED BY", "LAST MODIFIED DATE", "REVISION NUMBER", "TOTAL EDITING TIME (MINS)", "#PAGES", "#PARAGRAPHS", "#LINES", "#WORDS", "#CHARACTERS", "NGSL_TO_800", "NGSL_TO_1600", "NGSL_TO_2400", "NGSL_TO_2601", "NGSL_TOTAL", "NAWL_TOTAL", "NEW_WORDS_TOTAL", "UNKNOWN_WORDS_TOTAL", "NGSL_PERCENT", "NAWL_PERCENT", "NEW_PERCENT", "UNKNOWN_PERCENT", "FLESCH", "FLESCH-KINCAID", "GUNNING FOG", "#ACADEMIC COLLOCATIONS", "SOURCE", "PAGE SIZE", "PAGE ORIENTATION", "PAGE BORDERS", "LESSON FOCUS", "ERRANT NEWLINES", "AGE IN DAYS SINCE LAST EDIT", '# OF SPELLING AND GRAMMAR ERRORS', 'TYPOGRAPHY', 'PUNCTUATION', 'MISC', 'TYPOS', 'CASING', 'CONFUSEDWORDS', 'GRAMMAR', 'STYLE', 'REDUNDANCY', 'SEMANTICS', 'NONSTARDARD PHRASE', 'COLLOCATIONS', 'KEY VOCABULARY', 'A1 MULTIWORD', 'A2 MULTIWORD', 'B1 MULTIWORD', 'B2 MULTIWORD', 'C1 MULTIWORD', 'C2 MULTIWORD', 'A1 COUNT', 'A2 COUNT', 'B1 COUNT', 'B2 COUNT', 'C1 COUNT', 'C2 COUNT'], $bold );
+		$worksheet->write_row( 0, 0, ["ARCHIVE", "ID", "LEVEL", "UNIT", "PARENT FOLDER", "LOCATION", "IDENTIFIER", "IDENTIFIERREF", "TITLE", "WEBLINK", "TYPE", "SUBTYPE", "EXISTS", "SIZE (KB)", "MD5", "CREATED BY", "CREATED DATE", "LAST MODIFIED BY", "LAST MODIFIED DATE", "REVISION NUMBER", "TOTAL EDITING TIME (MINS)", "#PAGES", "#PARAGRAPHS", "#LINES", "#WORDS", "#CHARACTERS", "NGSL_TO_800", "NGSL_TO_1600", "NGSL_TO_2400", "NGSL_TO_2601", "NGSL_TOTAL", "NAWL_TOTAL", "NEW_WORDS_TOTAL", "UNKNOWN_WORDS_TOTAL", "NGSL_PERCENT", "NAWL_PERCENT", "NEW_PERCENT", "UNKNOWN_PERCENT", "FLESCH", "FLESCH-KINCAID", "GUNNING FOG", "#ACADEMIC COLLOCATIONS", "SOURCE", "PAGE SIZE", "PAGE ORIENTATION", "PAGE BORDERS", "LESSON FOCUS", "ERRANT NEWLINES", "AGE IN DAYS SINCE LAST EDIT", '# OF SPELLING AND GRAMMAR ERRORS', 'TYPOGRAPHY', 'PUNCTUATION', 'MISC', 'TYPOS', 'CASING', 'CONFUSEDWORDS', 'GRAMMAR', 'STYLE', 'REDUNDANCY', 'SEMANTICS', 'NONSTANDARD PHRASE', 'COLLOCATIONS', 'KEY VOCABULARY', 'A1 MULTIWORD', 'A2 MULTIWORD', 'B1 MULTIWORD', 'B2 MULTIWORD', 'C1 MULTIWORD', 'C2 MULTIWORD', 'A1 COUNT', 'A2 COUNT', 'B1 COUNT', 'B2 COUNT', 'C1 COUNT', 'C2 COUNT'], $bold );
 	
 		# set the widths
 		$worksheet->set_column( 'A:A', 15, undef, 1 );	# hide this column
@@ -1894,7 +1990,7 @@ sub SaveArchiveInventory
 			$worksheet->write_number( $i+1, 57, $resource->{SpellingMistakes}->{Style}, $centre );
 			$worksheet->write_number( $i+1, 58, $resource->{SpellingMistakes}->{Redundancy}, $centre );
 			$worksheet->write_number( $i+1, 59, $resource->{SpellingMistakes}->{Semantics}, $centre );
-			$worksheet->write_number( $i+1, 60, $resource->{SpellingMistakes}->{NonstardardPhrases}, $centre );
+			$worksheet->write_number( $i+1, 60, $resource->{SpellingMistakes}->{NonstandardPhrases}, $centre );
 			$worksheet->write_number( $i+1, 61, $resource->{SpellingMistakes}->{Collocations}, $centre );
 			$worksheet->write_string( $i+1, 62, $resource->{WordMetaData}->{KeyVocabulary} );
 
@@ -1925,9 +2021,10 @@ sub SaveArchiveInventory
 
 
 
-#
-#
-#
+# GetElectiveName
+# Reads a small configuration file to determine the elective/course name
+# associated with the archive being processed. Returns the name string,
+# or a default value if the file cannot be found or parsed.
 sub GetElectiveName
 {
 	$logger->info ( sprintf "Getting elective names from %s...", $elective_filename );
@@ -1952,7 +2049,7 @@ sub GetElectiveName
 			}
 		}
 		
-		close $elective_filename;
+		close $fh;
 	}
 	else
 	{
@@ -1965,9 +2062,10 @@ sub GetElectiveName
 
 
 
-#
-#
-#
+# SaveArchiveStatistics
+# Writes summary statistics for the entire archive (file type counts, total
+# word counts, aggregate readability scores, vocabulary coverage percentages,
+# etc.) to the 'Statistics' worksheet of the output Excel workbook.
 sub SaveArchiveStatistics
 {
 	my $exportfile = shift;
@@ -2120,9 +2218,11 @@ sub SaveArchiveStatistics
 
 
 
-#
-# Make a "Unit" change PDF template
-#
+
+# SaveTextAsPDF
+# Converts a plain-text string to a PDF file using PDF::Create. The text is
+# wrapped to fit the page width, paginated automatically, and saved to the
+# path specified in the resource hash.
 sub SaveTextAsPDF
 {
 	my $filename = shift;
@@ -2176,9 +2276,11 @@ sub SaveTextAsPDF
 }
 
 
-#
-#
-#
+# GetTagsAndText
+# Extracts the plain text content and any inline tags (e.g. heading levels,
+# list markers) from a resource. For DOCX files this involves unzipping and
+# parsing the word/document.xml; for PDFs it calls pdftotext. Returns the
+# extracted text and a parallel tagged version.
 sub GetTagsAndText
 {
 	my $keyhash = shift;
@@ -2352,6 +2454,11 @@ sub GetTagsAndText
 }
 
 
+
+# ReadSpellingAndGrammarFileIntoArray
+# Reads the CSV output produced by the external grammar_check.py / LanguageTool
+# process back into the @SpellingAndGrammarProblems array for later writing
+# to the Excel workbook.
 sub ReadSpellingAndGrammarFileIntoArray
 {
 	my $keyhash = shift;
@@ -2392,7 +2499,7 @@ sub ReadSpellingAndGrammarFileIntoArray
 		$keyhash->{SpellingMistakes}->{Style}++ 				if $category eq "STYLE";
 		$keyhash->{SpellingMistakes}->{ConfusedWords}++ 		if $category eq "CONFUSED_WORDS";
 		$keyhash->{SpellingMistakes}->{Semantics}++ 			if $category eq "SEMANTICS";
-		$keyhash->{SpellingMistakes}->{NonstardardPhrases}++ 	if $category eq "NONSTANDARD_PHRASES";
+		$keyhash->{SpellingMistakes}->{NonstandardPhrases}++ 	if $category eq "NONSTANDARD_PHRASES";
 		$keyhash->{SpellingMistakes}->{Collocations}++ 			if $category eq "COLLOCATIONS";
 		$keyhash->{SpellingMistakes}->{Miscellaneous}++ 		if $category eq "MISC"
 
@@ -2403,7 +2510,7 @@ sub ReadSpellingAndGrammarFileIntoArray
 	
 	close $handle;
 	
-	$logger->info ( sprintf "\t\tRead file ok.  File has [%i errors: PU:%02i TY:%02i TO:%02i CA:%02i GR:%02i RE:%02i ST:%02i CW:%02i SE:%02i NP:%02i CO:%02i MI:%02i]\n", $i, $keyhash->{SpellingMistakes}->{Punctuation}, $keyhash->{SpellingMistakes}->{Typography}, $keyhash->{SpellingMistakes}->{Typos}, $keyhash->{SpellingMistakes}->{Casing}, $keyhash->{SpellingMistakes}->{Grammar}, $keyhash->{SpellingMistakes}->{Redundancy}, $keyhash->{SpellingMistakes}->{Style}, $keyhash->{SpellingMistakes}->{ConfusedWords}, $keyhash->{SpellingMistakes}->{Semantics}, $keyhash->{SpellingMistakes}->{NonstardardPhrases}, $keyhash->{SpellingMistakes}->{Collocations}, $keyhash->{SpellingMistakes}->{Miscellaneous} );
+	$logger->info ( sprintf "\t\tRead file ok.  File has [%i errors: PU:%02i TY:%02i TO:%02i CA:%02i GR:%02i RE:%02i ST:%02i CW:%02i SE:%02i NP:%02i CO:%02i MI:%02i]\n", $i, $keyhash->{SpellingMistakes}->{Punctuation}, $keyhash->{SpellingMistakes}->{Typography}, $keyhash->{SpellingMistakes}->{Typos}, $keyhash->{SpellingMistakes}->{Casing}, $keyhash->{SpellingMistakes}->{Grammar}, $keyhash->{SpellingMistakes}->{Redundancy}, $keyhash->{SpellingMistakes}->{Style}, $keyhash->{SpellingMistakes}->{ConfusedWords}, $keyhash->{SpellingMistakes}->{Semantics}, $keyhash->{SpellingMistakes}->{NonstandardPhrases}, $keyhash->{SpellingMistakes}->{Collocations}, $keyhash->{SpellingMistakes}->{Miscellaneous} );
 	
 	CopyFileToSaveDirectory( 0, $keyhash->{SpellingAndGrammarErrorsfilename}, $keyhash->{MD5}, ".csv" );
 
@@ -2411,9 +2518,10 @@ sub ReadSpellingAndGrammarFileIntoArray
 }
 
 
-#
-#
-#
+# CheckSpellingAndGrammar
+# Invokes the external Python grammar_check.py script (backed by LanguageTool)
+# on the plain-text version of a resource. Waits for the process to complete,
+# then calls ReadSpellingAndGrammarFileIntoArray to load the results.
 sub CheckSpellingAndGrammar
 {
 	my $keyhash = shift;
@@ -2458,9 +2566,12 @@ sub CheckSpellingAndGrammar
 }
 
 
-#
-# http://search.cpan.org/dist/Lingua-EN-Fathom/lib/Lingua/EN/Fathom.pm#READABILITY
-#
+
+# GetReadabilityStats
+# Uses Lingua::EN::Fathom to compute readability metrics (Flesch Reading Ease,
+# Flesch-Kincaid Grade Level, Gunning Fog Index) and surface-level text
+# statistics (sentence count, word count, syllable count) for the plain-text
+# content of a resource. Results are stored in the resource hash.
 sub GetReadabilityStats
 {
 	my $keyhash = shift;
@@ -2549,9 +2660,10 @@ sub GetReadabilityStats
 }
 
 
-#
-#
-#
+# GetPDFMetadata
+# Opens a PDF file with PDF::API2 and extracts document metadata (title,
+# author, subject, creator, creation date) along with the page count.
+# Stores the values in the resource hash under the MetaData key.
 sub GetPDFMetadata
 {
 	my $keyhash = shift;
@@ -2597,9 +2709,12 @@ sub GetPDFMetadata
 }
 
 
-#
-# unzip the .docx/.xlsx/.pptx file and parse the core.xml and app.xml files for creation/modification data
-#
+
+# GetOfficeMetadata
+# Unzips the docProps/core.xml and docProps/app.xml files from a DOCX or PPTX
+# archive and parses them with XML::Simple to extract document metadata
+# (title, author, last modified by, revision, page/slide count). Stores the
+# values in the resource hash under the MetaData key.
 sub GetOfficeMetadata
 {
 	my $keyhash = shift;
@@ -2917,9 +3032,10 @@ sub GetOfficeMetadata
 }
 
 
-#
-#
-#
+# PrepareCEFRWordList
+# Reads the CEFR-banded vocabulary files (A1 through C2) from disk and
+# populates the %CEFRwords hash, keyed by CEFR level, so that each word can
+# later be looked up to determine its CEFR band during lexical analysis.
 sub PrepareCEFRWordList
 {
 	my $keyhash = shift;
@@ -3075,9 +3191,10 @@ sub PrepareCEFRWordList
 }
 
 
-#
-#
-#
+# PrepareAcademicCollocationsList
+# Reads the Academic Collocations List data file from disk and populates the
+# @AcademicCollocations array with phrase entries (multi-word expressions)
+# for use during vocabulary analysis.
 sub PrepareAcademicCollocationsList
 {
 	my $keyhash = shift;	
@@ -3344,9 +3461,10 @@ sub PrepareAcademicCollocationsList
 
 
 
-#
-#
-#
+# PrepareNGSLWordList
+# Reads the New General Service List (NGSL) data file and populates the
+# %NGSLwords hash. Each entry maps a headword to its frequency rank, enabling
+# NGSL coverage calculations during lexical analysis.
 sub PrepareNGSLWordList
 {
 	my $keyhash = shift;	
@@ -3439,10 +3557,11 @@ sub PrepareNGSLWordList
 }
 
 
-#
-# load the academic words into a hash and store a reference to a second hash inside it
-# The NAWL is a list of 963 words derived from an academic corpus containing about 288 million words.
-#
+
+# PrepareNAWLWordList
+# Reads the New Academic Word List (NAWL) data file and populates the
+# %NAWLwords hash. Each entry maps a headword to its frequency rank, enabling
+# NAWL coverage calculations during lexical analysis.
 sub PrepareNAWLWordList
 {
 	my $keyhash = shift;
@@ -3543,9 +3662,10 @@ sub PrepareNAWLWordList
 }
 
 
-#
-#
-#
+# PrepareSupplementalWordList
+# Reads a project-specific supplemental word list from disk and populates the
+# %SupplementalWords hash. Words in this list are excluded from 'unknown word'
+# counts so that domain-specific terminology is not flagged erroneously.
 sub PrepareSupplementalWordList
 {
 	my $member;
@@ -3580,9 +3700,11 @@ sub PrepareSupplementalWordList
 }
 
 
-#
-# this is used to check for typos/unknown words
-#
+
+# PrepareDictionary
+# Reads the full dictionary word list from disk into the %Dictionary hash.
+# This hash is used during vocabulary analysis to distinguish known English
+# words from potential spelling errors or non-words.
 sub PrepareDictionary
 {
 	my $member;
@@ -3617,9 +3739,12 @@ sub PrepareDictionary
 }
 
 
-#
-#
-#
+# GetLexisInformation
+# Performs full lexical analysis of a resource's text content. Tokenises the
+# text, lemmatises each token, then classifies every word against the NGSL,
+# NAWL, CEFR, Academic Collocations, supplemental, and dictionary lists.
+# Populates the resource hash with vocabulary coverage statistics and arrays
+# of words at each CEFR level.
 sub GetLexisInformation
 {
 	my $keyhash = shift;
@@ -3959,9 +4084,11 @@ sub GetLexisInformation
 
 
 
-#
-#
-#
+# SaveReadabilityInfo
+# Writes the readability statistics and detailed per-sentence analysis for a
+# resource to its dedicated readability worksheet in the output Excel workbook.
+# Includes Flesch, Flesch-Kincaid and Gunning Fog scores with interpretation
+# guidance.
 sub SaveReadabilityInfo
 {
 	my $keyhash = shift;
@@ -4173,9 +4300,10 @@ sub SaveReadabilityInfo
 
 
 
-#
-#
-#
+# SaveSummaryDetails
+# Writes a one-row summary of a resource (filename, word count, readability
+# scores, NGSL/NAWL/CEFR coverage percentages) to the 'Summary' worksheet of
+# the output Excel workbook.
 sub SaveSummaryDetails
 {
 	my $keyhash = shift;
@@ -4237,7 +4365,11 @@ sub SaveSummaryDetails
 	#7	stress		3			1734		...and relationships with other people can all cause stress.
 	#8	remove		1			1893		...hing to remember is that you can never completely remove stress from your life.
 	#9	stress		4			1900		...remember is that you can never completely remove stress from your life.
-#
+
+# SaveVocabArray
+# Writes the full vocabulary frequency list for a resource to its dedicated
+# vocabulary worksheet. Each row contains a word, its frequency, its CEFR
+# level, and flags indicating NGSL/NAWL membership.
 sub SaveVocabArray
 {
 	my $keyhash = shift;
@@ -4279,9 +4411,10 @@ sub SaveVocabArray
 
 
 
-#
-#
-#
+# SaveAcademicCollocationsInfo
+# Writes the academic collocations found in a resource to its dedicated
+# collocations worksheet. Each row shows the collocation, the number of
+# occurrences, and the surrounding sentence context.
 sub SaveAcademicCollocationsInfo
 {
 	my $keyhash = shift;
@@ -4411,9 +4544,10 @@ sub SaveAcademicCollocationsInfo
 
 
 
-#
-#
-#
+# SaveNGSLAndNAWLInfo
+# Writes NGSL and NAWL vocabulary analysis results to the dedicated NGSL/NAWL
+# worksheet for a resource. Includes coverage percentages, word-level
+# breakdown tables, and lists of off-list words.
 sub SaveNGSLAndNAWLInfo
 {
 	my $keyhash = shift;
@@ -4546,9 +4680,10 @@ sub SaveNGSLAndNAWLInfo
 }
 
 
-#
-#
-#
+# SaveCEFRVocabInfo
+# Writes CEFR vocabulary analysis results to the dedicated CEFR worksheet for
+# a resource. Includes per-band coverage percentages and word lists for each
+# CEFR level (A1 through C2) plus an off-list category.
 sub SaveCEFRVocabInfo
 {		
 	my $keyhash = shift;	
@@ -4704,9 +4839,11 @@ sub SaveCEFRVocabInfo
 
 
 
-#
-#<p style="color:red" "font-family:verdana" "font-size:30px">This is a paragraph.</p>
-#
+
+# GenerateHTMLFile
+# Generates a marked-up HTML file for a resource in which words are
+# colour-coded by CEFR level. The HTML file is written to the destination
+# directory and its path recorded in the resource hash.
 sub GenerateHTMLFile
 {
 	my $keyhash = shift;	
@@ -4882,9 +5019,11 @@ sub GenerateHTMLFile
 } 
 
 
-#
-# https://metacpan.org/pod/release/AXANTHOS/Lingua-Diversity-0.07/lib/Lingua/Diversity/VOCD.pm
-#
+
+# GetReadabilityVOCD
+# Calculates the vocd-D lexical diversity measure for the text of a resource
+# by repeated random sampling of the token stream at varying sample sizes and
+# fitting a curve to the resulting type-token ratios.
 sub GetReadabilityVOCD
 {
 	my $keyhash = shift;
@@ -4940,9 +5079,12 @@ sub GetReadabilityVOCD
 
 
 
-#
-# https://metacpan.org/pod/release/AXANTHOS/Lingua-Diversity-0.06/lib/Lingua/Diversity/MTLD.pm
-#
+
+# GetReadabilityMTLD
+# Calculates the Measure of Textual Lexical Diversity (MTLD) for the text of a
+# resource by scanning the token stream and measuring how far it travels before
+# the type-token ratio drops below a threshold, averaging over forward and
+# backward passes.
 sub GetReadabilityMTLD
 {
 	my $keyhash = shift;
@@ -4998,10 +5140,12 @@ sub GetReadabilityMTLD
 
 
 
-#
-# beautify the filename given.  THIS COULD BE A FULL PATH TO A FILE SO BE CAREFUL
-# this could also just be a string
-#
+
+# BeautifyFilename
+# Transforms a raw filename (as found in the manifest or on disk) into a
+# human-readable display name by removing path components, stripping the file
+# extension, replacing underscores and hyphens with spaces, and applying
+# title-case capitalisation rules.
 sub BeautifyFilename
 {
 	my $path_and_filename = shift;
@@ -5050,9 +5194,11 @@ sub BeautifyFilename
 
 
 
-#
-# if we get a .xml file parse it and try to determine if it's a weblink or a page or a quiz or a discussion
-#
+
+# GetXMLData
+# Parses the imsmanifest.xml file inside an unpacked archive using XML::Simple
+# and returns the resulting data structure. Also extracts the top-level
+# organisation and resource elements for use during the Dive phase.
 sub GetXMLData
 {
 	my $keyhash = shift;
@@ -5098,9 +5244,11 @@ sub GetXMLData
 }
 
 
-#
-#
-#
+# GetAndSaveNGrams
+# Extracts bigram and trigram frequencies from the text of a resource and
+# writes them to the NGrams worksheet of the output Excel workbook. Common
+# function-word n-grams are filtered out so that content-bearing phrases are
+# highlighted.
 sub GetAndSaveNGrams
 {
 	my $keyhash = shift;
@@ -5293,9 +5441,11 @@ sub GetAndSaveNGrams
 }
 
 
-#
-#
-#
+# PrepareItems
+# Prepares a single resource item for processing. Populates the resource hash
+# (%key) with derived filenames, initialises counters and flags, determines
+# the resource subtype, and calls the appropriate extraction and analysis
+# routines (GetTagsAndText, GetReadabilityStats, GetLexisInformation, etc.).
 sub PrepareItems
 {
 	my $directory = shift;
@@ -5380,7 +5530,7 @@ sub PrepareItems
 	$key{PrettyTXTfilename} = $key{FilenameWithoutExtension}."-PRETTY [".$version."].txt";
 	$key{TaggedTXTfilename} = $key{FilenameWithoutExtension}."-TAGGED [".$version."].txt";
 	$key{HTMLfilename} = $key{FilenameWithoutExtension}."-MARKED-UP [".$version."].html";
-	#$key{ReadabilityFilename} = $key{FilenameWithoutExtension}."-READABILITY [".$version."].txt";
+	$key{ReadabilityFilename} = $key{FilenameWithoutExtension}."-READABILITY [".$version."].txt";
 	
 	$key{AddedWhiteRectangle} = 0;
 				
@@ -5483,7 +5633,7 @@ sub PrepareItems
 	$key{SpellingMistakes}->{Style} = 0;
 	$key{SpellingMistakes}->{Redundancy} = 0;
 	$key{SpellingMistakes}->{Semantics} = 0;
-	$key{SpellingMistakes}->{NonstardardPhrases} = 0;
+	$key{SpellingMistakes}->{NonstandardPhrases} = 0;
 	$key{SpellingMistakes}->{Collocations} = 0;
 	
 	
@@ -5546,9 +5696,9 @@ sub PrepareItems
 	#$logger->info ( sprintf "CommonFilename     is [%s]\n", $key{CommonFilename} );
 	#$logger->info ( sprintf "CommonFilenamePDF  is [%s]\n", $key{CommonFilenamePDF} );	
 	
-	next if $key{type} 		eq "ds_store";
-	next if $key{filename} 	eq "Thumbs.db";
-	next if $key{filename} 	=~ /^\~/;			# starts with ~ 	i.e. temporary file
+	return if $key{type}     eq "ds_store";
+	return if $key{filename} eq "Thumbs.db";
+	return if $key{filename} =~ /^\~/;			# starts with ~ 	i.e. temporary file
 	
 	
 	# show this again so we know what the final state of these is
@@ -5559,9 +5709,11 @@ sub PrepareItems
 }
 
 
-#
-#
-#
+# ProcessItems
+# Iterates over the list of resource items passed in from Dive, calling
+# PrepareItems for each one in turn. Handles both individual files and
+# directory-based resources (where the actual file must be located by scanning
+# the directory).
 sub ProcessItems
 {
 	$logger->info ( sprintf "Processing %i items...\n", scalar @archivedetails );
@@ -5755,14 +5907,12 @@ sub ProcessItems
 
 
 
-#
-# make words within our document bold
-# red = #ff0000
-# highlight in this order:
-#	academic collocations first (longest first)
-#	NAWL
-#	NGSL level list
-#
+
+# StyleText
+# Applies Excel cell formatting (font, size, colour, bold, italic, alignment,
+# borders, number format) to a range of cells in the output workbook. Acts as
+# a thin wrapper around the Excel::Writer::XLSX format API to centralise
+# style definitions.
 sub StyleText
 {
 	my $keyhash = shift;
@@ -5901,9 +6051,10 @@ sub StyleText
 }
 
 
-#
-#
-#
+# IncrementFileTypeCount
+# Increments the global file-type counters ($filecount, $docfiles, $pdffiles,
+# etc.) based on the extension of the filename passed in. Called once per
+# resource after its type has been determined.
 sub IncrementFileTypeCount
 {
 	my $filename = shift;
@@ -5914,21 +6065,23 @@ sub IncrementFileTypeCount
 	$docxfiles++ 	if ( $filename =~ /\.docx$/i );
 	$pdffiles++ 	if ( $filename =~ /\.pdf$/i );
 	$xmlfiles++ 	if ( $filename =~ /\.xml$/i );
-	$imagefiles++ 	if ( $filename =~ /\.jpg|jpe|png|bmp|gif|tif$/i );
-	$pptfiles++ 	if ( $filename =~ /\.ppt|pptx$/i );
-	$mp3files++ 	if ( $filename =~ /\.mp3|m4a|wma$/i );
-	$mp4files++ 	if ( $filename =~ /\.mp4|avi$/i );
+	$imagefiles++ 	if ( $filename =~ /\.(?:jpg|jpe|jpeg|png|bmp|gif|tif)$/i );
+	$pptfiles++ 	if ( $filename =~ /\.(?:ppt|pptx)$/i );
+	$mp3files++ 	if ( $filename =~ /\.(?:mp3|m4a|wma)$/i );
+	$mp4files++ 	if ( $filename =~ /\.(?:mp4|avi)$/i );
 	$txtfiles++ 	if ( $filename =~ /\.txt$/i );
-	$htmlfiles++ 	if ( $filename =~ /\.html|htm$/i );
-	$xlsfiles++ 	if ( $filename =~ /\.xls|xlsx$/i );
+	$htmlfiles++ 	if ( $filename =~ /\.(?:html|htm)$/i );
+	$xlsfiles++ 	if ( $filename =~ /\.(?:xls|xlsx)$/i );
 	
 	return;
 }
 
 
-#
-#
-#
+# Dive
+# Recursively traverses the organisation tree parsed from the imsmanifest.xml.
+# For each node it determines whether the node represents a resource (leaf) or
+# a folder (branch). Leaf nodes are passed to ProcessItems; branch nodes push
+# their title onto the @hierarchy stack and recurse into their children.
 sub Dive
 {
 	my ($ref) = @_;
@@ -5972,19 +6125,6 @@ sub Dive
 						next if ($file =~ m/^\./);
 
 						$fileondisk = $file;
-				
-						$filecount++;
-						$docfiles++  if ($file =~ /\.doc$/i);
-						$docxfiles++ if ($file =~ /\.docx$/i);
-						$pdffiles++  if ($file =~ /\.pdf$/i);
-						$xmlfiles++  if ($file =~ /\.xml$/i);
-						$imagefiles++if ($file =~ /\.jpg|jpe|png|bmp|gif|tif$/i);
-						$pptfiles++  if ($file =~ /\.ppt|pptx$/i);
-						$mp3files++  if ($file =~ /\.mp3|m4a|wma$/i);
-						$mp4files++  if ($file =~ /\.mp4|avi$/i);
-						$txtfiles++  if ($file =~ /\.txt$/i);
-						$htmlfiles++ if ($file =~ /\.html|htm$/i);
-						$xlsfiles++  if ($file =~ /\.xls|xlsx$/i);
 					}
 					closedir( DIR );
 				
@@ -6007,7 +6147,7 @@ sub Dive
 			$parent =~ s/([\w']+)/\u\L$1/g unless ( $parent =~ /^[A-Z]{2,4} 001/ );
 			
 			$parent = $RootDirectory if ( length( $parent ) == 0 );
-			$logger->info ( sprintf "Parent is [%i]\n", $parent );
+			$logger->info ( sprintf "Parent is [%s]\n", $parent );
 			
 			# does the folder name/structure contain any words which mean we need to exclude these resources?
 			foreach my $exclude ( @exclusions )
@@ -6114,9 +6254,11 @@ sub Dive
 }
 
 
-#
-#
-#
+# IsUniqueMD5
+# Computes the MD5 hash of a file and checks it against the %seenMD5s cache.
+# Returns true if this is the first time the file content has been encountered,
+# false if a duplicate has already been processed. Used to skip redundant
+# analysis of identical files.
 sub IsUniqueMD5
 {
 	my $MD5 = shift;
@@ -6135,9 +6277,10 @@ sub IsUniqueMD5
 }
 
 
-#
-#
-#
+# LaunchListener
+# Starts a background thread that listens for inter-process messages (via a
+# socket or named pipe) from the external grammar_check.py processes. Used to
+# collect results asynchronously as multiple grammar checks run in parallel.
 sub LaunchListener
 {
 	my $returnvalue = -1;
@@ -6157,9 +6300,10 @@ sub LaunchListener
 }
 
 
-#
-#
-#
+# CopyFileToSaveDirectory
+# Copies a processed output file (e.g. a generated PDF or Excel workbook) into
+# the designated save/archive directory, creating the directory if necessary.
+# Records the destination path in the global @SavedFiles array.
 sub CopyFileToSaveDirectory
 {
 	my $index = shift;
@@ -6185,9 +6329,10 @@ sub CopyFileToSaveDirectory
 
 
 
-#
-#
-#
+# FindFileInSaveFiles
+# Searches the @SavedFiles array for a file matching a given name or pattern.
+# Returns the full path of the first match found, or undef if no match
+# exists.
 sub FindFileInSaveFiles
 {
 	my $ext = shift;
@@ -6226,9 +6371,10 @@ sub FindFileInSaveFiles
 }
 
 
-#
-#
-#
+# CheckFilenamesForSpelling
+# Checks the display name of each resource against the dictionary and NGSL
+# word lists to flag filenames that contain apparent spelling errors or
+# non-standard vocabulary. Results are added to the inventory worksheet.
 sub CheckFilenamesForSpelling
 {
 	my $allfiles_input = "./" . $zipbasename . " files.txt";
@@ -6272,9 +6418,11 @@ sub CheckFilenamesForSpelling
 	return;
 }
 
-#
-#
-#
+# ConvertResourcesToPDF
+# Iterates over all resources that require conversion and invokes LibreOffice
+# in headless mode to convert each DOCX or PPTX file to PDF. Manages
+# concurrency, checks for conversion failures, and updates the resource hash
+# with the path to the resulting PDF.
 sub ConvertResourcesToPDF
 {
 	my $outputformat = shift;
@@ -6646,9 +6794,10 @@ sub ConvertResourcesToPDF
 }
 
 
-#
-#
-#
+# ApplyTemplateToResources
+# Applies a DOCX template (cover page, header/footer styles) to each Word
+# document resource before conversion, so that the merged PDF output has a
+# consistent visual style throughout.
 sub ApplyTemplateToResources
 {
 	my $outputformat = shift;
@@ -6724,9 +6873,10 @@ sub ApplyTemplateToResources
 }
 
 
-#
-#
-#
+# CountPages
+# Returns the number of pages in a PDF file by opening it with PDF::API2 and
+# querying the page count. Used to populate page-count fields in the inventory
+# and to calculate offsets when building the table of contents.
 sub CountPages
 {
 	my $subtype = shift;
@@ -6754,9 +6904,10 @@ sub CountPages
 	return $page_count;
 }
 
-#
-#
-#
+# CreateTableOfContents
+# Builds a PDF table-of-contents document listing all resources with their
+# unit, title, and page range. The TOC is inserted at the front of the merged
+# PDF and hyperlinked to each section.
 sub CreateTableOfContents
 {
 	my $subtype = shift;
@@ -7035,9 +7186,10 @@ sub CreateTableOfContents
 }
 
 
-#
-#
-#
+# DoesArchiveHave
+# Checks whether the archive contains at least one resource of the specified
+# subtype (e.g. 'docx', 'pdf', 'pptx'). Returns a boolean used to decide
+# whether type-specific processing steps should be executed.
 sub DoesArchiveHave
 {
 	my $sub = shift;
@@ -7053,10 +7205,11 @@ sub DoesArchiveHave
 
 
 
-#
-# https://stackoverflow.com/questions/12172663/merge-2-pdf-files-with-pdfapi2
-# https://stackoverflow.com/questions/2947925/how-to-add-header-footer-with-images-using-pdfapi2lite/3049803#3049803
-#
+
+# MergePDFs
+# Concatenates a list of PDF files into a single output PDF using PDF::API2.
+# Preserves bookmarks where possible, inserts unit-change separator pages
+# between sections, and writes the merged file to the destination directory.
 sub MergePDFs
 {
 	my $thissubtype = shift;
