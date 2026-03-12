@@ -1,5 +1,38 @@
 #!/usr/bin/env perl
 
+# =============================================================================
+# THIRD-PARTY SCRIPT — DO NOT MODIFY
+# =============================================================================
+# This file is docx2txt by Sandeep Kumar, distributed under the GNU General
+# Public Licence v3 (or later).  It is included unmodified as a dependency of
+# AnalyseIMSCC.pl.
+#
+# Source: http://docx2txt.sourceforge.net
+#
+# Usage (as called by AnalyseIMSCC.pl):
+#   perl docx2txt.pl <file.docx>          # writes <file.txt> alongside the docx
+#   perl docx2txt.pl <file.docx> out.txt  # writes to the specified output file
+#
+# The script unzips the .docx archive in memory using the system 'unzip' tool,
+# extracts word/document.xml, and converts the XML to plain text.
+# It handles: paragraphs, headings, hyperlinks, lists (bullet/decimal/letter/
+# roman), text justification, special Unicode characters, and tracked deletions.
+#
+# Configuration can be overridden via a 'docx2txt.config' file located in the
+# current directory, the user home directory, or /etc.
+# Key settings:
+#   $config_unzip          Path to the unzip binary (default: /usr/bin/unzip)
+#   $config_showHyperLink  'Y' to include hyperlink URLs in output (default: N)
+#   $config_lineWidth      Line width for text justification (default: 80)
+#   $config_tempDir        Temp directory for STDIN input (default: /tmp)
+#
+# Known issues (not fixed to preserve the unmodified third-party code):
+#   - Does not use 'use strict' or 'use warnings'
+#   - Uses two-argument open() in several places
+#   - Several variables ($nullDevice, $tempFile, etc.) are undeclared globals
+#   - lowerRoman() declares @rcode and @dval without 'my'
+# =============================================================================
+
 # docx2txt, a command-line utility to convert Docx documents to text format.
 # Copyright (C) 2008-2014 Sandeep Kumar
 #

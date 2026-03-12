@@ -1,73 +1,114 @@
-#!/usr/bin/python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+"""
+grammar_check.py - Check a plain-text file for spelling and grammar errors
+using the LanguageTool library and write results to a CSV file.
 
-# python grammar_check.py -i "text.txt" -o "out.csv"
-# python grammar_check.py -i "text.txt" -o "out.csv"
-# python grammar_check.py -i "text.txt" -o "out.csv"
+Usage:
+    python grammar_check.py -i <inputfile.txt> -o <outputfile.csv>
 
-# java -jar languagetool-commandline.jar -l en-GB text.txt
+Arguments:
+    -i  Path to the plain-text input file (UTF-8 encoded)
+    -o  Path for the output CSV file (will be created or overwritten)
 
-import sys, getopt
-#import language_check          # pip install language-check
-import language_tool_python     # newest!
+Output format (!! delimited, one error per line):
+    ruleId!!message!!replacements!!context!!offset!!errorLength!!category!!ruleIssueType
 
-tool = language_tool_python.LanguageTool( 'en-UK' )
+Called by AnalyseIMSCC.pl via:
+    system("/usr/local/bin/python3.11", "grammar_check.py", "-i", txtfile, "-o", csvfile)
+
+Dependencies:
+    language_tool_python  (pip install language-tool-python)
+
+Notes:
+    - Uses British English (en-GB) rules.
+    - On first run LanguageTool will download its language model (~200MB).
+    - The LanguageTool instance is created inside main() so that importing
+      this module does not trigger a download or slow initialisation.
+"""
+
+import sys
+import getopt
+import language_tool_python
+
 
 def main(argv):
-    
-    inputfile = ''
-    outputfile = ''
-    strReplacements = ''
+    """
+    Parse command-line arguments, run LanguageTool on the input file,
+    and write all matches to the output CSV file.
 
-    opts, args = getopt.getopt( argv,"i:o:" )
+    Parameters
+    ----------
+    argv : list
+        Command-line arguments (typically sys.argv[1:])
+    """
+
+    inputfile  = ''
+    outputfile = ''
+
+    # Parse -i and -o options
+    try:
+        opts, _ = getopt.getopt(argv, "i:o:")
+    except getopt.GetoptError as e:
+        print(f"Error: {e}", file=sys.stderr)
+        print("Usage: grammar_check.py -i <inputfile> -o <outputfile>", file=sys.stderr)
+        sys.exit(2)
 
     for opt, arg in opts:
-        if opt in ( "-i" ):
+        if opt == "-i":
             inputfile = arg
-        elif opt in ( "-o" ):
+        elif opt == "-o":
             outputfile = arg
 
-#    print ( 'Input file is:', inputfile )
-#    print ( 'Output file is:', outputfile )
+    # Validate that both required arguments were provided
+    if not inputfile:
+        print("Error: No input file specified (-i).", file=sys.stderr)
+        sys.exit(2)
+    if not outputfile:
+        print("Error: No output file specified (-o).", file=sys.stderr)
+        sys.exit(2)
 
-    infile = open( inputfile, "r", encoding='utf-8' )
-    text = infile.read()
-    infile.close()
+    # Read the input file
+    # Use errors='replace' to handle any stray non-UTF-8 bytes gracefully
+    with open(inputfile, "r", encoding="utf-8", errors="replace") as infile:
+        text = infile.read()
 
-    outfile = open( outputfile, "w+", encoding='utf-8' )
-    #outfile.write( 'Rule ID,Message,Replacements,Context,Offset,Error Length,Category,Rule Issue Type\n' )
+    # Initialise LanguageTool with British English rules.
+    # NOTE: 'en-GB' is the correct BCP-47 language tag for British English.
+    # On first use this downloads the LanguageTool jar (~200MB) automatically.
+    tool = language_tool_python.LanguageTool("en-GB")
 
-    matches = tool.check( text )
-    #matches = tool.check( "A sentence with a error in the Hitchhiker’s Guide tot he Galaxy" )
-    #print ( 'Found ', len( matches ), ' possible errors' )
+    # Run the grammar and spelling check
+    matches = tool.check(text)
 
-    #print ( matches[0] )
-    #print ( matches[1] )
+    # Write results to the output CSV file.
+    # Delimiter is '!!' (double exclamation) to avoid conflicts with commas
+    # in error messages and context strings.
+    with open(outputfile, "w", encoding="utf-8") as outfile:
+        for match in matches:
 
-    for match in matches:
-        
-#        print( 'Rule ID is         ', match.ruleId )               # e.g. EN_A_VS_AN
-#        print( 'Message is         ', match.message )              # e.g. Use “an” instead of ‘a’ if the following word starts with a vowel sound, e.g. ‘an article’, ‘an hour’
-#        print( 'Replacements are   ', match.replacements[0] )      # e.g. an
-#        print( 'Context is         ', match.context )              # e.g. A sentence with a error in the Hitchhiker’s Guide tot he ...
-#        print( 'Offset is          ', match.offset )               # e.g. 16
-#        print( 'Error Length is    ', match.errorLength )          # e.g. 1
-#        print( 'Category is        ', match.category )             # e.g. MISC
-#        print( 'Rule Issue Type is ', match.ruleIssueType )        # e.g. misspelling
+            # Build a semicolon-separated list of suggested replacements
+            # (strip any trailing '; ' from the final entry)
+            if match.replacements:
+                str_replacements = "; ".join(match.replacements)
+            else:
+                str_replacements = ""
 
-        strReplacements = ''
-        
-        for replacement in match.replacements:
-            strReplacements = strReplacements + replacement + "; "
-
-        #strReplacements.removesuffix( " | " )  # doesn't seem to do what I want
-        strReplacements = strReplacements[:-2]
-        
-        #if match.ruleId not in ('WHITESPACE_RULE', 'EN_QUOTES', 'DASH_RULE'):   # ignore these, they are too common
-        outfile.write(  "{0}!!\"{1}\"!!{2}!!\"{3}\"!!{4}!!{5}!!{6}!!{7}\n".format( match.ruleId, match.message, strReplacements, match.context, match.offset, match.errorLength, match.category, match.ruleIssueType ) )        # match.replacements[0]
-
-    outfile.close()
+            # Write one line per match in the format expected by
+            # ReadSpellingAndGrammarFileIntoArray() in AnalyseIMSCC.pl
+            outfile.write(
+                '{0}!!"{1}!!{2}!!"{3}"!!{4}!!{5}!!{6}!!{7}\n'.format(
+                    match.ruleId,
+                    match.message,
+                    str_replacements,
+                    match.context,
+                    match.offset,
+                    match.errorLength,
+                    match.category,
+                    match.ruleIssueType,
+                )
+            )
 
 
 if __name__ == "__main__":
-   main(sys.argv[1:])
+    main(sys.argv[1:])
