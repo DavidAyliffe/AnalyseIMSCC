@@ -86,17 +86,17 @@ v2.22
 # Step4. Check LibreOffice is working
 # /Applications/LibreOffice.app/Contents/MacOS/soffice --version
 
-use utf8;
-use strict;
-use v5.10;
-use warnings;
-no warnings 'experimental::smartmatch';
-use diagnostics;
+use utf8;           # allow UTF-8 literals in source
+use strict;         # enforce variable declaration, etc.
+use v5.10;          # require Perl 5.10+ for 'say', named captures, etc.
+use warnings;       # enable runtime warnings
+no warnings 'experimental::smartmatch';  # suppress smartmatch (~~) warnings; feature is used intentionally
+use diagnostics;    # turn warnings into verbose diagnostic messages
 
-$|++;
+$|++;               # disable STDOUT buffering so progress messages appear immediately
 
-our $version = "v2.22";
-our $VERSION_NO = 1;
+our $version = "v2.22";   # human-readable version string embedded in filenames and PDF metadata
+our $VERSION_NO = 1;      # integer version number stamped onto the front cover of merged PDFs
 
 use XML::Simple;
 # use Image::Magick;
@@ -146,21 +146,28 @@ use MP3::Info;
 #use Text::Hunspell;
 #use Text::SpellChecker;			# brew install hunspell / brew install aspell	requires Text::Hunspell
 
-my $hasPDFConverter = 1;		# 1 is yes, otherwise no
-my $hasTemplateConverter = 1;	# 1 is yes, otherwise no
-my $isUnoconvWorking = 0;		# 1 is yes, otherwise no
+my $hasPDFConverter = 1;		# flag: 1 = LibreOffice/soffice is available and can convert DOCX->PDF
+my $hasTemplateConverter = 1;	# flag: 1 = LibreOffice template application (unoconv/soffice) is available
+my $isUnoconvWorking = 0;		# flag: 1 = unoconv listener is running; 0 = fall back to direct soffice calls
 
-# consts
-my $NGRAMS_LIMIT = 20;
-my $MAXIMUM_FILE_SIZE = 100485760;	# 100MB = 1024 x 1024 x 100	2MB = 1048576 * 2 = 2097152
-my $MAXIMUM_PDF_PAGES = 10;
-my $UPPER_LIMIT_PAGES = 5;
-my $ONE_YEAR_OLD_FILE = 365;
-my $TWO_YEAR_OLD_FILE = 730;
-my $ONE_MONTH_OLD_FILE = 30;
-my $AVERAGE_READING_SPEED = 200; 	# words per minute
+# ─── Constants ───────────────────────────────────────────────────────────────
 
-# NGSL vocab distribution by band 
+my $NGRAMS_LIMIT = 20;            # maximum number of n-gram entries written to the NGrams worksheets
+my $MAXIMUM_FILE_SIZE = 100485760;# 100 MB hard limit; files larger than this are marked EXCLUDED
+                                  # (100 MB = 1024 * 1024 * 100)
+my $MAXIMUM_PDF_PAGES = 10;       # PDFs with >= this many pages are auto-excluded from the merged output
+my $UPPER_LIMIT_PAGES = 5;        # the "ideal" page-count ceiling used for yellow/red highlighting in the
+                                  # inventory spreadsheet (column V)
+my $ONE_YEAR_OLD_FILE = 365;      # age threshold in days for red-highlighting stale documents
+my $TWO_YEAR_OLD_FILE = 730;      # age threshold in days for very-stale documents
+my $ONE_MONTH_OLD_FILE = 30;      # age threshold in days for green-highlighting recently edited documents
+my $AVERAGE_READING_SPEED = 200;  # assumed words-per-minute used to estimate reading time
+
+# NGSL band boundaries (rank numbers within the 2,801-item New General Service List)
+# Band A = most frequent 800 words (Foundation level)
+# Band B = words 801-1600 (Level 1)
+# Band C = words 1601-2400 (Level 2)
+# Band D = words 2401-2801 (Level 3)
 my $NGSL_BAND_A_LOWER 	= 0;
 my $NGSL_BAND_A_HIGHER 	= 800;
 my $NGSL_BAND_B_LOWER 	= 800;
@@ -170,88 +177,168 @@ my $NGSL_BAND_C_HIGHER 	= 2400;
 my $NGSL_BAND_D_LOWER 	= 2400;
 my $NGSL_BAND_D_HIGHER 	= 2801;
 
-# ideal reading text word limits 
-my $READING_LEVEL_1_LOWER_TEXT_LIMIT 	= 300;		# max  800 in test
+# Ideal word-count windows for each Reading programme level.
+# Texts outside these bands are yellow-highlighted (borderline) or
+# red-highlighted (significantly out of range) in the inventory spreadsheet.
+my $READING_LEVEL_1_LOWER_TEXT_LIMIT 	= 300;		# Reading 1 (A2): target 300-599 words
 my $READING_LEVEL_1_HIGHER_TEXT_LIMIT 	= 599;
-my $READING_LEVEL_2_LOWER_TEXT_LIMIT 	= 500;		# max 1200 in tests
+my $READING_LEVEL_2_LOWER_TEXT_LIMIT 	= 500;		# Reading 2 (B1): target 500-899 words
 my $READING_LEVEL_2_HIGHER_TEXT_LIMIT 	= 899;
-my $READING_LEVEL_3_LOWER_TEXT_LIMIT 	= 800;		# max 1600 in tests
-my $READING_LEVEL_3_HIGHER_TEXT_LIMIT 	= 1199;		
-my $READING_LEVEL_4_LOWER_TEXT_LIMIT 	= 1100;		# max 2000 for tests
+my $READING_LEVEL_3_LOWER_TEXT_LIMIT 	= 800;		# Reading 3 (B1+): target 800-1199 words
+my $READING_LEVEL_3_HIGHER_TEXT_LIMIT 	= 1199;
+my $READING_LEVEL_4_LOWER_TEXT_LIMIT 	= 1100;		# Reading 4 (B2): target 1100-1800 words
 my $READING_LEVEL_4_HIGHER_TEXT_LIMIT 	= 1800;
-my $READING_LEVEL_5_LOWER_TEXT_LIMIT 	= 0;		# dummy values
-my $READING_LEVEL_5_HIGHER_TEXT_LIMIT 	= 99999;	# dummy values
+my $READING_LEVEL_5_LOWER_TEXT_LIMIT 	= 0;		# Reading 5: placeholder / no constraint currently
+my $READING_LEVEL_5_HIGHER_TEXT_LIMIT 	= 99999;	# placeholder upper bound
 
 
-# VERY rough guidelines
-# READING 1: A2:  Fleisch-Kincaid 4-6
-# READING 2: B1:  Fleisch-Kincaid 6-8
-# READING 3: B1+: Fleisch-Kincaid 8-10
-# READING 4: B2:  Fleisch-Kincaid 10-12
-# IELTS is about 12.64	http://www.eiken.or.jp/teap/group/pdf/teap_rlspecreview_report.pdf
-# first year undergrad texts = 13.66 http://www.eiken.or.jp/teap/group/pdf/teap_rlspecreview_report.pdf
-my $READING_LEVEL_1_LOWER_FLEISCH_KINCAID_LIMIT 	= 4;
+# Flesch-Kincaid Grade Level target windows per Reading programme level.
+# These thresholds drive the wordsdescription field (e.g. "EAAASY", "HAAAARD")
+# which is appended to the custom PDF footer so teachers can see at a glance
+# whether a text is pitched at the right difficulty.
+# Reference scores: IELTS ~12.64; first-year undergrad ~13.66
+# (source: http://www.eiken.or.jp/teap/group/pdf/teap_rlspecreview_report.pdf)
+my $READING_LEVEL_1_LOWER_FLEISCH_KINCAID_LIMIT 	= 4;   # Reading 1 (A2):  FK 4–6
 my $READING_LEVEL_1_HIGHER_FLEISCH_KINCAID_LIMIT 	= 6;
-my $READING_LEVEL_2_LOWER_FLEISCH_KINCAID_LIMIT 	= 6;
+my $READING_LEVEL_2_LOWER_FLEISCH_KINCAID_LIMIT 	= 6;   # Reading 2 (B1):  FK 6–8
 my $READING_LEVEL_2_HIGHER_FLEISCH_KINCAID_LIMIT 	= 8;
-my $READING_LEVEL_3_LOWER_FLEISCH_KINCAID_LIMIT 	= 8;
+my $READING_LEVEL_3_LOWER_FLEISCH_KINCAID_LIMIT 	= 8;   # Reading 3 (B1+): FK 8–10
 my $READING_LEVEL_3_HIGHER_FLEISCH_KINCAID_LIMIT 	= 10;
-my $READING_LEVEL_4_LOWER_FLEISCH_KINCAID_LIMIT 	= 10;
+my $READING_LEVEL_4_LOWER_FLEISCH_KINCAID_LIMIT 	= 10;  # Reading 4 (B2):  FK 10–12
 my $READING_LEVEL_4_HIGHER_FLEISCH_KINCAID_LIMIT 	= 12;
 
 
-# command line arguments
-my $hasfilename = "";
-my $hasdirectory = "";
-my $loglevel = "";  # choices: 'DEBUG', 'INFO', 'WARNING', 'ERROR', 'CRITICAL'
-my $termno = undef;
+# ─── Command-line argument storage ──────────────────────────────────────────
+# These variables are populated by GetOptions() below.
 
-my $highlightvocab = undef;		# e.g. NGSL, A2, ACL
-my @highlightvocab;
+my $hasfilename = "";      # --file: path to a single .imscc or .docx file
+my $hasdirectory = "";     # --directory: path to a directory of files
+my $loglevel = "";         # --loglevel: Log4perl level (DEBUG|INFO|WARNING|ERROR|CRITICAL)
+my $termno = undef;        # --termno: optional term number (not currently used in logic)
 
-my $highlightin = undef;		# e.g. TASKS, TEXTS
-my @highlightin;
+my $highlightvocab = undef;   # --highlightvocab: comma-separated list of vocab lists to highlight
+my @highlightvocab;            # parsed array of vocab list names (e.g. 'NGSL', 'A2', 'ACL')
 
-my $addtemplate = undef;
-my @addtemplate;
+my $highlightin = undef;      # --highlightin: comma-separated list of subtypes to apply highlighting to
+my @highlightin;               # parsed array of subtypes (e.g. 'TASKS', 'TEXT')
 
-my $convert = undef;
-my @convert;
+my $addtemplate = undef;      # --addtemplate: comma-separated list of subtypes to apply template to
+my @addtemplate;               # parsed array; empty means apply to ALL subtypes
 
-my $quick = 0;
-my $noimages = 0;
-my $withanswers = 0;
-my $forceconvert = 0;
-my $addheader = 0;
+my $convert = undef;          # --convert: comma-separated list of subtypes to convert to PDF
+my @convert;                   # parsed array; empty means convert ALL subtypes
 
-# directories
+my $quick = 0;          # --quick: skip vocabulary, readability, grammar analysis for speed
+my $noimages = 0;       # --noimages: exclude jpg/png/gif files from the compiled PDF
+my $withanswers = 0;    # --withanswers: also produce a "WITH ANSWERS" merged PDF
+my $forceconvert = 0;   # --forceconvert: convert even files that would normally be excluded
+my $addheader = 0;      # --addheader: stamp a school logo image into the header of each page
+
+# ---------------------------------------------------------------------------
+# Directory and path globals
+# ---------------------------------------------------------------------------
+# $level tracks the depth of the current node as Dive() recurses through the
+# imsmanifest organisation tree.  It starts at 0 and is incremented/decremented
+# by Dive() with each level of nesting.
 my $level = 0;
+
+# Working output directory; overwritten later once $zipbasename is known.
 my $destinationDirectory = './temp/';
+
+# Persistent cache directory.  Files are stored here keyed by their MD5 hash
+# so that expensive operations (soffice PDF conversion, grammar checks, etc.)
+# are not repeated on re-runs with the same source material.
 my $savefileDirectory = './SaveFiles/';
+
+# Absolute path of the directory from which the script was invoked; captured
+# via getcwd() after argument parsing so that relative paths remain valid even
+# if the working directory changes during processing.
 my $HomeWorkingDirectory = "";
+
+# Root output folder name derived from $zipbasename; used as the top-level
+# directory created for the archive's output files.
 my $RootDirectory = "";
-my $zipbasename = '';	# without extension 
+
+# Stem of the input filename (no extension); used as a prefix for all output
+# directories and filenames so that multiple archives can be processed in the
+# same working directory without collision.
+my $zipbasename = '';	# without extension
+
+# Absolute path to the ALLDOCUMENTS sub-directory inside $destinationDirectory;
+# every resource PDF produced during processing is copied here so that
+# MergePDFs() can glob them into the final compiled output.
 my $AllDocumentsDirectory = '';
 
-my $templatefile = '/AGUTemplate.ott';
-my $answerstemplatefile = '/AnswersTemplate.ott';
-my $header_image_file = './WIST.png';
+# ---------------------------------------------------------------------------
+# Template and header file paths
+# ---------------------------------------------------------------------------
+# OpenDocument Text (.ott) template applied by LibreOffice when converting
+# DOCX files so that the output PDF inherits the school's house style.
+my $templatefile = '/template_file.ott';
 
+# Separate template used when the ANSWERS subtype is being converted, so that
+# answer documents can carry a distinct visual style.
+my $answerstemplatefile = '/answers_template_file.ott';
+
+# PNG logo stamped into the page header of every PDF when --addheader is set.
+my $header_image_file = './header_image_file.png';
+
+# ---------------------------------------------------------------------------
+# Excel workbook handle (Excel::Writer::XLSX)
+# ---------------------------------------------------------------------------
+# Holds the single .xlsx workbook created by SaveArchiveInventory() and
+# populated by all the Save*() subroutines.  Declared here so it is
+# accessible throughout the file's package scope.
 my $workbook = undef;
 
+# ---------------------------------------------------------------------------
+# Accumulated plain-text buffers
+# ---------------------------------------------------------------------------
+# All readable text extracted from TEXT-subtype documents is concatenated into
+# $AllTexts and written to a single .txt file at the end so that corpus-level
+# statistics can be recalculated without re-parsing every DOCX.
 my $AllTexts = '';
-my $AllTasks = '';
-my $AllTextsFilename = '';
-my $AllTasksFilename = '';
+my $AllTasks = '';    # analogous buffer for TASKS-subtype documents
+my $AllTextsFilename = '';   # path of the TEXT concatenation output file
+my $AllTasksFilename = '';   # path of the TASKS concatenation output file
 
-# exclude any FOLDERS and all material with any of these in its name
+# ---------------------------------------------------------------------------
+# Exclusion and classification arrays
+# ---------------------------------------------------------------------------
+
+# Any folder or resource whose name contains one of these strings is silently
+# excluded from all processing and PDF compilation.  The check is a substring
+# match performed in PrepareItems().  "EXCLUDE" is a catch-all marker that
+# content authors can embed in a resource name to force exclusion.
 my @exclusions = ( "Archive", "Other Practice Texts (and Tasks)", "EXCLUDE" );
 
-my @subtypes = ( "VOCABULARY", "WORKSHEET", "HOMEWORK", "TEXT", "TASKS", "HANDOUT", "ANSWERS", "TAPESCRIPT", "UNKNOWN", "LESSON PLAN", "EXCLUDED", "INCLUDED", "SONG", "XLSX" );	# The qw operator makes creating arrays easy. It means "quote on whitespace into a list":
+# Exhaustive list of all recognised document subtypes.  The classification
+# cascade in PrepareItems() assigns exactly one subtype to each resource; the
+# result governs which Save*() analytics worksheets receive a row for the
+# resource and which conditional-formatting band is applied.
+# "EXCLUDED" and "INCLUDED" are synthetic subtypes injected by the exclusion/
+# inclusion rules rather than inferred from the filename.
+# "XLSX" is used for spreadsheet resources which require their own handling.
+my @subtypes = ( "VOCABULARY", "WORKSHEET", "HOMEWORK", "TEXT", "TASKS", "HANDOUT", "ANSWERS", "TAPESCRIPT", "UNKNOWN", "LESSON PLAN", "EXCLUDED", "INCLUDED", "SONG", "XLSX" );
 
-my @vocablists = ( "NGSL", "NAWL", "A1", "A2", "B1", "B2", "C1", "C2", "ACL" );	# The qw operator makes creating arrays easy. It means "quote on whitespace into a list":
+# Names of the vocabulary lists that can be requested via --highlightvocab.
+# These map to the word-list preparation subroutines (PrepareNGSLWordList,
+# PrepareNAWLWordList, PrepareCEFRWordList, PrepareAcademicCollocationsList)
+# and to the highlighting logic in StyleText().
+my @vocablists = ( "NGSL", "NAWL", "A1", "A2", "B1", "B2", "C1", "C2", "ACL" );
 
-# course names
+# ---------------------------------------------------------------------------
+# Course-name arrays used by FindCourseForArchive() and Dive()
+# ---------------------------------------------------------------------------
+# @toplevels lists every known course (unit) name.  During Dive() traversal,
+# when a folder title exactly matches one of these strings the script
+# recognises that node as a "top-level" course boundary.  Two things happen:
+#   1. $archive_root / $archive_root_code are set (used in all output file
+#      names and as a label on cover pages).
+#   2. A separator PDF is generated so that the compiled output clearly marks
+#      where one course ends and the next begins.
+# FindCourseForArchive() also scans this array to infer the course code
+# (e.g., "R3", "S2") from the folder title when --cc is not supplied.
 my @toplevels = (
 "Year 07 - 1 - Clear messaging in digital media",
 "Year 07 - 2 - Networks",
@@ -291,85 +378,215 @@ my @toplevels = (
 "Year 11 - 5 - Network Security",
 "Year 11 - 6 - Object-Oriented Programming" );
 
-# we want a 'unit break' page in these cases
-# normal inclusion/exclusion rules apply (i.e. no automatic include or exclude)
+# @secondlevels lists sub-unit folder names that trigger a "unit break"
+# separator page inside Dive() without altering the normal inclusion/exclusion
+# rules.  This allows a course to be broken into numbered parts (e.g.
+# programming topics) each receiving its own divider page in the merged PDF.
+# Normal inclusion/exclusion rules still apply — no folder in @secondlevels is
+# automatically included or excluded; only the separator page is added.
+# NOTE: the previous set of names (Feeding Reading, Test Practice, etc.) is
+# preserved in a comment above as a reference for future configuration changes.
 # my @secondlevels = ( "Feeding Reading", "In-Class Test Practice Material", "Self-Study Test Practice Material", "Odd Numbered Terms", "Even Numbered Terms", "Odd Terms", "Even Terms" );
 my @secondlevels = ( "Part 1 - Sequence", "Part 2 - Selection", "Part 3 - Iteration", "Part 4 - Subroutines", "Part 5 - Strings and lists", "Part 6 - Dictionaries and data files" );
 
-# INclude any FOLDERS and all material with any of these in its name
-my @alwaysinclude = ( ); # everything inside these folders is included in every PDF (irrespective of document type)
+# Any folder whose name appears in @alwaysinclude causes all resources inside
+# it to be forcibly included in every PDF, overriding subtype-based exclusion.
+# Currently empty — all inclusion/exclusion is driven by subtype and @exclusions.
+my @alwaysinclude = ( );
 
-# this is a list of rule IDs.  e.g., 'UPPERCASE_SENTENCE_START', 'SENTENCE_FRAGMENT'
-my @spelling_rules_to_ignore = ( 'WHITESPACE_RULE', 'EN_QUOTES', 'DASH_RULE' );	# The qw operator makes creating arrays easy. It means "quote on whitespace into a list":
+# LanguageTool rule IDs that CheckSpellingAndGrammar() instructs the checker
+# to ignore.  Rules listed here generate too many false positives for this
+# corpus (e.g., WHITESPACE_RULE fires on double spaces between sentences which
+# are common in EFL teaching materials; EN_QUOTES flags smart quotes; DASH_RULE
+# flags en-dashes used stylistically).
+my @spelling_rules_to_ignore = ( 'WHITESPACE_RULE', 'EN_QUOTES', 'DASH_RULE' );
 
-my $archive_root = '';			# this is a name like Reading 3
-my $archive_root_level = -1;	# this is a level number like 3
-my $archive_root_code = '';		# this is a code like R3 or S2 or W5 or LA1
+# ---------------------------------------------------------------------------
+# Archive-root tracking variables
+# ---------------------------------------------------------------------------
+# These three variables are set by FindCourseForArchive() / Dive() when a
+# folder matching an entry in @toplevels is encountered, and are used across
+# all output file names, cover-page labels, and the merged PDF metadata.
 
-# these are used for summative statistics
-my $filecount = 0;
-my $docfiles = 0;
-my $docxfiles = 0;
-my $xlsfiles = 0;
-my $pdffiles = 0;
-my $xmlfiles = 0;
-my $imagefiles = 0; 
-my $mp3files = 0;
-my $mp4files = 0;
-my $pptfiles = 0;
-my $txtfiles = 0;
-my $htmlfiles = 0;
-my $foldercount = 0;
-my $weblinks = 0;
-my $schoologyresources = 0;
-my @unabletoparseXML;
-my @unabletoparseDOCX;
+# Human-readable course name extracted from the matching @toplevels entry.
+# e.g., "Reading 3" or "Writing - Advanced"
+my $archive_root = '';
 
+# Numeric depth at which the archive root was found in the manifest tree.
+# -1 means "not yet found".  Used to guard against updating the archive root
+# when a deeper nested folder name also matches.
+my $archive_root_level = -1;
+
+# Short alphanumeric code derived from the course name.
+# e.g., "R3", "S2", "W5", "LA1" — used in output filenames and PDF footers.
+my $archive_root_code = '';
+
+# ---------------------------------------------------------------------------
+# File-type counters  (used by IncrementFileTypeCount() and SaveArchiveStatistics())
+# ---------------------------------------------------------------------------
+# Each counter is incremented once per resource of that type encountered during
+# Dive() / PrepareItems().  SaveArchiveStatistics() writes them to the Summary
+# worksheet and to the log.
+my $filecount = 0;           # total resources processed
+my $docfiles = 0;            # legacy .doc files
+my $docxfiles = 0;           # modern Word documents
+my $xlsfiles = 0;            # Excel spreadsheets (.xls / .xlsx)
+my $pdffiles = 0;            # pre-existing PDF resources
+my $xmlfiles = 0;            # raw XML resources (e.g., Schoology quiz exports)
+my $imagefiles = 0;          # images (.jpg, .png, .gif, .jpeg)
+my $mp3files = 0;            # audio files
+my $mp4files = 0;            # video files
+my $pptfiles = 0;            # PowerPoint presentations (.ppt / .pptx)
+my $txtfiles = 0;            # plain-text files
+my $htmlfiles = 0;           # HTML resources
+my $foldercount = 0;         # folders (organisation nodes) in the manifest
+my $weblinks = 0;            # web-link resources (no local file)
+my $schoologyresources = 0;  # Schoology-native resource types (LTI, etc.)
+
+# Resources that could not be parsed (logged for diagnostics).
+my @unabletoparseXML;    # resource IDs / titles that caused XML::Simple to die
+my @unabletoparseDOCX;   # DOCX paths that caused Archive::Zip / XML errors
+
+# ---------------------------------------------------------------------------
+# Table-of-contents and hierarchy tracking
+# ---------------------------------------------------------------------------
+# Entries are pushed here by Dive() and later consumed by CreateTableOfContents().
 my @tableofcontents;
-my $toc_pages = 0;
+my $toc_pages = 0;        # page count of the generated ToC PDF (used for page offset in MergePDFs)
 
+# Resources explicitly excluded from the merged PDF still get an entry here
+# so the inventory worksheet can show what was omitted.
 my @excludedtableofcontents;
+
+# Web-link resources collected during Dive() for the inventory worksheet.
 my @weblinks;
+
+# Stack of folder titles maintained by Dive() to track the path from the
+# manifest root to the current node.  Used to build breadcrumb strings and
+# to determine unit/section context for separator page generation.
 my @hierarchy;
-my @frontcovers;		# a list of filenames for potential front cover pages
-my @backcovers;			# a list of filenames for potential back cover pages
+
+my @frontcovers;    # filenames of PDFs suitable for use as front cover pages
+my @backcovers;     # filenames of PDFs suitable for use as back cover pages
 
 
-# dictionary hashes.  these are **archive-wide** hashes
-my %ngsl;				# whole archive array.  a hash of hashes containing the words in the NGSL and the frequency of which each word appears in the archive
-my %nawl;				# whole archive array.  a hash of hashes containing the words in the NAWL and the frequency of which each word appears in the archive
-my %cefr;				# whole archive array.  a hash of hashes containing the words in the CEFR list and the frequency of which each word appears in the archive
+# ---------------------------------------------------------------------------
+# Vocabulary / word-list hashes   (archive-wide accumulators)
+# ---------------------------------------------------------------------------
+# Each of the following hashes is keyed by a word form and holds a nested
+# hash of per-document frequency data.  They are populated incrementally by
+# GetLexisInformation() as each document is processed and are written out by
+# the Save*Info() subroutines at the end of the run.
+
+# %ngsl  — words drawn from the New General Service List (NGSL, ~2,800 most
+# frequent words in English).  Inner hash: { $word => { $docname => $count } }
+my %ngsl;
+
+# %nawl  — words drawn from the New Academic Word List (NAWL, ~963 words
+# common in academic English but not in the NGSL).
+my %nawl;
+
+# %cefr  — words from the Cambridge English CEFR word lists (A1–C2 bands).
+# The band (A1, B2, etc.) is stored as an attribute of each entry.
+my %cefr;
+
+# %grammarproblems — keyed by rule ID; counts how many times each LanguageTool
+# rule fired across all documents.  Used by SaveSpellingAndGrammarProblems().
 my %grammarproblems;
-my %dictionary;
-my %supplemental;
-my %AcademicCollocationList;	# whole archive array.  a hash of hashes containing the words in the Pearson Academic Collocations List (https://pearsonpte.com/organizations/researchers/academic-collocation-list/)
 
-# these are re-useable hashes
+# %dictionary — full general-English dictionary loaded from $DICTIONARY_FILE;
+# used by GetLexisInformation() to determine whether an unknown word is at
+# least a real English word (rather than a proper noun or typo).
+my %dictionary;
+
+# %supplemental — domain-specific vocabulary from $SUPPLEMENTAL_FILE; treated
+# as "known" words so they are not flagged as off-list during lexis analysis.
+my %supplemental;
+
+# %AcademicCollocationList — multi-word academic collocations loaded by
+# PrepareAcademicCollocationsList() from the Pearson ACL CSV file.
+# See: https://pearsonpte.com/organizations/researchers/academic-collocation-list/
+my %AcademicCollocationList;
+
+# ---------------------------------------------------------------------------
+# Per-document reusable hashes (reset for each resource in GetLexisInformation)
+# ---------------------------------------------------------------------------
+# These parallel the archive-wide hashes above but are cleared before each
+# document is analysed so they hold only that document's data.  Results are
+# then merged up into the archive-wide hashes.
 my %NGSL_document;
 my %NAWL_document;
 my %CEFR_document;
 my %AcademicCollocationList_document;
 
+# ---------------------------------------------------------------------------
+# Word-level arrays (per-document; populated by GetLexisInformation)
+# ---------------------------------------------------------------------------
+# Every token extracted from the current document's plain text.
 my @AllWords;
+
+# Tokens that did not match any vocabulary list, dictionary, or supplemental
+# list — potential misspellings, proper nouns, or genuinely new vocabulary.
 my @UnknownWords;
+
+# Tokens that are new to this document compared with all previously processed
+# documents in the archive (i.e., appearing in @AllWords but not @OldWords).
 my @NewWords;	# new and off-list
+
+# N-gram arrays populated by GetAndSaveNGrams() for the current document.
 my @TwoNgrams;
 my @ThreeNgrams;
 my @FourNgrams;
 
-my @SpellingAndGrammarProblems;		# array of spelling and grammar problems
+# Flat array of spelling/grammar problem strings returned by
+# CheckSpellingAndGrammar() and later consolidated by
+# ReadSpellingAndGrammarFileIntoArray().
+my @SpellingAndGrammarProblems;
 
+# ---------------------------------------------------------------------------
+# Word-list file paths
+# ---------------------------------------------------------------------------
+# All word-list data files live under ./WordLists/ relative to the script.
+# These constants are passed to the corresponding Prepare*() subroutines.
+
+# Pearson Academic Collocation List — CSV format; each row is a multi-word
+# phrase that is academically significant.
 my $ACADEMIC_COLLOCATION_LIST_FILE = './WordLists/AcademicCollocationList.csv';
+
+# New General Service List — plain text, one word per line.
 my $NGSL_FILE = './WordLists/NGSL.txt';
+
+# New Academic Word List — plain text, one word per line.
 my $NAWL_FILE = './WordLists/NAWL.txt';
+
+# Domain-specific supplemental vocabulary treated as "known" during lexis analysis.
 my $SUPPLEMENTAL_FILE = './WordLists/Supplemental.txt';
+
+# Comprehensive English dictionary; used to distinguish real (but off-list)
+# words from likely misspellings.
 my $DICTIONARY_FILE = './WordLists/dictionary.txt';
 
+# ---------------------------------------------------------------------------
+# Cover-page and blank-page resources
+# ---------------------------------------------------------------------------
+# PDF files used for front/back covers and blank writing pages are sourced
+# from this directory.
 my $COVERS_DIRECTORY = './Covers/';
-my $BLANK_WRITING_PAGE = 'BLANK WRITING PAGE.pdf';								# 4 SIDES OF PAPER
-my $BLANK_WRITING_PAGE_FOR_WRITING = 'BLANK WRITING PAGE FOR WRITING.pdf';		# 10 SIDES OF PAPER
+
+# Pre-made blank writing page inserted by MergePDFs() at certain points in
+# the compiled PDF.  The "4 SIDES" variant is a single sheet folded in half
+# (landscape A3 → portrait A4 spreads).
+my $BLANK_WRITING_PAGE = 'BLANK WRITING PAGE.pdf';              # 4 sides of paper
+
+# 10-side variant used when more writing space is required.
+my $BLANK_WRITING_PAGE_FOR_WRITING = 'BLANK WRITING PAGE FOR WRITING.pdf';  # 10 sides
+
+# Number of blank writing page copies appended by MergePDFs().
 my $BLANK_WRITING_PAGE_NO_OF_COPIES = 20;
 
+# ---------------------------------------------------------------------------
+# CEFR word-list file paths (one per band)
+# ---------------------------------------------------------------------------
 my $CEFR_A1_FILE = './WordLists/CEFR-A1.txt';
 my $CEFR_A2_FILE = './WordLists/CEFR-A2.txt';
 my $CEFR_B1_FILE = './WordLists/CEFR-B1.txt';
@@ -377,40 +594,138 @@ my $CEFR_B2_FILE = './WordLists/CEFR-B2.txt';
 my $CEFR_C1_FILE = './WordLists/CEFR-C1.txt';
 my $CEFR_C2_FILE = './WordLists/CEFR-C2.txt';
 
-my @VOCAB_FILES = (	'Important Vocabulary At Foundation.pdf', 
-					'Important Vocabulary At Level 1.pdf', 
-					'Important Vocabulary At Level 2.pdf', 
+# ---------------------------------------------------------------------------
+# Vocabulary supplement file handling
+# ---------------------------------------------------------------------------
+# A course may include one of several pre-made vocabulary PDFs (at Foundation,
+# Level 1, 2, or 3).  These are searched for and, if found, appended to the
+# compiled PDF by MergePDFs().
+my @VOCAB_FILES = (	'Important Vocabulary At Foundation.pdf',
+					'Important Vocabulary At Level 1.pdf',
+					'Important Vocabulary At Level 2.pdf',
 					'Important Vocabulary At Level 3.pdf' );
-my $addedvocabfile = 0;		# this is non-zero if we've added a file to the exported PDF
-my $addedvocabfilename = 0;		# this is the filename (with ALL DOCUMENTS path that we've copied)
-my $addedvocabpages = 0;		# this is the number of pages in the vocab file we've copied
 
-my @OldWords;			# this is a list of words in all documents before the one being analysed.
+# Non-zero once a vocab file has been located and copied into ALLDOCUMENTS.
+my $addedvocabfile = 0;
 
-my $elective_coursecode = '';
-my $elective_coursename = '';
-my $elective_filename = 'electives.csv';
-my @elective_details;
+# Full ALLDOCUMENTS-relative path of the vocab file that was copied.
+my $addedvocabfilename = 0;
 
+# Page count of the vocab file; used so MergePDFs() can account for its pages
+# in the running page-number offset.
+my $addedvocabpages = 0;
+
+# ---------------------------------------------------------------------------
+# Cross-document word accumulator
+# ---------------------------------------------------------------------------
+# Before GetLexisInformation() analyses a document it copies @AllWords into
+# @OldWords so that "new word" detection can compare the current document's
+# tokens against all previously seen tokens in the archive.
+my @OldWords;
+
+# ---------------------------------------------------------------------------
+# Elective course details
+# ---------------------------------------------------------------------------
+# When --cc is supplied on the command line the script treats the archive as
+# an elective course.  GetElectiveName() looks up the course code in the CSV
+# to get the full human-readable course name for cover pages.
+my $elective_coursecode = '';    # short code, e.g., "ICT3"
+my $elective_coursename = '';    # full name, e.g., "ICT - Advanced"
+my $elective_filename = 'electives.csv';   # lookup table mapping codes to names
+my @elective_details;            # parsed rows from electives.csv
+
+# ---------------------------------------------------------------------------
+# Processing-state globals
+# ---------------------------------------------------------------------------
+# Set by Dive() when the last page of long documents-only mode is reached.
 my $lastpageoflongdocssonly = 0;
-my $folderhasitems = 0;
-my $currentcourse = "";
-my $currentunit = "";
-my $unitcount = 0;
-my $hasunits = 0;
-my $archiveitemcounter = 0;
-my $firsttime = 0;
-my $ignore_pages = 0;
-my $xml;
-my $parent = 'parent';
-my $location = '';
-my @archivedetails;				# the master array.  contains references to key hashes, one hash for each item (file)
-my @individualfilemode = qw ( .doc .docx .jpg .png .gif .jpeg );	# The qw operator makes creating arrays easy. It means "quote on whitespace into a list":
-my @tobe = qw ( be is am are were was isn't wasn't weren't aren't );	# all forms of the verb 'to be'
 
+# Flag set within Dive() when at least one includable item has been found
+# inside the current folder; used to suppress empty separator pages.
+my $folderhasitems = 0;
+
+# Title of the course (top-level folder) currently being processed.
+my $currentcourse = "";
+
+# Title of the unit (second-level folder) currently being processed.
+my $currentunit = "";
+
+# Running count of units encountered; drives unit-number labels on separator pages.
+my $unitcount = 0;
+
+# Set to 1 once the first unit has been entered, so that unit-break logic is
+# not triggered prematurely at the very start of the archive.
+my $hasunits = 0;
+
+# Sequential counter incremented for each item pushed onto @archivedetails.
+# Used to give each item a stable numeric ID for the inventory worksheet.
+my $archiveitemcounter = 0;
+
+# Guards against re-running one-time setup code inside the processing loop.
+my $firsttime = 0;
+
+# When non-zero, the next N pages of a document are skipped during page
+# counting (used to ignore introductory pages that should not be paginated).
+my $ignore_pages = 0;
+
+# XML object returned by XML::Simple for the current manifest or document.
+my $xml;
+
+# String literal 'parent' used as a sentinel key when traversing the manifest
+# tree to identify the parent node of the current item.
+my $parent = 'parent';
+
+# Current resource location (href) extracted from the manifest.
+my $location = '';
+
+# ---------------------------------------------------------------------------
+# Master item array and mode arrays
+# ---------------------------------------------------------------------------
+# @archivedetails is the central data structure: an array of hash references,
+# one per resource, built by PrepareItems() and Dive(), then read by
+# ProcessItems() and all Save*() analytics subroutines.
+my @archivedetails;
+
+# File extensions that can be processed when the script is run in single-file
+# mode (--file pointing directly at a resource rather than an .imscc archive).
+my @individualfilemode = qw ( .doc .docx .jpg .png .gif .jpeg );
+
+# All inflected forms of the verb "to be"; used by GetLexisInformation() to
+# exclude copula forms from the lexical density calculation so they do not
+# inflate the NGSL word count.
+my @tobe = qw ( be is am are were was isn't wasn't weren't aren't );
+
+# PDF metadata author string embedded in every PDF produced by the script.
 my $authorinfo = sprintf "AnalyseIMSCC%s.pl with PDF::API2 by David Ayliffe", $version;
 
-# Configuration in a string for the logger
+# ---------------------------------------------------------------------------
+# Log::Log4perl configuration (inline string — no external config file needed)
+# ---------------------------------------------------------------------------
+# The configuration is passed to Log::Log4perl::init() as a reference to this
+# string rather than as a file path, so the script is self-contained.
+#
+# Category "Foo::Bar" is the logger name used throughout the code via
+#   $logger = Log::Log4perl::get_logger("Foo::Bar");
+# Setting it to DEBUG means all levels (DEBUG, INFO, WARN, ERROR, FATAL) are
+# forwarded to both appenders unless overridden by --loglevel.
+#
+# Two appenders are configured:
+#
+#   Logfile — writes to a file whose path is resolved at runtime by calling
+#     GetLogFileName(), which returns a timestamped path in the archive's
+#     output directory.  The PatternLayout ConversionPattern is:
+#       [%d] [%M][%p] %m%n
+#     where  %d = ISO date-time, %M = calling method name, %p = priority
+#     (DEBUG/INFO/etc.), %m = log message, %n = newline.
+#     This gives a full audit trail: timestamp, source subroutine, severity.
+#
+#   Screen — writes to STDOUT (stderr = 0).  The layout is just %m%n (message
+#     plus newline) so the terminal output is clean and uncluttered.  Colour
+#     coding is applied per level so important messages stand out:
+#       INFO  = bright white   (normal progress)
+#       WARN  = bright yellow  (non-fatal issues)
+#       DEBUG = bright blue    (verbose detail, often suppressed)
+#       ERROR = bright red     (problems that need attention)
 my $logger;
 my $conf = q(
     log4perl.category.Foo.Bar							= DEBUG, Logfile, Screen
@@ -422,10 +737,10 @@ my $conf = q(
     log4perl.appender.Screen.stderr						= 0
     log4perl.appender.Screen.layout						= Log::Log4perl::Layout::PatternLayout
     log4perl.appender.Screen.layout.ConversionPattern	= %m%n
-	log4perl.appender.Screen.color.info 				= bright_white    
-	log4perl.appender.Screen.color.warn 				= bright_yellow    
-	log4perl.appender.Screen.color.debug 				= bright_blue    
-	log4perl.appender.Screen.color.error 				= bright_red 
+	log4perl.appender.Screen.color.info 				= bright_white
+	log4perl.appender.Screen.color.warn 				= bright_yellow
+	log4perl.appender.Screen.color.debug 				= bright_blue
+	log4perl.appender.Screen.color.error 				= bright_red
 );
 
 
@@ -447,63 +762,104 @@ Usage is:  AnalyseIMSCC.pl -file=XXX.imscc|XXX.docx (-loglevel=XXX) (-addtemplat
 	-addheader	adds a custom header to each document
 	\n\n";
 
+# Capture the full command line before GetOptions consumes @ARGV; used for
+# logging so the exact invocation can be reproduced from the log file.
 my $commandline = $0 . " ". ( join " ", @ARGV );
 
+# ---------------------------------------------------------------------------
+# Command-line option parsing (Getopt::Long)
+# ---------------------------------------------------------------------------
+# '=s'  means the option requires a string value.
+# ':s'  means the option accepts an optional string value (undef if absent).
+# Flag options (no value suffix) are Boolean: present = 1, absent = 0.
+#
+# After GetOptions() returns, several options undergo post-processing:
+#   - $addtemplate, $convert, $highlightin are split on ',' to populate
+#     the corresponding arrays (@addtemplate, @convert, @highlightin).
+#     An empty array means "apply to ALL subtypes".
+#   - $highlightvocab is split to populate @highlightvocab.
+#   - Each parsed value is validated against @subtypes / @vocablists;
+#     unrecognised values cause logdie().
 GetOptions(
-    'file=s'			=> \$hasfilename,			# mandatory string
-    'directory=s'		=> \$hasdirectory,			# mandatory string
-    'loglevel:s'		=> \$loglevel,				# optional string
-	'termno:s'			=> \$termno,				# optional string
-	'highlightvocab:s'	=> \$highlightvocab,		# optional string	e.g. NGSL, ACL, B1
-	'highlightin:s'		=> \$highlightin,			# optional string	e.g. TEXTS, TASKS
-	'addtemplate:s'		=> \$addtemplate,			# optional string
-	'convert:s'			=> \$convert,				# optional string
-    'cc=s'				=> \$elective_coursecode,	# string
-	'quick'				=> \$quick,					# flag
-	'noimages'			=> \$noimages,				# flag
-	'withanswers'		=> \$withanswers,			# flag
-	'forceconvert'		=> \$forceconvert,			# flag
-	'addheader'			=> \$addheader				# flag
+    'file=s'			=> \$hasfilename,     # path to the .imscc archive or a single .docx/.jpg/etc.
+    'directory=s'		=> \$hasdirectory,    # path to a directory of resources (directory mode)
+    'loglevel:s'		=> \$loglevel,        # Log4perl level: DEBUG, INFO, WARN, ERROR, FATAL
+    'termno:s'			=> \$termno,          # academic term number; used to filter by odd/even terms
+    'highlightvocab:s'	=> \$highlightvocab,  # comma-separated vocab lists to highlight, e.g. "NGSL,ACL,B1"
+    'highlightin:s'		=> \$highlightin,     # comma-separated subtypes to apply highlighting to
+    'addtemplate:s'		=> \$addtemplate,     # comma-separated subtypes to apply the .ott template to
+    'convert:s'			=> \$convert,         # comma-separated subtypes to convert to PDF via soffice
+    'cc=s'				=> \$elective_coursecode,  # elective course code (e.g. "ICT3"); triggers elective front page
+    'quick'				=> \$quick,           # skip vocabulary / readability / grammar for faster output
+    'noimages'			=> \$noimages,        # exclude image files (.jpg, .png, .gif) from the compiled PDF
+    'withanswers'		=> \$withanswers,     # also produce a second compiled PDF that includes ANSWERS resources
+    'forceconvert'		=> \$forceconvert,    # convert all resources to PDF regardless of @exclusions
+    'addheader'			=> \$addheader        # stamp a school logo header image onto every output page
 ) or die $usagestring;
 
 
-my $timeStarted = [gettimeofday];		# start the timer!
-my ( $filename, $directories, $suffix ) = fileparse( $hasfilename, qr/\.[^.]*/ );		# set up 'global' filenames/directories
+# Record the wall-clock start time so a total elapsed duration can be logged
+# at the end of the run.
+my $timeStarted = [gettimeofday];
 
-# beautify the filename, make the Lesson Focus Sentence Case
+# Split the input file path into directory, base name, and extension.
+# The regex qr/\.[^.]*/ matches the last dot-delimited extension, so
+#   "/path/to/Reading 3.imscc" → $filename="Reading 3", $directories="/path/to/",
+#   $suffix=".imscc"
+# These three variables are used throughout the script to build output paths.
+my ( $filename, $directories, $suffix ) = fileparse( $hasfilename, qr/\.[^.]*/ );
+
+# Convert the base filename to Title Case so that directory names and PDF
+# titles look polished even when the source filename is all-caps or mixed-case.
+# The substitution matches each word token (including words with apostrophes)
+# and applies \u (uppercase first char) \L (lowercase rest).
 $filename =~ s/([\w']+)/\u\L$1/g;
 
+# ---------------------------------------------------------------------------
+# Guard: ensure the input is valid before doing any real work
+# ---------------------------------------------------------------------------
+# The script has two valid entry points:
+#   1. A file that exists (-e) and whose extension is in @individualfilemode or ".imscc"
+#   2. A directory path (-d $hasdirectory)
+# If neither condition is met, print the usage string and exit implicitly.
 unless ( ( -e $hasfilename && ( $suffix ~~ @individualfilemode || $suffix eq "\.imscc" ) ) || -d $hasdirectory )
 {
      print $usagestring;
 }
 else
 {
-	#
-	# set up the logger here
+	# -----------------------------------------------------------------------
+	# Initialise the logger now that we know the input is valid.
+	# The Log4perl config is passed by reference so no config file is needed.
+	# The logger name "Foo::Bar" matches the category in $conf.
+	# The four banner lines at different levels let the operator verify that
+	# colour coding is working correctly in their terminal.
 	Log::Log4perl::init( \$conf );
 	$logger = Log::Log4perl::get_logger( "Foo::Bar" );
 	$logger->info ( "*" x 80 );
 	$logger->info ( "*" x 80 );
 	$logger->info ( "*" x 80 );
-	
-	$logger->debug ( "*" x 80 );
-	$logger->info  ( "*" x 80 );
-	$logger->warn  ( "*" x 80 );
-	$logger->error ( "*" x 80 );
-	
-	
-	
-	#
+
+	$logger->debug ( "*" x 80 );    # blue  — visible only at DEBUG level
+	$logger->info  ( "*" x 80 );    # white
+	$logger->warn  ( "*" x 80 );    # yellow
+	$logger->error ( "*" x 80 );    # red
+
 	$logger->info ( sprintf "Command line was [%s]\n", $commandline );
-	
-	
+
+	# -----------------------------------------------------------------------
+	# Post-process --addtemplate
+	# -----------------------------------------------------------------------
+	# Normalise the alias "TEXTS" → "TEXT" (both spellings are accepted on the
+	# command line for convenience).  Split on comma to get an array of subtypes.
+	# Set $addtemplate = 1 (truthy "enabled") and validate each element
+	# against the master @subtypes array to catch typos early.
 	if ( defined $addtemplate )
 	{
-		$addtemplate =~ s/TEXTS/TEXT/g;
+		$addtemplate =~ s/TEXTS/TEXT/g;    # normalise plural alias
 		@addtemplate = split ( ',', $addtemplate );
 		$addtemplate = 1;
-		
+
 		# if the user has specified subtypes to be converted, check that these are valid subtypes
 		if ( scalar @addtemplate > 0 )
 		{
@@ -515,17 +871,21 @@ else
 	}
 	else
 	{
-		$addtemplate = 0;
+		$addtemplate = 0;    # --addtemplate was not supplied; template application is disabled
 	}
-	
-	###
-	
+
+	# -----------------------------------------------------------------------
+	# Post-process --convert
+	# -----------------------------------------------------------------------
+	# Same pattern as --addtemplate: normalise, split, validate.
+	# $convert = 1 means "conversion is active for the subtypes in @convert".
+	# An empty @convert means convert ALL subtypes.
 	if ( defined $convert )
 	{
 		$convert =~ s/TEXTS/TEXT/g;
 		@convert = split ( ',', $convert );
 		$convert = 1;
-		
+
 		# if the user has specified subtypes to be converted, check that these are valid subtypes
 		if ( scalar @convert > 0 )
 		{
@@ -537,17 +897,20 @@ else
 	}
 	else
 	{
-		$convert = 0;
+		$convert = 0;    # --convert was not supplied; conversion is disabled
 	}
-	
-	###
-	
-	if ( defined $highlightin )		# e.g. TASKS, TEXT, HANDOUTS
+
+	# -----------------------------------------------------------------------
+	# Post-process --highlightin  (e.g. TASKS, TEXT, HANDOUTS)
+	# -----------------------------------------------------------------------
+	# Determines which document subtypes receive vocabulary highlighting via
+	# StyleText().  An empty @highlightin means highlight in ALL subtypes.
+	if ( defined $highlightin )
 	{
-		$highlightin =~ s/TEXTS/TEXT/g;
+		$highlightin =~ s/TEXTS/TEXT/g;    # normalise plural alias
 		@highlightin = split ( ',', $highlightin );
 		$highlightin = 1;
-		
+
 		# if the user has specified subtypes to be highlighted, check that these are valid subtypes
 		if ( scalar @highlightin > 0 )
 		{
@@ -559,16 +922,20 @@ else
 	}
 	else
 	{
-		$highlightin = 0;
+		$highlightin = 0;    # --highlightin was not supplied; highlighting is disabled
 	}
 
-	###
-	
-	if ( defined $highlightvocab )	# e.g. NGSL, NAWL, ACL
+	# -----------------------------------------------------------------------
+	# Post-process --highlightvocab  (e.g. NGSL, NAWL, ACL)
+	# -----------------------------------------------------------------------
+	# Determines which vocabulary lists are used for in-document highlighting.
+	# Validated against @vocablists (not @subtypes) since these are word lists,
+	# not document subtypes.
+	if ( defined $highlightvocab )
 	{
 		@highlightvocab = split ( ',', $highlightvocab );
 		$highlightvocab = 1;
-		
+
 		# if the user has specified subtypes to be highlighted, check that these are valid subtypes
 		if ( scalar @highlightvocab > 0 )
 		{
@@ -580,15 +947,20 @@ else
 	}
 	else
 	{
-		$highlightvocab = 0;
+		$highlightvocab = 0;    # --highlightvocab was not supplied
 	}
-	
-	###
+
+	# If --forceconvert was set, ensure $convert is truthy even if --convert
+	# was not explicitly supplied, so that all resources are converted.
 	$convert = 1 if $forceconvert == 1;
 	
+	# Log today's date (from DateTime::today) so the log file is self-timestamped
+	# even when archived or copied to a different system.
 	my $dt = DateTime->today;
 	$logger->info ( sprintf "Today is: %s\n", $dt->date );
-	
+
+	# Log all runtime option values so any invocation can be exactly reproduced
+	# from the log file.  Array-valued options are listed one-per-line indented.
 	$logger->info ( sprintf "Version Number is 		[%s]\n", $VERSION_NO );
 	$logger->info ( sprintf "File is 		[%s]\n", $hasfilename );
 	$logger->info ( sprintf "Directory is 		[%s]\n", $hasdirectory );
@@ -597,14 +969,15 @@ else
 	$logger->info ( sprintf "Quick is 		[%s]\n", $quick );
 	$logger->info ( sprintf "NoImages is 		[%s]\n", $noimages );
 	$logger->info ( sprintf "WithAnswers is 		[%s]\n", $withanswers );
-	
+
 	$logger->info ( sprintf "AddTemplate is		[%s]\n", $addtemplate );
+	# If specific subtypes were given, list them one per line for clarity
 	$logger->info ( sprintf "	[%s]\n", join( "\n\t", @addtemplate ) ) if ( scalar( @addtemplate ) > 0 );
-	
-	$logger->info ( sprintf "HighlightVocab is	[%s]\n", $highlightvocab );		# this/these are vocab lists e.g. ACL, A2, NGSl
+
+	$logger->info ( sprintf "HighlightVocab is	[%s]\n", $highlightvocab );  # vocab lists e.g. ACL, A2, NGSL
 	$logger->info ( sprintf "	[%s]\n", join( "\n\t", @highlightvocab ) ) if ( scalar( @highlightvocab ) > 0 );
-	
-	$logger->info ( sprintf "HighlightIn is	[%s]\n", $highlightin );			# this/these are subtypes e.g. TASKS, HANDOUTS
+
+	$logger->info ( sprintf "HighlightIn is	[%s]\n", $highlightin );         # subtypes e.g. TASKS, HANDOUTS
 	$logger->info ( sprintf "	[%s]\n", join( "\n\t", @highlightin ) ) if ( scalar( @highlightin ) > 0 );
 
 	$logger->info ( sprintf "Convert is	 	[%s]\n", $convert );
@@ -617,25 +990,43 @@ else
 	$logger->info ( sprintf "Force Convert is	 	[%s]\n", $forceconvert );
 
 	$logger->info ( sprintf "Directory is [%s]; Filename is [%s]; Suffix is [%s]\n", $directories, $filename, $suffix );
-	
-	#
-	
-	$zipbasename = ( $filename ne '' ) ? $filename : 'temp';	# we might be in 'directory' mode so we don't have a filename
-	$zipbasename = ( $hasdirectory ne '' ) ? $hasdirectory . " OUTPUT" : 'temp';	# we might be in 'directory' mode so we don't have a filename
-	
+
+	# -----------------------------------------------------------------------
+	# Derive the output stem ($zipbasename) and set dependent path variables.
+	# -----------------------------------------------------------------------
+	# In archive mode $filename holds the .imscc stem; in directory mode it
+	# is empty so we fall back to "temp".  The second assignment then overrides
+	# with the directory name if --directory was given.
+	$zipbasename = ( $filename ne '' ) ? $filename : 'temp';      # archive mode
+	$zipbasename = ( $hasdirectory ne '' ) ? $hasdirectory . " OUTPUT" : 'temp';  # directory mode
+
 	$logger->info ( sprintf "zipbasename is [%s]\n", $zipbasename );
-	
+
+	# All output files live under ./$zipbasename/ to keep a run's outputs grouped.
 	$destinationDirectory = './'.$zipbasename.'/';
+
+	# Remember the invoking directory so we can build absolute paths later.
 	$HomeWorkingDirectory = getcwd;
+
+	# Top-level folder name used by MakeFolders() to create the directory tree.
 	$RootDirectory = $zipbasename.' Home Folder';
+
+	# All individual resource PDFs are copied into ALLDOCUMENTS so MergePDFs()
+	# can glob them in a single pass without having to recurse subtype folders.
 	$AllDocumentsDirectory = $destinationDirectory.'ALLDOCUMENTS/';
-	
-	$AllTextsFilename = $zipbasename.'/TEXT/ALL TEXTS.txt';		# TEXT NOT TEXTS
+
+	# Plain-text concatenation files used for corpus-level readability analysis.
+	# Note: the directory is TEXT (singular), not TEXTS.
+	$AllTextsFilename = $zipbasename.'/TEXT/ALL TEXTS.txt';
 	$AllTasksFilename = $zipbasename.'/TASKS/ALL TASKS.txt';
-	
+
+	# Excel workbook — named with the archive stem and version so multiple runs
+	# produce distinctly named files (e.g., "Reading 3 [v2.22].xlsx").
 	my $ArchiveWorkbook = './'.$zipbasename." [".$version."].xlsx";
+
+	# Plain-text statistics export file (tab-separated summary for pasting).
 	my $exportTXTfile = './'.$zipbasename." [".$version."].txt";
-	
+
 	$logger->info ( sprintf "Archive Workbook is [%s]\n", $ArchiveWorkbook );
 	$logger->info ( sprintf "Export Text file is [%s]\n", $exportTXTfile );
 	
@@ -2534,7 +2925,7 @@ sub CheckSpellingAndGrammar
 		my $Started = [gettimeofday];		# start the timer!
 		$logger->info ( sprintf "\tRunning grammar_check.py [%s] -> [%s]\n", $keyhash->{TXTfilename}, $keyhash->{SpellingAndGrammarErrorsfilename} );
 		
-		if( system ( "/usr/local/bin/python3.11", "grammar_check.py", "-i", $keyhash->{TXTfilename}, "-o", $keyhash->{SpellingAndGrammarErrorsfilename} ) == 0 )	# success!
+		if( system ( "/opt/homebrew/bin/python3", "grammar_check.py", "-i", $keyhash->{TXTfilename}, "-o", $keyhash->{SpellingAndGrammarErrorsfilename} ) == 0 )	# success!
 		{
 			if ( -e $keyhash->{SpellingAndGrammarErrorsfilename} )
 			{
@@ -5808,7 +6199,7 @@ sub ProcessItems
 					elsif( $keyhash->{type} eq 'pptx' )	# success!
 					{
 						#if ( system ( "/usr/bin/perl", "/usr/local/bin/pptx2txt.pl", $keyhash->{filename}, $keyhash->{TXTfilename} ) == 0 )
-						if ( system ( "/usr/local/bin/python3.11", "python_pptx.py", $keyhash->{filename}, $keyhash->{TXTfilename} ) == 0 )
+						if ( system ( "/opt/homebrew/bin/python3", "python_pptx.py", $keyhash->{filename}, $keyhash->{TXTfilename} ) == 0 )
 						{
 							print "\tMade txt file from pptx :-)\n";	
 							
@@ -6397,7 +6788,7 @@ sub CheckFilenamesForSpelling
 	
 	#
 		
-	if( system ( "/usr/local/bin/python3.11", "grammar_check.py", "-i", $allfiles_input, "-o", $allfiles_output ) == 0 )	# success!
+	if( system ( "/opt/homebrew/bin/python3", "grammar_check.py", "-i", $allfiles_input, "-o", $allfiles_output ) == 0 )	# success!
 	{
 		if ( -e $allfiles_output )
 		{
