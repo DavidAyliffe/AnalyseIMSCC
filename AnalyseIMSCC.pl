@@ -218,6 +218,7 @@ my $termno = undef;        # --termno: optional term number (not currently used 
 
 my $highlightvocab = undef;   # --highlightvocab: comma-separated list of vocab lists to highlight
 my @highlightvocab;            # parsed array of vocab list names (e.g. 'NGSL', 'A2', 'ACL')
+my %highlightvocab_hash;       # O(1) lookup hash built from @highlightvocab after argument parsing
 
 my $highlightin = undef;      # --highlightin: comma-separated list of subtypes to apply highlighting to
 my @highlightin;               # parsed array of subtypes (e.g. 'TASKS', 'TEXT')
@@ -227,6 +228,7 @@ my @addtemplate;               # parsed array; empty means apply to ALL subtypes
 
 my $convert = undef;          # --convert: comma-separated list of subtypes to convert to PDF
 my @convert;                   # parsed array; empty means convert ALL subtypes
+my %convert_hash;              # O(1) lookup hash built from @convert after argument parsing
 
 my $quick = 0;          # --quick: skip vocabulary, readability, grammar analysis for speed
 my $noimages = 0;       # --noimages: exclude jpg/png/gif files from the compiled PDF
@@ -320,12 +322,16 @@ my @exclusions = ( "Archive", "Other Practice Texts (and Tasks)", "EXCLUDE" );
 # inclusion rules rather than inferred from the filename.
 # "XLSX" is used for spreadsheet resources which require their own handling.
 my @subtypes = ( "VOCABULARY", "WORKSHEET", "HOMEWORK", "TEXT", "TASKS", "HANDOUT", "ANSWERS", "TAPESCRIPT", "UNKNOWN", "LESSON PLAN", "EXCLUDED", "INCLUDED", "SONG", "XLSX" );
+# O(1) lookup hash built from @subtypes — used instead of $x ~~ @subtypes throughout
+my %subtypes_hash = map { $_ => 1 } @subtypes;
 
 # Names of the vocabulary lists that can be requested via --highlightvocab.
 # These map to the word-list preparation subroutines (PrepareNGSLWordList,
 # PrepareNAWLWordList, PrepareCEFRWordList, PrepareAcademicCollocationsList)
 # and to the highlighting logic in StyleText().
 my @vocablists = ( "NGSL", "NAWL", "A1", "A2", "B1", "B2", "C1", "C2", "ACL" );
+# O(1) lookup hash built from @vocablists
+my %vocablists_hash = map { $_ => 1 } @vocablists;
 
 # ---------------------------------------------------------------------------
 # Course-name arrays used by FindCourseForArchive() and Dive()
@@ -393,6 +399,11 @@ my @secondlevels = ( "Part 1 - Sequence", "Part 2 - Selection", "Part 3 - Iterat
 # it to be forcibly included in every PDF, overriding subtype-based exclusion.
 # Currently empty — all inclusion/exclusion is driven by subtype and @exclusions.
 my @alwaysinclude = ( );
+# O(1) lookup hashes for @toplevels, @secondlevels, @alwaysinclude — used
+# instead of $x ~~ @toplevels / $x ~~ @secondlevels / $x ~~ @alwaysinclude
+my %toplevels_hash    = map { $_ => 1 } @toplevels;
+my %secondlevels_hash = map { $_ => 1 } @secondlevels;
+my %alwaysinclude_hash = map { $_ => 1 } @alwaysinclude;
 
 # LanguageTool rule IDs that CheckSpellingAndGrammar() instructs the checker
 # to ignore.  Rules listed here generate too many false positives for this
@@ -622,6 +633,8 @@ my $addedvocabpages = 0;
 # @OldWords so that "new word" detection can compare the current document's
 # tokens against all previously seen tokens in the archive.
 my @OldWords;
+# O(1) lookup hash kept in sync with @OldWords — used instead of $x ~~ @OldWords
+my %OldWords_hash;
 
 # ---------------------------------------------------------------------------
 # Elective course details
@@ -689,6 +702,8 @@ my @archivedetails;
 # File extensions that can be processed when the script is run in single-file
 # mode (--file pointing directly at a resource rather than an .imscc archive).
 my @individualfilemode = qw ( .doc .docx .jpg .png .gif .jpeg );
+# O(1) lookup hash for @individualfilemode
+my %individualfilemode_hash = map { $_ => 1 } @individualfilemode;
 
 # All inflected forms of the verb "to be"; used by GetLexisInformation() to
 # exclude copula forms from the lexical density calculation so they do not
@@ -822,7 +837,7 @@ $filename =~ s/([\w']+)/\u\L$1/g;
 #   1. A file that exists (-e) and whose extension is in @individualfilemode or ".imscc"
 #   2. A directory path (-d $hasdirectory)
 # If neither condition is met, print the usage string and exit implicitly.
-unless ( ( -e $hasfilename && ( $suffix ~~ @individualfilemode || $suffix eq "\.imscc" ) ) || -d $hasdirectory )
+unless ( ( -e $hasfilename && ( exists $individualfilemode_hash{$suffix} || $suffix eq "\.imscc" ) ) || -d $hasdirectory )
 {
      print $usagestring;
 }
@@ -865,7 +880,7 @@ else
 		{
 			foreach my $totemplate ( @addtemplate )
 			{
-				$logger->logdie ( "Unknown subtype specified as template option: [$totemplate]\n" ) unless ( $totemplate ~~ @subtypes );
+				$logger->logdie ( "Unknown subtype specified as template option: [$totemplate]\n" ) unless ( exists $subtypes_hash{$totemplate} );
 			}
 		}
 	}
@@ -891,7 +906,7 @@ else
 		{
 			foreach my $converter ( @convert )
 			{
-				$logger->logdie ( "Unknown subtype specified as convert option: [$converter]\n" ) unless ( $converter ~~ @subtypes );
+				$logger->logdie ( "Unknown subtype specified as convert option: [$converter]\n" ) unless ( exists $subtypes_hash{$converter} );
 			}
 		}
 	}
@@ -916,7 +931,7 @@ else
 		{
 			foreach my $highlighter ( @highlightin )
 			{
-				$logger->logdie ( "Unknown subtype specified as highlighter option: [$highlighter]\n" ) unless ( $highlighter ~~ @subtypes );
+				$logger->logdie ( "Unknown subtype specified as highlighter option: [$highlighter]\n" ) unless ( exists $subtypes_hash{$highlighter} );
 			}
 		}
 	}
@@ -941,9 +956,11 @@ else
 		{
 			foreach my $highlighter ( @highlightvocab )
 			{
-				$logger->logdie ( "Unknown vocab list specified as highlighter option: [$highlighter]\n" ) unless ( $highlighter ~~ @vocablists );
+				$logger->logdie ( "Unknown vocab list specified as highlighter option: [$highlighter]\n" ) unless ( exists $vocablists_hash{$highlighter} );
 			}
 		}
+		# O(1) lookup hash built from the validated @highlightvocab list
+		%highlightvocab_hash = map { $_ => 1 } @highlightvocab;
 	}
 	else
 	{
@@ -953,6 +970,9 @@ else
 	# If --forceconvert was set, ensure $convert is truthy even if --convert
 	# was not explicitly supplied, so that all resources are converted.
 	$convert = 1 if $forceconvert == 1;
+
+	# O(1) lookup hash for @convert subtypes (used in ConvertResourcesToPDF)
+	%convert_hash = map { $_ => 1 } @convert;
 	
 	# Log today's date (from DateTime::today) so the log file is self-timestamped
 	# even when archived or copied to a different system.
@@ -1196,7 +1216,7 @@ else
 			MergePDFs( 	'ALL DOCUMENTS', $AllDocumentsDirectory, $AllDocumentsDirectory.$zipbasename.' ALL DOCUMENTS WITH ANSWERS.pdf', $ignore_pages + $toc_pages, 1, 'ANSWERS', $AllDocumentsDirectory.$zipbasename.' ALL DOCUMENTS.pdf' ) if ( $withanswers == 1 );						
 		}
 	}
-	elsif ( -e $hasfilename && $suffix ~~ @individualfilemode )
+	elsif ( -e $hasfilename && exists $individualfilemode_hash{$suffix} )
 	{
 		$logger->info ( "Running in single file mode\n" );
 
@@ -1282,7 +1302,7 @@ else
 				
 				# save this 'unit change page' to the 'All Documents' directory
 				my $filename = sprintf( '%s%04db%i %s.pdf', $AllDocumentsDirectory, $archiveitemcounter, $level, $dirs[-1] );
-				if ( $dirs[-1] ~~ @secondlevels || $dirs[-1] ~~ @toplevels )
+				if ( exists $secondlevels_hash{$dirs[-1]} || exists $toplevels_hash{$dirs[-1]} )
 				{
 					$logger->info ( sprintf "Making new page marker called [%s]", $filename );
 					SaveTextAsPDF( $filename, $dirs[-1], 0, 0 ) 
@@ -1292,7 +1312,7 @@ else
 				foreach my $sub ( @subtypes )
 				{
 					my $filename = sprintf( '%s%04db%i %s.pdf', $destinationDirectory.$sub.'/', $archiveitemcounter, $level, $dirs[-1] );
-					if ( $dirs[-1] ~~ @secondlevels || $dirs[-1] ~~ @toplevels )
+					if ( exists $secondlevels_hash{$dirs[-1]} || exists $toplevels_hash{$dirs[-1]} )
 					{
 						$logger->info ( sprintf "Making new page marker called [%s]", $filename );
 						SaveTextAsPDF( $filename, $dirs[-1], 0, 0 )
@@ -1825,18 +1845,21 @@ sub GetCovers
 		
 		$logger->info ( sprintf "Found %i potential front covers\n", scalar @frontcovers );
 		$logger->info ( sprintf "\t%s\n", join( "\n\t", @frontcovers ) ) if scalar @frontcovers > 0;
-		
+
 		# find a back cover
 		my $truncated_toplevel = $toplevel;
 		$truncated_toplevel =~ s/ [0-9]//g;	#remove numbers and spaces from the top level. I.e. "Writing 1" --> "Writing"
 		$truncated_toplevel .= ' Back';
-		
+
+		# O(1) lookup for "is this cover already in @frontcovers?"
+		my %frontcovers_set = map { $_ => 1 } @frontcovers;
+
 		foreach my $cover ( @coverfiles )
 		{
 			my ( $cover_filename, $cover_directories, $cover_suffix ) = fileparse( $cover, qr/\.[^.]*/ );
 			#printf "[%s]\n", $cover_filename;
-			
-			if ( ( index( $cover_filename, $truncated_toplevel ) != -1 || index( $cover_filename, "Generic Back Cover" ) != -1 ) && not $cover ~~ @frontcovers )		# string, substring, position
+
+			if ( ( index( $cover_filename, $truncated_toplevel ) != -1 || index( $cover_filename, "Generic Back Cover" ) != -1 ) && not exists $frontcovers_set{$cover} )		# string, substring, position
 			{
 				$logger->info ( sprintf "Cover [%s] looks like [%s]\n", $cover, $truncated_toplevel );
 				push @backcovers, $cover;
@@ -2883,6 +2906,13 @@ sub SaveTextAsPDF
 # Parameters: $keyhash - reference to a per-resource metadata hash
 # Returns: (nothing — populates fields in $keyhash)
 # -----------------------------------------------------------------------
+
+# Pre-compiled regexes used inside GetTagsAndText's per-sentence loop.
+# Compiling once at load time avoids re-compilation for every sentence
+# in every document processed during the run.
+my $ATTRIBUTION_PREFIX_RE = qr/^(Taken from:|Adapted from|Adapted by|Retrieved from|Source)/;
+my $URL_RE = qr/^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$/;
+
 sub GetTagsAndText
 {
 	my $keyhash = shift;
@@ -3006,7 +3036,7 @@ sub GetTagsAndText
 			#   optional scheme (http/https) + domain + optional port + optional path
 			#   This catches bare domains like "www.bbc.co.uk" that authors paste
 			#   as reading sources but which should not be sent to the readability analyser.
-			if ( $sentence =~ m/^(Taken from:|Adapted from|Adapted by|Retrieved from|Source)/ || $sentence =~ m/^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$/ )
+			if ( $sentence =~ $ATTRIBUTION_PREFIX_RE || $sentence =~ $URL_RE )
 			{
 				$keyhash->{WordMetaData}->{source} = $sentence;
 				next;		# don't store this link in the 'textofdocument' member (and don't add a full stop at the end either)						
@@ -3796,7 +3826,8 @@ sub PrepareCEFRWordList
 			my $level = '';
 			my $colour = '';
 			my @strings;
-		
+			my %strings_seen;	# O(1) dedup set kept in sync with @strings
+
 			my $item = '';
 		
 			$member = $_;
@@ -3840,7 +3871,7 @@ sub PrepareCEFRWordList
 				{
 					$meaning .= $item . ' ';
 				}
-				elsif ( $item ~~ ['auxiliary', 'exclamation', 'pronoun', 'noun', 'adverb', 'modal', 'verb', 'adjective', 'preposition', 'determiner', 'conjunction'] )
+				elsif ( $item eq 'auxiliary' || $item eq 'exclamation' || $item eq 'pronoun' || $item eq 'noun' || $item eq 'adverb' || $item eq 'modal' || $item eq 'verb' || $item eq 'adjective' || $item eq 'preposition' || $item eq 'determiner' || $item eq 'conjunction' )
 				{
 					# maybe of more than one type:
 					# above adverb, preposition TOO IMPORTANT C2
@@ -3867,14 +3898,14 @@ sub PrepareCEFRWordList
 			$meaning =~ s/\s+$//;	# remove trailing spaces
 			#$logger->debug( sprintf "%4i: [%s] -> [%s] -> [%s] -> [%i] -> [%s]\n", $index, $word, $type, $meaning, $ismultiword, $level ) if ( $ismultiword == 1 );
 		
-			push @strings, $word;
-			push @strings, verb( $word )->singular( 1 )	if ( $type eq 'verb' && not verb( $word )->singular( 1 ) ~~ @strings );	# first person singular
-			push @strings, verb( $word )->singular( 3 )	if ( $type eq 'verb' && not verb( $word )->singular( 3 ) ~~ @strings );	# third person singular
-			push @strings, verb( $word )->past 			if ( $type eq 'verb' && not verb( $word )->past  ~~ @strings );
-			push @strings, verb( $word )->past_part 	if ( $type eq 'verb' && not verb( $word )->past_part  ~~ @strings );
-			push @strings, verb( $word )->pres_part		if ( $type eq 'verb' && not verb( $word )->pres_part  ~~ @strings );
-			push @strings, noun( $word )->singular   	if ( $type eq 'noun' && not noun( $word )->singular  ~~ @strings );
-			push @strings, noun( $word )->plural	   	if ( $type eq 'noun' && not noun( $word )->plural ~~ @strings );
+			push @strings, $word; $strings_seen{$word} = 1;
+			do { my $f = verb( $word )->singular( 1 ); unless ( exists $strings_seen{$f} ) { push @strings, $f; $strings_seen{$f} = 1 } } if $type eq 'verb';  # first person singular
+			do { my $f = verb( $word )->singular( 3 ); unless ( exists $strings_seen{$f} ) { push @strings, $f; $strings_seen{$f} = 1 } } if $type eq 'verb';  # third person singular
+			do { my $f = verb( $word )->past;          unless ( exists $strings_seen{$f} ) { push @strings, $f; $strings_seen{$f} = 1 } } if $type eq 'verb';
+			do { my $f = verb( $word )->past_part;     unless ( exists $strings_seen{$f} ) { push @strings, $f; $strings_seen{$f} = 1 } } if $type eq 'verb';
+			do { my $f = verb( $word )->pres_part;     unless ( exists $strings_seen{$f} ) { push @strings, $f; $strings_seen{$f} = 1 } } if $type eq 'verb';
+			do { my $f = noun( $word )->singular;      unless ( exists $strings_seen{$f} ) { push @strings, $f; $strings_seen{$f} = 1 } } if $type eq 'noun';
+			do { my $f = noun( $word )->plural;        unless ( exists $strings_seen{$f} ) { push @strings, $f; $strings_seen{$f} = 1 } } if $type eq 'noun';
 		
 			# if we already have an item with this vocab item, don't add a second
 			# this means that where a word has different precisions of meaning at different levels,
@@ -4898,7 +4929,7 @@ sub GetLexisInformation
 				#
 				# get new words in this document which are NOT in the NGSL or NAWL
 				#
-				unless( $uniqueword ~~ @OldWords || exists $ngsl{$uniqueword} || exists $ngsl{$uniqueword} )
+				unless( exists $OldWords_hash{$uniqueword} || exists $ngsl{$uniqueword} || exists $nawl{$uniqueword} )
 				{
 					#printf "					We've NOT seen this word (%s) before.  New Word.\n", $word;
 					push @new_words_in_document, $uniqueword;
@@ -4914,6 +4945,8 @@ sub GetLexisInformation
 	}
 	
 	push @OldWords, sort @new_words_in_document;		# at the end, add these words to our big global array ready for next time
+	# keep the O(1) lookup hash in sync with @OldWords
+	@OldWords_hash{ @new_words_in_document } = (1) x @new_words_in_document;
 	
 	
 	@UnknownWords = uniq @all_unknown_words_in_document;
@@ -7053,7 +7086,7 @@ sub StyleText
 		#
 		
 		# NAWL (or blank which means ALL lists)
-		if ( $highlightvocab == 1 && ( scalar @highlightvocab == 0 || ( scalar @highlightvocab > 0 && "NAWL" ~~ @highlightvocab ) ) )
+		if ( $highlightvocab == 1 && ( scalar @highlightvocab == 0 || ( scalar @highlightvocab > 0 && exists $highlightvocab_hash{"NAWL"} ) ) )
 		{
 			$logger->info ( sprintf "		Now highlighting NAWLs...\n" );
 			
@@ -7084,7 +7117,7 @@ sub StyleText
 		#
 		
 		# NAWL (or blank which means ALL lists)
-		if ( $highlightvocab == 1 && ( scalar @highlightvocab == 0 || ( scalar @highlightvocab > 0 && "NGSL" ~~ @highlightvocab ) ) )
+		if ( $highlightvocab == 1 && ( scalar @highlightvocab == 0 || ( scalar @highlightvocab > 0 && exists $highlightvocab_hash{"NGSL"} ) ) )
 		{
 			$logger->info ( sprintf "		Now highlighting NGSLs...\n" );
 			
@@ -7130,7 +7163,7 @@ sub StyleText
 		#
 
 		# ACL (or blank which means ALL lists)
-		if ( $highlightvocab == 1 && ( scalar @highlightvocab == 0 || ( scalar @highlightvocab > 0 && "ACL" ~~ @highlightvocab ) ) )
+		if ( $highlightvocab == 1 && ( scalar @highlightvocab == 0 || ( scalar @highlightvocab > 0 && exists $highlightvocab_hash{"ACL"} ) ) )
 		{
 			$logger->info ( sprintf "		Now highlighting ACLs...\n" );
 			
@@ -7362,18 +7395,18 @@ sub Dive
 			# children of this folder ('a' suffix, higher counter).
 			#
 			
-			if ( ( $parent =~ /^Lesson\b/i || $parent ~~ @toplevels || $parent ~~ @alwaysinclude || $parent ~~ @secondlevels ) && $donotmakePDF == 0 )
+			if ( ( $parent =~ /^Lesson\b/i || exists $toplevels_hash{$parent} || exists $alwaysinclude_hash{$parent} || exists $secondlevels_hash{$parent} ) && $donotmakePDF == 0 )
 			{
-				if ( $parent =~ /^Lesson\b/i || $parent ~~ @alwaysinclude || $parent ~~ @secondlevels )
+				if ( $parent =~ /^Lesson\b/i || exists $alwaysinclude_hash{$parent} || exists $secondlevels_hash{$parent} )
 				{
 					$logger->info ( sprintf "Starting a new Lesson.  Was [%s] is now [%s].  Level is now [%i]\n", $oldunit, $parent, $level );
 					$logger->info ( sprintf "Archive has lessons.  This is the [%i] unit found\n", $hasunits );
 
 					$currentunit = $parent;
 					$hasunits++;
-					$unitcount++;					
+					$unitcount++;
 				}
-				elsif ( $parent ~~ @toplevels )	# new course
+				elsif ( exists $toplevels_hash{$parent} )	# new course
 				{
 					$logger->info ( sprintf "Starting a new Course.  Was [%s] is now [%s].  Level is now [%i]\n", $currentcourse, $parent, $level );
 					
@@ -7694,7 +7727,7 @@ sub ConvertResourcesToPDF
 			# If @convert is empty the user did not restrict subtypes — convert everything.
 			# If @convert is populated only convert resources whose subtype is in the list,
 			# or resources explicitly tagged INCLUDED (course-wide shared resources).
-			if ( scalar @convert == 0 || $item->{subtype} eq 'INCLUDED' || ( scalar @convert > 0 && $item->{subtype} ~~ /@convert/ ) )
+			if ( scalar @convert == 0 || $item->{subtype} eq 'INCLUDED' || ( scalar @convert > 0 && exists $convert_hash{$item->{subtype}} ) )
 			{
 				my $Started = [gettimeofday];		# start the clock!
 				$logger->info ( sprintf "    %03i: ConvertResourcesToPDF [%s]...", $i, $item->{filename} );
